@@ -1,0 +1,80 @@
+SCHEDULE_CONFIG:
+  TIME_ZONE: America/New_York
+  KOTH_SCHEDULES_PLAYERS_REQUIRED: 0
+  PLAYERS_REQUIRED_MESSAGE: '&cA koth would have been started but %amount% players
+    need to be online.'
+  NO_SCHEDULE_NAME: '&fNone Scheduled'
+  NO_SCHEDULE_TIME: ''
+TIME:
+  HOUR_START: '9:00'
+  HOUR_END: '24:00'
+  INTERVAL: 30
+KOTHS_LIST:
+  - §6§lPlains, koth start Plains
+  - §9§c§lNether, koth start Nether
+  - §9§5§lEnd, koth start End
+  - §9§d§lFantasy, koth start Fantasy
+  - '&2&lJungle, koth start Jungle'
+EVENT_LIST:
+  - '&6&lChaos Event, MONDAY, 18:00, chaos start 1h'
+TIPS:
+  ENABLED: true
+  SECONDS: 180
+  SOUND: ''
+  TIP_TYPES:
+    TEAM_LIST:
+      - '&7&m----------------------'
+      - '&d&lTeam List Tip'
+      - '&eYou can use /team sort to sort how'
+      - '&eyou would like /team list and tablists'
+      - '&eteam list to look.'
+      - '&7&m----------------------'
+    SCHEDULE:
+      - '&7&m----------------------'
+      - '&d&lScheduler Tip'
+      - '&eYou can use /schedule to view'
+      - '&ewhat time our events happen.'
+      - '&7&m----------------------'
+    PUSHBACK:
+      - '&7&m----------------------'
+      - '&d&lBard Pushback Tip'
+      - '&eYou can right click a piece of coal'
+      - '&ewhile being active in the bard class'
+      - '&eto pushback any near enemies.'
+      - '&7&m----------------------'
+    ABILITIES:
+      - '&7&m----------------------'
+      - '&d&lAbilities Tip'
+      - '&eYou can view our abilities by'
+      - '&etyping the command /abilities'
+      - '&7&m----------------------'
+    CLAIM_SCOREBOARD:
+      - '&7&m----------------------'
+      - '&d&lClaim Scoreboard Tip'
+      - '&eYou can use /settings to toggle'
+      - '&ethe claim shown on your scoreboard.'
+      - '&7&m----------------------'
+    STATS:
+      - '&7&m----------------------'
+      - '&d&lStats Tip'
+      - '&eYou can view your stats by'
+      - '&erunning the command /stats.'
+      - '&7&m----------------------'
+    KILLTAGS:
+      - '&7&m----------------------'
+      - '&d&lKilltags Tip'
+      - '&eYou can change the way your kill'
+      - '&emessages look via /killtags.'
+      - '&7&m----------------------'
+    FALLTRAP:
+      - '&7&m----------------------'
+      - '&d&lFalltrap Tip'
+      - '&eYou can create a auto falltrap task'
+      - '&evia the command /f falltrap'
+      - '&7&m----------------------'
+    BASE:
+      - '&7&m----------------------'
+      - '&d&lBase Tip'
+      - '&eYou can create a auto base task'
+      - '&evia the command /f base'
+      - '&7&m----------------------'

@@ -1,0 +1,124 @@
+LUNAR_API:
+  FIX_1_8_HIT_DELAY: true # Viper does this aswell, it fixes the hit delay for lunar client only!
+
+TEAM_VIEWER:
+  ENABLED: true
+  SHOW_DISPLAY_NAME: true
+  COLOR: '#ADD8E6'
+  PER_CLASS_COLOR:
+    ENABLED: true
+    ARCHER: '#00FF00'
+    BARD: '#FFFF00'
+    ROGUE: '#808080'
+    GHOST: '#FFFFFF'
+    MAGE: '#013220'
+    MINER: '#000000'
+    BOMBER: '#990000'
+    YETI: '#0096d2'
+    FISHERMAN: '#ff8b00'
+    CHEMIST: '#861fac'
+
+
+NAMETAGS:
+  NORMAL: '&8[%name%&8] %dtr-color%%dtr%%dtr-symbol%'
+  TEAM_TOP: '%pos% &8[%pos-color%%name% &7┃ %dtr-color%%dtr%%dtr-symbol%&8]'
+  VANISHED_SYMBOL: '&3✤ '
+  FORMAT: # You can use %rank-name% and %rank-color% aswell
+    MOD_MODE:
+      - '&7[Mod Mode]'
+      - '%vanishsymbol%%rank-suffix%%name%'
+    IN_TEAM:
+      - '%teamtag%%disqualified%'
+      - '%killtag%%vanishsymbol%%name%'
+    #      - '&f%health% &4❤'
+    NO_TEAM:
+      - '%killtag%%vanishsymbol%%name%'
+    #      - '&f%health% &4❤'
+    PVP_TIMER:
+      - '&2⚔ &aPvP Timer &2⚔'
+    INVINCIBILITY_TIMER:
+      - '&2⚔ &aPvP Timer &2⚔'
+    FROZEN:
+      - '&4&lFrozen'
+      - '&c%time%'
+      - ''
+    ANTICLEAN:
+      - '&c⚠ [%anticlean-team%] ⚠'
+    ARCHERTAG:
+      - '&6[ArcherTagged]'
+    BOUNTY:
+      - '&eBounty: &2$&a%amount%'
+
+LUNAR_PREFIXES:
+  ENABLED: true
+  TEAMS:
+    ONE:
+      PREFIX: '&4①'
+      COLOR: '&4'
+    TWO:
+      PREFIX: '&c②'
+      COLOR: '&c'
+    THREE:
+      PREFIX: '&f③'
+      COLOR: '&f'
+  PLAYER:
+    ONE: '&6#1 '
+    TWO: '&2#2 '
+    THREE: '&7#3 '
+
+# Just google '<color> hex code'
+WAYPOINTS:
+  SPAWN:
+    ENABLED: true
+    NAME: 'Spawn'
+    COLOR: '#00FF00'
+  END_SPAWN:
+    ENABLED: true
+    NAME: 'End Spawn'
+    COLOR: '#800080'
+  NETHER_SPAWN:
+    ENABLED: true
+    NAME: 'Nether Spawn'
+    COLOR: '#ff0000'
+  HQ:
+    ENABLED: true
+    NAME: 'HQ'
+    COLOR: '#0000FF'
+  FOCUS:
+    ENABLED: true
+    NAME: '%team%''s HQ'
+    COLOR: '#FFC0CB'
+  RALLY_POINT:
+    ENABLED: true
+    NAME: 'Rally Point'
+    COLOR: '#FF0000'
+  MARK_POINT:
+    NAME: "&%player%'s Mark"
+    COLOR: "#00BFFF"
+    ENABLED: true
+    RANGE: 50
+    DURATION_SECONDS: 10
+  GLOWSTONE:
+    ENABLED: true
+    NAME: 'Glowstone Mountain'
+    COLOR: '#FFD700'
+  ORE_MOUNTAIN:
+    ENABLED: true
+    NAME: 'Ore Mountain'
+    COLOR: '#00FFFF'
+  KOTH:
+    ENABLED: true
+    NAME: '%name% KoTH'
+    COLOR: '#0000FF'
+  END_EXIT: # This is in the end world.
+    ENABLED: true
+    NAME: 'End Exit'
+    COLOR: '#9400D3'
+  CONQUEST:
+    ENABLED: true
+    NAME: '%name% Zone'
+    COLOR: '%color%'
+  DTC:
+    ENABLED: true
+    NAME: '%name%'
+    COLOR: '%color%'

@@ -1,0 +1,156 @@
+Commands:
+- azurite.resetreclaim
+- azurite.reload
+- azurite.ecomanage
+- azurite.livesmanage
+- azurite.setend
+- azurite.strengthnerf
+- azurite.broadcast
+- azurite.clearchat
+- azurite.clear
+- azurite.craft
+- azurite.feed
+- azurite.gamemode
+- azurite.gmc
+- azurite.gms
+- azurite.heal
+- azurite.kill
+- azurite.rename
+- azurite.repair
+- azurite.top
+- azurite.tpall
+- azurite.teleport
+- azurite.teleporthere
+- azurite.tploc
+- azurite.tprandom
+- azurite.world
+- azurite.abilities
+- azurite.ability
+- azurite.deathban
+- azurite.spawner
+- azurite.freeze
+- azurite.staffbuild
+- azurite.staff
+- azurite.crowbar
+- azurite.purge
+- azurite.resetredeem
+- azurite.managefalltraptoken
+- azurite.managebasetoken
+- azurite.vanish
+- azurite.timer
+- azurite.keyall
+
+- azurite.eotw
+- azurite.customtimer
+- azurite.sotw.admin
+- azurite.spawn.admin
+- azurite.pvptimer.admin
+- azurite.spawner.bypass
+
+Team Commands:
+- azurite.team.teleport
+- azurite.team.setregen
+- azurite.team.setpoints
+- azurite.team.setleader
+- azurite.team.setdtr
+- azurite.team.setcaps
+- azurite.team.setbal
+- azurite.systeam
+- azurite.mountain
+- azurite.citadel
+
+Miscellaneous:
+- azurite.deathban.bypass
+- azurite.eotw.bypass
+- azurite.claim.nomoney
+- azurite.claim.bypass
+- azurite.freeze.bypass
+- azurite.customsigns
+- azurite.donor
+- azurite.autosmelt
+- azurite.chat.bypass
+- azurite.repair.all
+- azurite.abilitymenu.click
+- azurite.citadel.entry
+- azurite.event.entry
+- azurite.potionlimit.bypass
+
+How to claim spawn:
+- /st create <name of spawn> SAFEZONE
+- /st claim <name of spawn>
+- /st sethq <name of spawn> (shows in /f info)
+
+How to claim koths
+- /koth create <name of koth> <color> <mins> <pointsreward>
+- Color has to be color coded, &9, &5, etc.
+- /koth claimzone <name of koth>
+- /st create <name of koth> EVENT
+- /st claim <name of koth>
+- /st sethq <name of koth> (shows in /f info)
+
+How to claim glowstone
+- /st create <name of glowstone> GLOWSTONE
+- /st claim <name of glowstone>
+- /st sethq <name of glowstone> (shows in /f info and waypoint)
+- After all the glowstone is placed, run /mountain reload <name of glowstone> to save the glowstone blocks
+- Give it some time to store all the blocks, after a few seconds break a glowstone and type /mountain respawn <name of glowstone> to see if it works.
+
+How to claim ore mountain
+- /st create <name of oremountain> ORE_MOUNTAIN
+- /st claim <name of oremountain>
+- /st sethq <name of oremountain> (shows in /f info and waypoint)
+- After all the chests and valuables are placed, run /mountain reload <name of oremountain> to save the chests and blocks
+- Give it some time to store all the blocks, after a few seconds break an ore and type /mountain respawn <name of oremountain> to see if it works.
+- Check the chests and some loot should have spawned.
+
+How to setup deathban arena
+- /deathban setarenaspawn (Where the player spawns when they die)
+- /kit edit deathban (Edit to your liking, kit is created already)
+- Create your kit sign where you would like with the kit name as "Deathban"
+- Create a sign with [lives] on the first line to create the lives sign (click to revive)
+- Create a sign with [deathlocsign] on the first line to create the death location info sign.
+- Create a sign with [killedbysign] on the first line to create the killed by info sign.
+
+How to setup a keyall
+- Run /keyall create <name> <displayName> <time> <command>
+- Displayname shows on scoreboard
+- command runs when the timer runs out
+- Example: /keyall create SOTW &a&lSOTW-KEY 10m crate giveall SOTW 3
+
+How to setup eotw
+- Create a koth with the name u have set in config.yml
+- Run /eotw start <time>
+- When Pre-EOTW ends no player would be allowed to join and eotw koth will be started and every team will be raidable.
+
+How to setup citadel
+- /st create <name of citadel> CITADEL
+- /st claim <name of citadel>
+- /koth create <name of citadel> <color> <mins> <pointsreward>
+- /koth claimzone <name of citadel>
+- After all the chests are placed, run /citadel reload <name of citadel> to save the chests.
+- Give it some time to store all the blocks, after a few seconds type /mountain respawn and check the chests and some loot should have spawned.
+
+How to setup end exits
+- Run /setend exit at the location you would like the end waypoint to be (In end dimension)
+- Run /setend worldexit at the location you would like the player to teleport to when they move in water in end dimension
+
+How to setup holograms
+- Make sure you have holographic displays installed
+- Create a hologram of choice and the lines should be one of the following:
+- {team_top%number%} - Please note the number is capped at 10
+- {kills_top%number%} - Please note the number is capped at 10
+- {deaths_top%number%} - Please note the number is capped at 10
+- {kdr_top%number%} - Please note the number is capped at 10
+- {killstreak_top%number%} - Please note the number is capped at 10
+- Your hologram should look something like this:
+- '&3&lTeam Top'
+- '{team_top1}'
+- '{team_top2}'
+- '{team_top3}'
+- '{team_top4}'
+- '{team_top5}'
+- '{team_top6}'
+- '{team_top7}'
+- '{team_top8}'
+- '{team_top9}'
+- '{team_top10}'

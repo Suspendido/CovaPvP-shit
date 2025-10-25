@@ -1,0 +1,72 @@
+name: autoPR.yml
+on:
+  push:
+    branches:
+      - dev-peru
+      - feature/**
+      - bugfix/**
+      - hotfix/**
+  workflow_dispatch: {}
+
+jobs:
+  open-or-update-pr:
+    if: github.actor != 'github-actions[bot]'   # evita PRs por el bot de autosync
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+
+    steps:
+      - name: Checkout (shallow ok)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Open or update PR -> master, assign & request review
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { owner, repo } = context.repo;
+            const branch = context.ref.replace('refs/heads/', ''); // rama que hizo push
+            const base = 'master';
+            const title = `Dev PR: ${branch} → ${base}`;
+            const body = [
+              `Auto-generated PR because \`${branch}\` received new commits.`,
+              '',
+              'Requested reviewer: @RodriDevs'
+            ].join('\n');
+
+            // ¿Ya existe un PR abierto desde esta rama hacia master?
+            const { data: prs } = await github.rest.pulls.list({
+              owner, repo, state: 'open', head: `${owner}:${branch}`, base
+            });
+
+            let prNumber;
+            if (prs.length) {
+              prNumber = prs[0].number;
+              // Actualiza el título/cuerpo por si cambiaron
+              await github.rest.pulls.update({ owner, repo, pull_number: prNumber, title, body });
+            } else {
+              const created = await github.rest.pulls.create({
+                owner, repo, head: branch, base, title, body, draft: false
+              });
+              prNumber = created.data.number;
+            }
+
+            // Asigna y solicita review al Code Owner
+            const reviewer = 'RodriDevs'; // <-- tu usuario
+            try { await github.rest.issues.addAssignees({ owner, repo, issue_number: prNumber, assignees: [reviewer] }); } catch {}
+            try { await github.rest.pulls.requestReviewers({ owner, repo, pull_number: prNumber, reviewers: [reviewer] }); } catch {}
+
+            // Menciona explícitamente en un comentario (fuerza notificación)
+            try {
+              await github.rest.issues.createComment({
+                owner, repo, issue_number: prNumber,
+                body: `@${reviewer} new commits pushed, please review before merging into \`${base}\`.`
+              });
+            } catch {}
+
+            // Etiquetas útiles
+            try { await github.rest.issues.addLabels({ owner, repo, issue_number: prNumber, labels: ['auto-pr', 'review-required'] }); } catch {}

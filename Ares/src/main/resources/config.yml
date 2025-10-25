@@ -1,0 +1,1229 @@
+# ARES HCF CORE
+# FORK BY @RODRIDEVS
+
+STORAGE_TYPE: JSON
+MONGO:
+  URI: ''
+  SERVER_IP: 127.0.0.1:27017
+  DATABASE: Ares
+  AUTH:
+    ENABLED: false
+    USERNAME: admin
+    PASSWORD: Password
+PAGINATED_MENUS:
+  FILLER:
+    NAME: '&7'
+    MATERIAL: STAINED_GLASS_PANE
+    DATA: 7
+    LORE: {}
+  NEXT_PAGE:
+    NAME: '&cNext Page'
+    SOUND: CLICK
+    MATERIAL: CARPET
+    DATA: 7
+    LORE: {}
+  LAST_PAGE:
+    NAME: '&cPrevious Page'
+    SOUND: CLICK
+    MATERIAL: CARPET
+    DATA: 7
+    LORE: {}
+KITMAP_MODE: false
+SOUP_MODE: true
+RAID_ANNOUNCER: true
+KITS_INFO_ONLY_SPAWN: true
+SOUP_INFO_ONLY_SPAWN: true
+SOUP_HEAL_AMOUNT: 7
+TEAM_INFO_JOIN: true
+TEAM_MAX_STRIKES: 3
+SMELT_ON_MINE: true
+GIVE_EXP_MINE: true
+WATER_MOVE_CLAIMS: true
+GIVE_EXP_KILL: true
+GIVE_ITEM_ON_KILL: true
+GIVE_BLOCK_ON_MINE: true
+DEFAULT_CLAIM_SCOREBOARD: false
+MOB_NATURAL_SPAWN: false
+MOB_SPAWN_WARZONE: false
+MESSAGE_SOUND: ORB_PICKUP
+HIDE_VANISH_FROM_MESSAGE: true
+DEFAULT_DEATH_MESSAGES: true
+DISABLE_BEDS: true
+ALLOW_ORE_MINE_SPAWN: false
+ALLOW_BOW_BOOSTING: true
+DENY_ENDERPEARL_TO_SPAWN: true
+DENY_ENDERPEARL_IN_SPAWN: false
+MILK_ONLY_REMOVE_NEGATIVE: true
+DISABLE_ENDER_EYE: true
+ENDERMEN_HOSTILE: true
+BOUNTY:
+  ENABLED: true
+  MINIMAL_AMOUNT: 1200
+  COOLDOWN: 120
+  REWARDS:
+    ENABLED: false
+    COMMANDS:
+      - ''
+DEATHBANS:
+  DEFAULT_TIME: 45
+  KILL_TIME: 5
+  TIMES:
+    - GOLD, 35
+    - SILVER, 30
+    - AZURITE, 20
+  SIGNS_CONFIG:
+    LIVES_SIGN:
+      - '&0&m----------'
+      - Have lives?
+      - '&aClick me!'
+      - '&0&m----------'
+    KILLED_BY:
+      - '&0&m----------'
+      - 'Killed By:'
+      - '&d%reason%'
+      - '&0&m----------'
+    DEATH_LOCATION:
+      - '&0&m----------'
+      - 'Death Location:'
+      - '&c%location%'
+      - '&0&m----------'
+COBWEBS_CONFIG:
+  PLACE_WARZONE: true
+  PLACE_ROAD: true
+  PLACE_WILDERNESS: true
+  DESPAWN_TIME: 8
+DURABILITY_FIX:
+  ENABLED: true
+  PERCENT: 75
+JOIN_ITEMS:
+  ENABLED: false
+  BOOK_ITEM:
+    ENABLED: true
+    TITLE: '&6Welcome to CyrusPvP'
+    AUTHOR: RodriDevs
+    PAGES:
+      - '&9Welcome to CyrusPvP Network.'
+  NORMAL_ITEMS:
+    - FISHING_ROD, 1, LURE:2
+    - COOKED_BEEF, 10, NONE
+MOTD_MESSAGE:
+  ENABLED: true
+  MOTD:
+    - ''
+    - '&d&lCyrusPvP Network'
+    - ''
+    - '&7This map begun '
+JOIN_COMMANDS:
+  ENABLED: true
+  COMMANDS:
+    - cr givekey %player% zeus 10
+KILL_COMMANDS:
+  ENABLED: true
+  COMMANDS:
+    - cr givekey %player% kill 1
+DEATH_COMMANDS:
+  ENABLED: true
+  COMMANDS:
+    - cr givekey %player% death 1
+LIMIT_ENTRY_PER_TEAM:
+  EVENTS: 0
+  CITADEL: 3
+  CONQUEST: 3
+SAVE_DATA_TASK:
+  ENABLED: true
+  TIME: 300
+  COMMANDS:
+    - ares forcesave
+MOB_STACKING:
+  ENABLED: true
+  RADIUS: 10
+  MAX_STACK: 150
+  DESPAWN_TIME: 300
+  COLOR: '&c'
+  DENIED_ENTITIES:
+    - VILLAGER
+    - ENDERMAN
+DISCORD_WEBHOOK:
+  ENABLED: true
+  REQUEST_WEBHOOK:
+    WEBHOOK_URL: ''
+    CONTENT: ''
+    DESCRIPTION: '**%player%** needs assistance with **%request%**'
+    COLOR: '#FF69B4'
+    FOOTER: Requests info for azurite.cc
+    FOOTER_ICON: https://img.icons8.com/fluency/2x/document.png
+    THUMBNAIL: https://img.icons8.com/fluency/2x/support.png
+    AUTHOR: CyrusPvP Network Requests
+    AUTHOR_URL: https://google.com
+    AUTHOR_ICON: https://img.icons8.com/fluency/2x/checked.png
+  REPORT_WEBHOOK:
+    WEBHOOK_URL: ''
+    CONTENT: ''
+    DESCRIPTION: '**%player%** has reported **%target%** for **%report%**'
+    COLOR: '#90C1D7'
+    FOOTER: Reports info for azurite.cc
+    FOOTER_ICON: https://img.icons8.com/fluency/2x/document.png
+    THUMBNAIL: https://img.icons8.com/fluency/2x/support.png
+    AUTHOR: CyrusPvP Network Reports
+    AUTHOR_URL: https://google.com
+    AUTHOR_ICON: https://img.icons8.com/fluency/2x/checked.png
+  KOTH_WEBHOOK:
+    WEBHOOK_URL: ''
+    CONTENT: ''
+    DESCRIPTION: '**%koth%** KoTH is now active! [%time%]'
+    COLOR: '#FF0000'
+    FOOTER: KoTH info for azurite.cc
+    FOOTER_ICON: https://img.icons8.com/external-kmg-design-flat-kmg-design/2x/external-sword-active-lifestyle-kmg-design-flat-kmg-design.png
+    THUMBNAIL: https://img.icons8.com/color/2x/fairytale.png
+    AUTHOR: CyrusPvP Network KoTH
+    AUTHOR_URL: https://google.com
+    AUTHOR_ICON: https://img.icons8.com/fluency/2x/checked.png
+  RESTORE_WEBHOOK:
+    WEBHOOK_URL: ''
+    CONTENT: ''
+    DESCRIPTION: '%player% has restored the inventory for %target% dated %date%'
+    COLOR: '#FF0000'
+    FOOTER: Restores info for azurite.cc
+    FOOTER_ICON: https://img.icons8.com/external-kmg-design-flat-kmg-design/2x/external-sword-active-lifestyle-kmg-design-flat-kmg-design.png
+    THUMBNAIL: https://img.icons8.com/color/2x/fairytale.png
+    AUTHOR: CyrusPvP Restores
+    AUTHOR_URL: https://google.com
+    AUTHOR_ICON: https://img.icons8.com/fluency/2x/checked.png
+STRENGTH_FIX:
+  ENABLED: true
+  MULTIPLIER_LEVEL_1: 0.45
+  MULTIPLIER_LEVEL_2: 0.4
+  MULTIPLIER_LEVEL_3+: 0.3
+CPS_CAPPER:
+  MAX_CPS: 15
+  DAMAGE_REDUCTION: 50
+KILL_TAGS:
+  TITLE: '&dKilltags'
+  SIZE: 27
+  EQUIPPED_PLACEHOLDER: '&aYou have this killtag equipped.'
+  RESET_BUTTON:
+    SLOT: 5
+    NAME: '&cReset Killtag'
+    MATERIAL: REDSTONE
+    SOUND: ITEM_BREAK
+    LORE:
+      - '&aCurrent: &r%current%'
+  TYPES:
+    POOPED:
+      NAME: '&dPooped On'
+      MATERIAL: NAME_TAG
+      FORMAT: '%killer% &etook a poop on %player% &eusing &c%item%&e.'
+      SLOT: 1
+      LORE:
+        - '&eRight click to select &dPooped On&e.'
+        - '&cAzurite&4[0] &etook a poop on &cMeeZoid&4[0]'
+        - '%equipped%'
+    BEAMED:
+      NAME: '&dBeamed'
+      MATERIAL: NAME_TAG
+      FORMAT: '%killer% &ewas beamed by %player% &eusing &c%item%&e.'
+      SLOT: 2
+      LORE:
+        - '&eRight click to select &dBeamed&e.'
+        - '&cAzurite&4[0] &ebeamed &cMeeZoid&4[0]'
+        - '%equipped%'
+    SMACKED:
+      NAME: '&dSmacked'
+      MATERIAL: NAME_TAG
+      FORMAT: '%killer% &esmacked %player% &eusing &c%item%&e.'
+      SLOT: 3
+      LORE:
+        - '&eRight click to select &dSmacked&e.'
+        - '&cAzurite&4[0] &esmacked &cMeeZoid&4[0]'
+        - '%equipped%'
+    PISSED:
+      NAME: '&dPissed'
+      MATERIAL: NAME_TAG
+      FORMAT: '%killer% &epissed on %player% &eusing &c%item%&e.'
+      SLOT: 4
+      LORE:
+        - '&eRight click to select &dPissed&e.'
+        - '&cAzurite&4[0] &epissed on &cMeeZoid&4[0]'
+        - '%equipped%'
+    SHIT_ON:
+      NAME: '&dShit On'
+      MATERIAL: NAME_TAG
+      FORMAT: '%killer% &etook a shit on %player% &eusing &c%item%&e.'
+      SLOT: 5
+      LORE:
+        - '&eRight click to select &dShit on&e.'
+        - '&cAzurite&4[0] &etook a shit on &cMeeZoid&4[0]'
+        - '%equipped%'
+HOLOGRAM_PLACEHOLDER:
+  NONE: '&7%number%. &fN/A'
+  FTOP: '&7%number%. &d%team% &f(%points% points)'
+  FTOP_RAIDABLE: '&7%number%. &d%team% &f(%raidablepoints% raidable)'
+  KILLS_TOP: '&7%number%. &d%player% &f(%kills% kills)'
+  DEATHS_TOP: '&7%number%. &d%player% &f(%deaths% deaths)'
+  KDR_TOP: '&7%number%. &d%player% &f(%kdr% KDR)'
+  KILLSTREAK_TOP: '&7%number%. &d%player% &f(%killstreak% killstreak)'
+  BALANCE_TOP: '&7%number%. &d%player% &f(%bounty%)'
+GOLDEN_APPLE_LIMIT:
+  NORMAL: -1
+  NETHER: 16
+  THE_END: 16
+CONQUEST:
+  SECONDS_PER_CAPZONE: 30
+  POINTS_CAPTURE: 150
+  POINTS_DEATH: 5
+  TEAM_POINTS_WON: 100
+  SCOREBOARD_ONLY_CONQUEST_CLAIM: false
+  COMMANDS_WON:
+    - cr givekey %player% event 3
+    - cr givekey %player% conquest 5
+STAFF_MODE:
+  STAFF_MODE_ON_JOIN: true
+  HEAD_STAFF_MODE_ON_JOIN: false
+  LUNAR_STAFF_MODULES: true
+  ACTION_BAR_ENABLED: true
+  ACTION_BAR_STRING: '&d&lChat: &3%volcano_profile_chat_type% &7┃ &d&lBuild: &f%staffbuild%
+    &7┃ &d&lHide Staff: &f%hidestaff%'
+  SILENT_VIEW_TITLE: Silently viewing...
+  FREEZE_MESSAGE_INTERVAL: 3
+  RANDOM_TP_MINER_Y: 25
+  PAUSE_PLAYTIME_STAFF: true
+  PLACEHOLDERS:
+    TRUE_PLACEHOLDER: '&a●'
+    FALSE_PLACEHOLDER: '&c○'
+    HEAD:
+      TRUE_PLACEHOLDER: '&a◆'
+      FALSE_PLACEHOLDER: '&c◇'
+  DISABLED_COMMANDS_FROZEN:
+    - f home
+    - t home
+    - faction home
+    - team home
+    - logout
+  REPORTS_MENU:
+    TITLE: '&dReports'
+    SIZE: 27
+    MAX_REPORTS: 81
+    REPORT_FORMAT:
+      NAME: '&dReport: &e%reported%'
+      MATERIAL: PAPER
+      COMMAND: /teleport %reported%
+      DATA: 0
+      LORE:
+        - '&7&m----------------------------'
+        - '&ePlayer: &c%player%'
+        - '&eReported: &c%reported%'
+        - '&eReason: &c%reason%'
+        - ''
+        - '&eClick to teleport to &d%reported%&e.'
+        - '&7&m----------------------------'
+  REQUESTS_MENU:
+    TITLE: '&dRequests'
+    SIZE: 27
+    MAX_REPORTS: 81
+    REQUEST_FORMAT:
+      NAME: '&dRequest: &e%player%'
+      MATERIAL: PAPER
+      COMMAND: /teleport %player%
+      DATA: 0
+      LORE:
+        - '&7&m----------------------------'
+        - '&ePlayer: &c%player%'
+        - '&eRequest: &c%reason%'
+        - ''
+        - '&eClick to teleport to &d%player%&e.'
+        - '&7&m----------------------------'
+  STAFF_ITEMS:
+    VANISH_ON:
+      NAME: '&3Vanish &c(Disabled)'
+      ACTION: VANISH_ON
+      MATERIAL: INK_SACK
+      DATA: 8
+      SLOT: 9
+      REPLACE: VANISH_OFF
+      COMMAND: ''
+      BASE64_TEXTURE: ''
+      LORE:
+        - '&eClick to appear to all online players. '
+    VANISH_OFF:
+      NAME: '&3Vanish &a(Enabled)'
+      ACTION: VANISH_OFF
+      MATERIAL: INK_SACK
+      DATA: 10
+      SLOT: 9
+      REPLACE: VANISH_ON
+      COMMAND: ''
+      BASE64_TEXTURE: ''
+      LORE:
+        - '&eClick to vanish from all online players.'
+    VANISH_ADMIN:
+      NAME: '&3Vanish &4(Head)'
+      ACTION: VANISH_ADMIN
+      MATERIAL: INK_SACK
+      DATA: 1
+      SLOT: 9
+      REPLACE: VANISH_ON
+      COMMAND: ''
+      BASE64_TEXTURE: ''
+      LORE:
+        - '&eClick to vanish from all online players.'
+    FREEZE:
+      NAME: '&bFreeze'
+      ACTION: FREEZE
+      MATERIAL: SKULL_ITEM
+      DATA: 3
+      SLOT: 2
+      REPLACE: ''
+      COMMAND: ''
+      BASE64_TEXTURE: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzBlYmFkY2EzNjg4ZGE3ZjZmMjZmNmRiYWVhMzQ2ZDdhNDlmZmRmNDg5N2RkMTljNTUxODkwY2UwZWFhYTVkNSJ9fX0=
+      LORE:
+        - '&eClick a player to freeze them.'
+    RANDOM_TP:
+      NAME: '&6Random Teleport'
+      ACTION: ''
+      MATERIAL: EMERALD
+      DATA: 0
+      SLOT: 8
+      REPLACE: ''
+      COMMAND: /randomtp
+      BASE64_TEXTURE: ''
+      LORE:
+        - '&eClick to randomly teleport to a online player.'
+    RANDOM_TP_COMBAT:
+      NAME: '&4Teleport Combat'
+      ACTION: COMBAT_TP
+      MATERIAL: BLAZE_ROD
+      DATA: 0
+      SLOT: 6
+      REPLACE: ''
+      COMMAND: ''
+      BASE64_TEXTURE: ''
+      LORE:
+        - '&eClick to randomly teleport to players in combat.'
+    INSPECTION:
+      NAME: '&dInventory Inspect'
+      ACTION: INSPECTION
+      MATERIAL: SKULL_ITEM
+      DATA: 3
+      SLOT: 1
+      REPLACE: ''
+      COMMAND: ''
+      BASE64_TEXTURE: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjUzYWI4MzYxZTllMDJjZTk1OGNhODM3ZWU3MGRhNmJjOGZmYzIyZTdkNTc2MDcyN2NjMTNkODVhMjYwYmJjZCJ9fX0=
+      LORE:
+        - '&eClick a player to inspect their inventory.'
+    COMPASS:
+      NAME: '&cWall Teleport'
+      ACTION: ''
+      MATERIAL: COMPASS
+      DATA: 0
+      SLOT: 5
+      REPLACE: ''
+      COMMAND: ''
+      BASE64_TEXTURE: ''
+      LORE:
+        - '&eClick a wall to teleport through it.'
+    CARPET:
+      NAME: '&5Online Staff'
+      ACTION: ''
+      MATERIAL: SKULL_ITEM
+      DATA: 3
+      SLOT: 4
+      REPLACE: ''
+      COMMAND: /staffonline
+      BASE64_TEXTURE: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjMxNTI1Mjc0ZDJjNmI5YTVhZDNlNmE4NDRhODMxOWJjYTE4YmZiYzliNzhhZWNkZmQ4NGEzOTkzMjEzNTU0OCJ9fX0=
+      LORE:
+        - '&eClick to view online staff.'
+  EDIT_MODMODE_MENU:
+    TITLE: '&dEdit Mod Mode'
+    SIZE: 9
+  INSPECTION_MENU:
+    TITLE: '&dInspection Menu'
+    SIZE: 54
+    FILLER:
+      NAME: '&7'
+      MATERIAL: STAINED_GLASS_PANE
+      DATA: 3
+    POTIONS_VIEWER:
+      NAME: '&dActive Effects'
+      MATERIAL: BREWING_STAND_ITEM
+      DATA: 0
+      SLOT: 50
+      FORMAT: '&e%effect% &7(&d%time% &dLVL: %amplifier%&7)'
+    PLAYER_INFO:
+      NAME: '&ePlayer Info&7: &d%player%'
+      MATERIAL: SKULL_ITEM
+      DATA: 0
+      SLOT: 51
+      LORE:
+        - '&dKills&7: &f%kills%'
+        - '&dDeaths&7: &f%deaths%'
+        - '&dLives&7: &f%lives%'
+    CLOSE_INSPECTION:
+      NAME: '&cClose Inspection'
+      MATERIAL: WOOL
+      DATA: 14
+      SLOT: 54
+      LORE:
+        - '&eClick to close inspection.'
+    HELMET_SLOT: 46
+    CHESTPLATE_SLOT: 47
+    LEGGINGS_SLOT: 48
+    BOOTS_SLOT: 49
+  STAFF_ONLINE_MENU:
+    TITLE: '&dOnline Staff'
+    SIZE: 27
+    STAFF_HEAD:
+      NAME: '%rank-prefix%&d%color%%player%'
+      MATERIAL: SKULL_ITEM
+      DATA: 3
+      COMMAND: /teleport %player%
+      LORE:
+        - '&ePlaytime: &d%playtime%'
+        - ''
+        - '&eStaff Mode: %staff%'
+        - '&eVanished: %vanish%'
+        - '&eClaim: %claim%'
+        - ''
+        - '&3Click to teleport to &b%player%&e.'
+SPAWNERS_CONFIG:
+  ITEM:
+    NAME: '&dMob Spawner'
+    LORE:
+      - '&eEntity Type: &c%spawner%'
+  TYPES:
+    - ENDERMAN, &5Endermen
+    - BLAZE, &6Blaze
+    - CREEPER, &aCreeper
+    - SPIDER, &8Spider
+    - COW, &7Cow
+    - PIG, &dPig
+    - SKELETON, &7Skeleton
+    - CAVE_SPIDER, &cCave Spider
+BLOCKSHOP_CONFIG:
+  ONLY_SOTW: false
+  ALLOW_OWN_TEAM: true
+  ALLOW_ENEMY_TEAM: false
+  ALLOW_WARZONE: false
+  ALLOW_WILDERNESS: false
+  ALLOW_COMBAT: false
+STARTING_BALANCES:
+  DEFAULT_MEMBER: 500
+  PER_RANK:
+    IRON: 2, 600
+    GOLD: 3, 700
+    AZURITE: 4, 800
+CROWBARS:
+  NAME: '&dCrowbar'
+  MATERIAL: GOLD_HOE
+  SPAWNER_LINE: '&eSpawner: &c%spawner%'
+  END_FRAME_LINE: '&eEnd Frame: &c%endframe%'
+  SPAWNER_AMOUNT: 5
+  END_FRAME_AMOUNT: 5
+REDEEMS:
+  KEANO:
+    NAME: Keano
+    COMMANDS:
+      - cr givekey %player% keano 5, 100%
+      - cr give partnerpackage %player% 1, 100%
+      - lootbox give %player% 1, 100%
+  PEQRLZ:
+    NAME: Peqrlz
+    COMMANDS:
+      - cr givekey %player% keano 5, 3%
+      - cr give partnerpackage %player% 1, 5%
+      - lootbox give %player% 1, 1%
+  ANDREW:
+    NAME: Andrew
+    COMMANDS:
+      - cr givekey %player% keano 5, 3%
+      - cr give partnerpackage %player% 1, 5%
+      - lootbox give %player% 1, 1%
+DEATH_PORTAL_BAN:
+  NETHER: 3
+  END: 3
+WALLS:
+  LUNAR_WALLS_ENABLED: true
+  PVP_TIMER:
+    TYPE: STAINED_GLASS
+    COLOR_LUNAR: '#32CD32'
+    DATA: 5
+  INVINCIBILITY:
+    TYPE: STAINED_GLASS
+    COLOR_LUNAR: '#32CD32'
+    DATA: 5
+  COMBAT_TAG:
+    TYPE: STAINED_GLASS
+    COLOR_LUNAR: '#FF0000'
+    DATA: 14
+  LOCKED_CLAIM:
+    TYPE: STAINED_GLASS
+    COLOR_LUNAR: '#ADD8E6'
+    DATA: 3
+  EVENT_DENIED:
+    TYPE: STAINED_GLASS
+    COLOR_LUNAR: '#0000FF'
+    DATA: 11
+  CITADEL_DENIED:
+    TYPE: STAINED_GLASS
+    COLOR_LUNAR: '#A020F0'
+    DATA: 10
+  CONQUEST_DENIED:
+    TYPE: STAINED_GLASS
+    COLOR_LUNAR: '#FFA500'
+    DATA: 1
+  DISQUALIFIED:
+    TYPE: STAINED_GLASS
+    COLOR_LUNAR: '#FF0000'
+    DATA: 14
+STATS_TRACKER:
+  ENABLED: true
+  SPACE_BEFORE_KILLS: true
+  SPACE_BEFORE_DEATHS: true
+  KILLS_ONLY_SWORD: true
+  MAX_KILLS_STATS: 3
+  MAX_DEATHS_STATS: 3
+  KILLS_PLACEHOLDER: '&4&lKills: &f'
+  DEATHS_PLACEHOLDER: '&4&lDeaths:'
+  KILL_STAT: '&e%playerPrefix%playerColor%player% &fkilled &e%targetPrefix%targetColor%target%'
+  DEATH_STAT: '&e%target% &fkilled by &e%player% &6%date% %time%'
+KOTHS_CONFIG:
+  ALLOW_NO_TEAM_CAP: true
+  SEND_CAPTURING_MESSAGE: 20
+  LOST_CONTROL_PERCENT: 70
+  TEAM_SEND_CAPTURING_MESSAGE: 60
+  MAX_KOTHS_ACTIVE: 1
+  COMMANDS_ON_CAPTURE:
+    - cr givekey %player% event 3
+    - cr givekey %player% koth 5
+CITADEL:
+  CHEST_CONFIG:
+    MIN_ITEM_AMOUNT: 2
+    MAX_ITEM_AMOUNT: 5
+    RANDOM_ITEMS:
+      - DIAMOND_SWORD, 1, 0, &5&lCitadel &d&lSword, DAMAGE_ALL:2;DURABILITY:4, &cNutrition III;&cKeano IX, 30%
+      - DIAMOND_HELMET, 1, 0, &5&lCitadel &d&lHelmet, PROTECTION_ENVIRONMENTAL:2;DURABILITY:4, none, 20%
+      - DIAMOND_CHESTPLATE, 1, 0, &5&lCitadel &4&lChestplate, PROTECTION_ENVIRONMENTAL:2;DURABILITY:4, &cFire Resistance I, 20%
+      - DIAMOND_LEGGINGS, 1, 0, &5&lCitadel &4&lLeggings, PROTECTION_ENVIRONMENTAL:2;DURABILITY:4, none, 20%
+      - DIAMOND_BOOTS, 1, 0, &5&lCitadel &4&lBoots, PROTECTION_ENVIRONMENTAL:2;DURABILITY:4, &cSpeed II, 15%
+      - COOKIE, 1, 0, &5&lCitadel &d&lCookie, none, &5&kii&r &dKeano's &dMagical &dCookie &5&kii&r, 10%
+      - GOLDEN_APPLE, 16, 0, none, none, none, 45%
+      - GOLDEN_APPLE, 1, 1, none, none, none, 10%
+      - ENDER_PEARL, 8, 0, none, none, none, 30%
+      - GLOWSTONE_DUST, 16, 0, none, none, none, 35%
+      - SULPHUR, 16, 0, none, none, none, 35%
+      - EMERALD_BLOCK, 16, 0, none, none, none, 20%
+      - DIAMOND_BLOCK, 16, 0, none, none, none, 25%
+      - GOLD_BLOCK, 16, 0, none, none, none, 30%
+      - IRON_BLOCK, 16, 0, none, none, none, 35%
+      - ABILITY:Switcher, 4, 15%
+      - ABILITY:AntiBuild, 4, 15%
+MOUNTAINS:
+  EDIT_LOOT_MENU:
+    TITLE: '&dEditing Loot'
+    SIZE: 36
+    SOUND_CLICK: CLICK
+    SOUND_REMOVE: ITEM_BREAK
+    LORE:
+      - '%lore%'
+      - ''
+      - '&bChance: &f%chance%'
+      - '&bLeft click: &f+1% &bShift Left Click: &f+10%'
+      - '&bRight click: &f-1% &bShift Right Click: &f-10%'
+      - '&bMiddle click to remove item.'
+  ORE_MOUNTAIN:
+    MIN_ITEM_AMOUNT: 2
+    MAX_ITEM_AMOUNT: 5
+    ALLOWED_BREAK:
+      - EMERALD_ORE
+      - DIAMOND_ORE
+      - GOLD_ORE
+      - IRON_ORE
+      - COAL_ORE
+      - EMERALD_BLOCK
+      - DIAMOND_BLOCK
+      - GOLD_BLOCK
+      - IRON_BLOCK
+      - COAL_BLOCK
+      - LAPIS_BLOCK
+      - LAPIS_ORE
+      - REDSTONE_ORE
+      - REDSTONE_BLOCK
+  GLOWSTONE:
+    MIN_ITEM_AMOUNT: 0
+    MAX_ITEM_AMOUNT: 0
+    ALLOWED_BREAK:
+      - GLOWSTONE
+BORDERS:
+  world: 2000
+  world_nether: 1000
+  world_the_end: 1000
+INVENTORY_RESTORE:
+  RESTORES_LIMIT: 9
+  RESTORE_MENU:
+    TITLE: '&dRestore: &e%player%'
+    SIZE: 18
+    NAME: '&dInventory Restore: &c%date%'
+    RESTORE_ITEM: PAPER
+    FORMAT:
+      - '&7&m----------------------------'
+      - '&eArmor Content: &c%armoramount%'
+      - '&eContent: &c%contentamount%'
+      - '&eDate: &c%date%'
+      - ''
+      - '&aClick to preview inventory.'
+      - '&7&m----------------------------'
+  INVENTORY_MENU:
+    TITLE: '&c%date%'
+    SIZE: 54
+    CONFIRM_RESTORE:
+      NAME: '&aConfirm Button'
+      MATERIAL: WOOL
+      DATA: 5
+      SLOT: 54
+      LORE: {}
+    BACK_BUTTON:
+      NAME: '&cBack Button'
+      MATERIAL: WOOL
+      DATA: 14
+      SLOT: 53
+      LORE: {}
+    FILLER:
+      NAME: '&7'
+      MATERIAL: STAINED_GLASS_PANE
+      DATA: 3
+    HELMET_SLOT: 46
+    CHESTPLATE_SLOT: 47
+    LEGGINGS_SLOT: 48
+    BOOTS_SLOT: 49
+    POTIONS_VIEWER:
+      NAME: '&dPotion Effects'
+      MATERIAL: BLAZE_POWDER
+      DATA: 0
+      SLOT: 50
+      FORMAT: '&e%effect% &7(%amplifier%x, %time%)'
+    PLAYER_INFO:
+      NAME: '&dPlayer Info'
+      MATERIAL: SKULL_ITEM
+      DATA: 3
+      SLOT: 51
+      LORE:
+        - '&eHealth: &c%health%'
+LOGGERS:
+  COLOR: '&e'
+  DESPAWN: 15
+ONLINE_DONOR:
+  ENABLED: true
+  INTERVAL: 120
+  SOUND: ''
+  MESSAGE:
+    - '&7&m--------------------------'
+    - '&e&lOnline Donor Status'
+    - ' &8» &f%members%'
+    - ''
+    - ' &8» &fPurchase in &astore.cyruspvp.net'
+    - '&7&m--------------------------'
+ONLINE_CYRUS:
+  ENABLED: false
+  INTERVAL: 1
+  SOUND: ''
+  MESSAGE:
+    - '&7&m--------------------------'
+    - '          &d&lCyrus 2 xdxdxdxdx'
+    - '&7&f%members%'
+    - ''
+    - '&d&nstore.cyruspvp.net'
+    - '&7&m--------------------------'
+CHAT_FORMAT:
+  DENIED_WORDS:
+    - FUCK
+    - BITCH
+    - KYS
+    - STFU
+  COOLDOWN: 3
+  PUBLIC_NO_TEAM: '%killtop%%tag%%prefix%%color%%player%%suffix%&7: &f%s'
+  PUBLIC_TEAM: '%ftop%&8[%ftop-color%%team%&8]&r %killtop%%tag%%prefix%%color%%player%%suffix%&7:
+    &f%s'
+  KILL_TOP_FORMAT: '&8[%killtop%&8] &r'
+  FTOP_FORMAT: '%ftop% '
+  STAFF:
+    FORMAT: '&d(Staff) %player%: &e%s'
+  TEAM_CHAT:
+    ENABLED: true
+    FORMAT: '&2(Team) %player%: &e%s'
+    SHORTCUT: '@'
+  ALLY_CHAT:
+    ENABLED: true
+    FORMAT: '&9(Ally) %player%: &e%s'
+    SHORTCUT: ''
+  OFFICER_CHAT:
+    ENABLED: true
+    FORMAT: '&d(Officer) %player%: &e%s'
+    SHORTCUT: ''
+  CO_LEADER_CHAT:
+    ENABLED: true
+    FORMAT: '&3(Co-Leader) %player%: &e%s'
+    SHORTCUT: ''
+FIXES:
+  ENDERCHEST_CRAFTING: false
+  GOLDEN_APPLE_CRAFTING: true
+  GOD_APPLE_CRAFTING: false
+  BOAT_PLACING: true
+  OBSIDIAN_GENS: false
+  MOB_SPAWN_WARZONE: false
+  EASIER_GLISTERING_CRAFT: true
+MULTIPLIERS:
+  NETHER_MULTIPLIER: 2
+  SMELT_MULTIPLIER: 2
+SIGNS_CONFIG:
+  UP_SIGN:
+    ENABLED: true
+    LINES:
+      - '&4[Elevator]'
+      - Up
+      - ''
+      - ''
+  DOWN_SIGN:
+    ENABLED: true
+    LINES:
+      - '&4[Elevator]'
+      - Down
+      - ''
+      - ''
+  BUY_SIGN:
+    ENABLED: true
+    LINES:
+      - '&a- Buy -'
+      - '%material%'
+      - '%amount%'
+      - $%price%
+  SELL_SIGN:
+    ENABLED: true
+    LINES:
+      - '&c- Sell -'
+      - '%material%'
+      - '%amount%'
+      - $%price%
+  KIT_SIGN:
+    ENABLED: true
+    CONFIRM_NOT_EMPTY: true
+    LINES:
+      - '&9- Kit -'
+      - '%kit%'
+      - ''
+      - ''
+  SUBCLAIM_SIGN:
+    ENABLED: true
+    LINES:
+      - '&4[Subclaim]'
+      - '%member%'
+      - ''
+      - ''
+  REFILL_SIGN:
+    ENABLED: true
+    MENU_TITLE: '&dRefill'
+    MENU_SIZE: 27
+    COOLDOWN: 5
+    LINES:
+      - ''
+      - '&6[Refill]'
+      - (Right Click)
+      - ''
+    ITEMS:
+      - STONE:1
+      - IRON_INGOT:2
+    REFILL:
+      MATERIAL: EYE_OF_ENDER
+      SLOT: 13
+      NAME: '&bRefill Potions'
+    FILL_ITEM:
+      MATERIAL: POTION
+      POTION_TYPE: INSTANT_HEAL
+      POTION_LEVEL: 2
+      SPLASH: true
+  QUICK_REFILL_SIGN:
+    ENABLED: true
+    MENU_TITLE: '&dQuick Refill'
+    MENU_SIZE: 54
+    COOLDOWN: 120
+    LINES:
+      - ''
+      - '&3[Quick Refill]'
+      - (Right Click)
+      - ''
+  KOTH_CAPTURE_SIGN:
+    ENABLED: true
+    NAME: '&dKOTH Capture Sign'
+    LINES:
+      - '%color%koth%'
+      - '&eCaptured By:'
+      - '&a%player%'
+      - '%date%'
+  DEATH_SIGN:
+    ENABLED: true
+    NAME: '&dDeath Sign'
+    LINES:
+      - '&c%killed%'
+      - '&eSlain By:'
+      - '&a%killer%'
+      - '%date%'
+TIMERS_COOLDOWN:
+  OLD_TIMER_FORMAT: false
+  INVINCIBILITY: 0
+  PVP_TIMER: 0
+  COMBAT_TAG: 30
+  APPLE: 15
+  ENDER_PEARL: 14
+  GAPPLE: 9800
+  GAPPLE_DURATION: 15
+  GAPPLE_AMPLIFIER: 3
+  STUCK: 45
+  HQ: 10
+  HQ_ENEMY: 15
+  ARCHER_TAG: 10
+  WARMUP: 0
+  LOGOUT: 45
+  TEAM_CREATE_CD: 30
+  TEAM_RENAME_CD: 30
+  LOCK_CLAIM: 30
+  LFF_COMMAND: 60
+  REQUEST_COMMAND: 60
+  REPORT_COMMAND: 30
+  CAMP: 45
+  OPEN_FAC: 30
+  ANTI_RAID: 30
+ANTI_CLEAN:
+  ENABLED: true
+  MEMBERS_REQUIRED: 1
+  COOLDOWN: 60
+  RADIUS: 1000
+  KOTH_RADIUS: 15
+  DENIED_WORLDS:
+    - test
+EOTW_TIMER:
+  PRE_EOTW: 45
+  RAIDABLE_TIME: 1d12h
+  COMMAND: koth start eotw
+ROD_TIMER:
+  TIME: 2
+  CLASSES_TIME:
+    BARD: 0
+    GHOST: 0
+    ARCHER: 0
+    ROGUE: 0
+    MAGE: 0
+    BOMBER: 0
+    YETI: 0
+    FISHERMAN: 0
+PURGE_TIMER:
+  INTRACTABLE:
+    - CHEST
+    - TRAPPED_CHEST
+    - FENCE_GATE
+    - WOODEN_DOOR
+    - TRAP_DOOR
+    - DROPPER
+    - DISPENSER
+    - HOPPER
+    - STONE_BUTTON
+SOTW_FLY:
+  ALLOW_SPAWN: true
+  ALLOW_OWN_CLAIM: true
+  ALLOW_ANYWHERE: false
+REBOOT_TIMER:
+  COMMAND: restart
+  MESSAGES_SECOND:
+    SECOND_60:
+      - ''
+      - '&4[REBOOT] &cRebooting in &c60s&e.'
+      - ''
+    SECOND_30:
+      - ''
+      - '&4[REBOOT] &cRebooting in &c30s&e.'
+      - ''
+    SECOND_10:
+      - ''
+      - '&4[REBOOT] &CRebooting in &c10s&e.'
+      - ''
+    SECOND_3:
+      - ''
+      - '&4[REBOOT] &cRebooting in &c3s&e.'
+      - ''
+    SECOND_2:
+      - ''
+      - '&4[REBOOT] &cRebooting in &c2s&e.'
+      - ''
+    SECOND_1:
+      - ''
+      - '&4[REBOOT] &cServer is rebooting.'
+      - ''
+SPAWN_TIMER:
+  ENABLED: true
+  INSTANT_TP_SOTW: true
+  TIME: 30
+CAMP_TIMER:
+  ALLOW_COMBAT: false
+  ONLY_SPAWN_AND_OWN_CLAIM: true
+  INSTANT_TP_SPAWN: true
+LAST_KILLS:
+  MENU:
+    TITLE: '&dLast Kills: &e%player%'
+    SIZE: 54
+    ITEM:
+      NAME: '&dKill &e#%number% &7- &f%player%'
+      LORE:
+        - '&7&m----------------------------'
+        - '&f%deathmessage%'
+        - '&7Date: &f%date%'
+        - '&7Location: &f%x%, %y%, %z%'
+        - '&7Faction: &f%team%'
+        - '&7DTR: &f%dtr_before% &7-> &f%dtr_after%'
+        - ''
+        - '&aLeft-click to view message'
+        - '&aRight-click to teleport'
+        - '&7&m----------------------------'
+LAST_DEATHS:
+  MENU:
+    TITLE: '&dLast Deaths: &e%player%'
+    SIZE: 54
+    ITEM:
+      NAME: '&dDeath &e#%number% &7- &f%player%'
+      LORE:
+        - '&7&m----------------------------'
+        - '&f%deathmessage%'
+        - '&7Date: &f%date%'
+        - '&7Location: &f%x%, %y%, %z%'
+        - '&7Faction: &f%team%'
+        - '&7DTR: &f%dtr_before% &7-> &f%dtr_after%'
+        - ''
+        - '&aLeft-click to view message'
+        - '&aRight-click to teleport'
+        - '&7&m----------------------------'
+DISABLED_COMMANDS:
+  MAIN_COMMANDS:
+    - command
+  TEAM_SUBCOMMANDS:
+    - subcommand
+RENAMING:
+  DENIED_NAMES:
+    - bitch
+    - fuck
+    - nigga
+    - nigger
+    - sex
+    - kys
+  DENIED_ITEMS:
+    - TRIPWIRE_HOOK
+REPAIRING:
+  DENIED_ITEMS:
+    - TRIPWIRE_HOOK
+COMBAT_TIMER:
+  HQ_TELEPORT: false
+  STUCK_TELEPORT: true
+  LOGOUT_COMMAND: false
+  END_ENTRY: false
+  BLOCKED_COMMANDS:
+    - /ce
+REPAIR_BLOCK:
+  REPAIR_ALL_COST: 5000
+  REPAIR_HAND_COST: 1000
+INVINCIBILITY:
+  END_ENTRY: true
+  HQ_TELEPORT: true
+  ENTER_OWN_CLAIM: true
+HQ_TIMER:
+  INSTANT_TP_SPAWN: true
+  INSTANT_TP_SOTW: true
+  ALLOW_TP_OTHER_CLAIM: true
+PVP_TIMER:
+  END_ENTRY: false
+  HQ_TELEPORT: false
+  ENTER_OWN_CLAIM: false
+DTC_EVENT:
+  HEALTH: 250
+  BLOCKS:
+    - OBSIDIAN
+  BLOCK: OBSIDIAN
+  LOCATION:
+    X: -900
+    Y: 82
+    Z: -900
+    world: world
+DRAGON_EVENT:
+  HEALTH: 200
+  LOCATION:
+    X: 0
+    Y: 100
+    Z: 0
+    world: world
+  ATTACK:
+    DAMAGE: 4.0
+    INTERVAL: 10
+    KNOCKBACK: 10.5
+    RADIUS: 30
+    EFFECTS:
+      - SLOWNESS:80:1
+      - BLINDNESS:60:0
+keyall:
+  active: false
+  loot:
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+    - ==: org.bukkit.inventory.ItemStack
+      type: GOLD_NUGGET
+      amount: 5
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: §c§oKOTH §fKEY
+        lore:
+          - §7
+          - §d▎ §7Right click on your claim or on
+          - §f §7the §aSpawn §7to open the key
+          - §7
+          - §d▎ §7Left click to preview key §arewards
+          - §7
+          - §7You can buy more keys in our store.
+          - §d§nstore.cyruspvp.net
+        enchants:
+          DURABILITY: 5
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+    - ==: org.bukkit.inventory.ItemStack
+      type: AIR
+autosotw:
+  commands:
+    start:
+      - sotw start 2h
+      - whitelist off
+    cancel:
+      - sotw end
+      - whitelist off
+LAUNCHPAD:
+  BLOCK: SPONGE
+  POWER: 2.0
+  Y: 1.0
+  SOUND: FIREWORK_LAUNCH
+  SOUND_VOLUME: 1.0
+  SOUND_PITCH: 1.0
+POWERUPS:
+  MESSAGES:
+    LIMIT_REACHED: '&cThe limit of %limit% active power-ups has been reached.'
+    SPAWN: '&eA power-up %type% spawned at (%x%, %y%, %z%)!'
+    PICKUP: '&a%player% picked up power-up %type% at (%x%, %y%, %z%)!'
+    ACTIONBAR_PICKUP: '&aYou picked up power-up %type%!'
+  RADIUS:
+    OUTER: 2.0
+  SPAWN:
+    WORLDS:
+      - world
+    MAX_ACTIVE: 3
+    SPAWN_ATTEMPTS: 10
+    MIN_X: -500
+    MAX_X: 500
+    MIN_Z: -500
+    MAX_Z: 500
+  TYPES:
+    '1':
+      NAME: Speed
+      COLOR: 255,85,85
+      EFFECT: SPEED
+      DURATION: 15
+      LEVEL: 2
+    '2':
+      NAME: Strength
+      COLOR: 85,85,255
+      EFFECT: INCREASE_DAMAGE
+      DURATION: 15
+      LEVEL: 1
+    '3':
+      NAME: Resistance
+      COLOR: 85,255,85
+      EFFECT: DAMAGE_RESISTANCE
+      DURATION: 20
+      LEVEL: 1
+
+DENY_PLACE_BLOCKS:
+  - CHEST
+  - PISTON
+  - TRIPWIRE
+  - HOPPER
+  - BOAT
+
+PAYLOAD_EVENT:
+  RADIOUS: 5.0
+  SPEED: 0.2
+  TIME-OUT: 10000
+  ENTITY_TYPE: MINECART_TNT
+  AURA:
+    ENABLED: true
+    COLOR: ORANGE
+    SIZE: 1.2
+    STEP_DEGREES: 22.5
+    Y_OFFSET: 0.1
+  HOLOGRAM:
+    ENABLED: true
+    OFFSET_Y: 3.0
+    LINE_SPACING: 0.25
+    LINES:
+      - '&7&m--------------------------'
+      - '&d&lPAYLOAD'
+      - ''
+      - '&7Progress: &f%progress% &7(&f%distance%&7 blocks)'
+      - '&7Controller: &f%controller%'
+      - ''
+      - '&7&m--------------------------'
+
+PETS:
+  WOLF:
+    DISPLAY_NAME: Wolf
+    TEXTURE: ''
+    EFFECTS: SPEED
+  PET_2:
+    DISPLAY_NAME: PET_2
+    TEXTURE: ''
+    EFFECTS: []

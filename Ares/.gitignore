@@ -1,0 +1,43 @@
+﻿# Build directories
+build/
+out/
+
+# Gradle
+.gradle/
+# Permitir gradle wrapper para GitHub Actions
+!gradlew
+!gradlew.bat
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# Gradle build output
+/build/
+
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Compiled class files
+*.class
+
+# Package Files
+*.jar
+!libs/
+!libs/*.jar
+!libs/**/*.jar
+
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar

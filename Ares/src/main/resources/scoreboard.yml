@@ -1,0 +1,278 @@
+SCOREBOARD_INFO:
+  ENABLED: true
+  TITLE: '<p>&lSoupPvP &7&o[#1]' # If changer not enabled
+  LINES: '&7&m--------------------' # Cannot be empty. If you want it blank make it &7
+  LINES_ENABLED: true
+  LAST_LINE_ENABLED: true
+  SHOW_KILLSTREAK_ONLY_POSITIVE: true
+  SHOW_DATE_BELOW_TITLE: true
+  DATE_LINE: '            &7&o%date%             '
+  DATE_FORMAT: 'dd/MM/YY'
+
+TITLE_CONFIG:
+  CHANGER_ENABLED: true
+  CHANGER_TICKS: 120
+  CHANGES:
+    # ARES shimmer
+    - '<p>&lA&5&lRES'
+    - '<p>&lAR&5&lES'
+    - '<p>&lARE&5&lS'
+    - '<p>&lARES'
+    - '&5&lARES'
+    - '<p>&lARES'
+    - '&5&lARE<p>&lS'
+    - '&5&lAR<p>&lES'
+    - '&5&lA<p>&lRES'
+    - '<p>&lARES'
+    # transition
+    - '&f&l◆'
+    - '&f&l◆◆'
+    - '&f&l◆◆◆'
+    # KITMAP shimmer
+    - '<p>&lK&5&lITMAP'
+    - '<p>&lKI&5&lTMAP'
+    - '<p>&lKIT&5&lMAP'
+    - '<p>&lKITM&5&lAP'
+    - '<p>&lKITMA&5&lP'
+    - '<p>&lKITMAP'
+    - '&5&lKITMAP'
+    - '<p>&lKITMAP'
+    - '&5&lKITMA<p>&lP'
+    - '&5&lKITM<p>&lAP'
+    - '&5&lKIT<p>&lMAP'
+    - '&5&lKI<p>&lTMAP'
+    - '&5&lK<p>&lITMAP'
+    - '<p>&lKITMAP'
+    # transition
+    - '&f&l◆◆◆'
+    - '&f&l◆◆'
+    - '&f&l◆'
+
+ACTION_BAR_CONFIG: # Set empty to disable
+  SEPARATOR: ' &8┃ '
+  STATS_ONLY_SPAWN: true
+  LINES:
+    STATS: '&a&lKills &f%kills% &8┃ &c&lDeaths &f%deaths% &8┃ &e&lKillstreak &f%killstreak%' # %kills%, %deaths%, %killstreak%
+    SOTW_TIMER: ''
+    SOTW_TIMER_ENABLED: ''
+    CLAIM: '' # %claim%
+    INVINCIBILITY: '' # %time%
+    CLASS_NAME: '' # %class%
+    BARD_ENERGY: '&eEnergy &f%energy%'
+    BARD_EFFECT: '&eEffect &f%time%'
+    MAGE_ENERGY: '&5Energy &f%energy%'
+    MAGE_EFFECT: '&5Effect &f%time%'
+    PVP_TIMER: ''
+    ANTI_CLEAN: ''
+    SPAWN_TIMER: ''
+    HQ_TIMER: ''
+    GLOBAL_ABILITY: ''
+    COMBAT: ''
+    ENDERPEARL: ''
+    APPLE: '<p>&lApple &f%time%'
+    ARCHER_TAG: ''
+    LOGOUT: ''
+    ROD: ''
+    WARMUP: ''
+    CAMP_TIMER: ''
+    F_STUCK: ''
+    REBOOT: ''
+
+FOOTER:
+  ENABLED: true
+  LINES:
+    - '&7&m---------------'
+    - '%footer%'
+
+CLAIM:
+  ENABLED: true
+  LINES:
+    - '<p>&lClaim %claim%'
+
+KOTH:
+  ENABLED: true
+  LINES:
+    - ''
+    - '%color%%koth%&7: &c%rem%'
+
+ANTI_CLEAN:
+  ENABLED: true
+  LINES:
+    - '<p>&lRemaining: &f%rem%'
+    - ''
+    - '&b&lLinked: %team%'
+    - '&3&l%rem%'
+
+BOOST:
+  ENABLED: true
+  LINES:
+    - "&7◤ <p>&lBoost Event &7(&5x%multiplier%&7)&7 ◥"
+    - "&7◣ <p>will end in &c%rem%      &7◢"
+    - ""
+
+DRAGON_EVENT:
+  ENABLED: true
+  LINES:
+    - '&5&lEnd Dragon&7: &c%rem%'
+
+CHAOS_EVENT:
+  ENABLED: true
+  LINES:
+    - '&6&lChaos Event&7: &c%rem%'
+
+PAYLOAD:
+  ENABLED: true
+  LINES:
+    - '           &6&lPayload&7' #DO NOT USE %rem% HERE, it will be replaced with infinite dashes
+    - '&7&m'
+    - '&7&l● &6&lDistance&7: &f%distance%'
+    - '&7&l● &6&lSpeed&7: &f%speed%'
+    - '&7&l● &6&lDirection&7: &f%direction%'
+
+FOOTER_CONFIG:
+  CHANGER_TICKS: 3000 # Less for faster changing, more for slower changing
+  # Create as many as you want
+  CHANGES:
+    - '<p>cyruspvp.net'
+    - '<s>discord.gg/cyruspvp'
+    - '<e>@CyrusPvPnet'
+
+KITS_INFO:
+  - '&fKills&7: &c%kills%'
+  - '&fDeaths&7: &4%deaths%'
+  - '&fBalance&7: &2$&a%balance%'
+
+SOUP_INFO:
+  - '&fKills&7: &c%kills%'
+  - '&fDeaths&7: &4%deaths%'
+  - '&fKillstreak&7: &3%killstreak%'
+  - '&fCredits&7: &a%credits%'
+
+DEATHBAN_INFO:
+  TIME: '&c&lDeathban&7: &c'
+  LIVES: '&a&lLives&7: &c'
+
+PLAYER_TIMERS:
+  SOTW: '&a&lSOTW &aends in &l'
+  SOTW_OFF: '&c&l&mSOTW&r &f'
+  INVINCIBILITY: '&a&lPvP Timer &f'
+  PVP_TIMER: '&a&lPvP Timer &f'
+  COMBAT_TAG: '&c&lCombat&7: &f'
+  ENDER_PEARL: '&3&lEnderpearl &f'
+  APPLE: ''
+  GAPPLE: '&5&lGapple &f'
+  STUCK: '&4&lStuck &f'
+  HQ: '&9&lHome &9'
+  ARCHER_TAG: '<p>&lArcher Tag &f'
+  WARMUP: '&b&lClass Warmup &f'
+  LOGOUT: '&4&lLogout &f'
+  ACTIVE_CLASS: ''
+  SPAWN: '&a&lSpawn &f'
+  ABILITIES: '' # %ability%&7: &f if you want per ability cooldown
+  GLOBAL_ABILITIES: '<p>&lAbility Item &f'
+  PRE_EOTW: '&4&lPRE-EOTW &f'
+  PURGE: '&4&lPurge &f'
+  DTC: '&5&lDTC &f'
+  FISHING_ROD: '&a&lRod &f'
+  APPLE_LIMIT: '<p>&lApple Limit &f%amount%/%max-amount%'
+  CAMP: '&5&lCamp &f'
+  ANTI_CLEAN: '<p>&lAntiClean &f'
+  RAID_TIMER: '&2&lRaid Prot &c'
+  REBOOT: '&4&lReboot &c'
+
+BARD_CLASS:
+  BARD_ENERGY: ''
+  BARD_EFFECT: ''
+
+MAGE_CLASS:
+  MAGE_ENERGY: ''
+  MAGE_EFFECT: ''
+
+GHOST_CLASS:
+  MODE: '&3&lMode&7: &c'
+  QUARTZ: '&f&lQuartz&7: &c'
+
+ROGUE_CLASS:
+  BACKSTAB: '&cBackstab&7 &f'
+
+MINER_CLASS:
+  INVIS: ''
+  DIAMONDS: '&b&lDiamonds&7: &c'
+
+BOMBER_CLASS:
+  BOMBER_ENERGY: '&6Energy: &c'
+  BOMBER_EFFECT: '&6Effect: &c'
+  TNT_COOLDOWN: '&6TNT Cooldown: &c'
+  MINECART_COOLDOWN: '&6Minecart Cooldown: &c'
+
+YETI_CLASS:
+  ICE_COOLDOWN: '&bIce Cooldown&7 &f'
+  SNOWBALL_COOLDOWN: '&BSnowball Cooldown &f'
+
+FISHERMAN_CLASS:
+  SOUP_COOLDOWN: '&9&lGrandma''s Stew &f'
+  ROD_COOLDOWN: '&e&lFisherman''s Rod &f'
+
+CHEMIST_CLASS:
+  ALCHEMIST_STAFF_COOLDOWN: '&5&lAlchemistStaff &f'
+  TOXIC_DYE_COOLDOWN: '&2&lToxicEye &f'
+
+CONQUEST:
+  FORMAT_POINTS: '&e%team% &f- %points%'
+  LINES:
+    - '&7'
+    - '&6&lConquest'
+    - '&4① &f%points-1%'
+    - '&6② &f%points-2%'
+    - '&a③ &f%points-3%'
+    - ' &e%yellow% &7 ◆ &c%red% '
+    - ' &a%green% &7 ◆ &9%blue%'
+
+KILL_THE_KING:
+  ENABLED: true
+  LINES:
+    - '&7&m--------------------'
+    - '<p>KillTheKing'
+    - ' &fKing&7: <p>%king%'
+    - ' &fHealth&7: &c%health%❤'
+    - ' &fReward&7: <p>%reward%'
+    - ' &fLocation&7: &7&o%loc%'
+
+TEAM_FOCUS:
+  ENABLED: true
+  LINES_PLAYER:
+    - '<p>&l%team% &7(Focused)'
+    - '<p>&lHome&7: &f%hq%'
+    - '<p>&lDTR&7: %dtr-color%%dtr%%dtr-symbol%'
+    - '<p>&lOnline&7: &f%online%'
+  LINES_SYSTEM:
+    - '<p>&l%team% &7(Focused)'
+    - '<p>&lHome&7: &f%hq%'
+
+STAFF_MODE:
+  ENABLED: true
+  VANISH_NO_MODMODE: # They are vanished but not in staff mode.
+    - '&7[S] &fVanished&7: &7%vanished%'
+    - '&7&m--------------------'
+  MOD_MODE:
+    - '<p>&lStaff Mode'
+    - '&fVanished&7: &7%vanished%'
+    - '&fChat: &b%volcano_profile_chat_type%'
+    - '&fOnline&7: &a%players%'
+    - '&7&m--------------------'
+
+HSTAFF_MODE:
+  ENABLED: true
+  VANISH_NO_MODMODE: # They are vanished but not in staff mode.
+    - '&fVanished&7: &7%vanished%'
+    - '&7&m--------------------'
+  MOD_MODE:
+    - '<p>&lStaff Mode'
+    - '&fVanished&7: <p>%vanished% %hvanish%'
+    - '&fStaff Online&7: <p>%staff%'
+    - '&fPlayers&7: <p>%players%'
+    - '&fTPS&7: <p>%tps%'
+    - ''
+
+CUSTOM_TIMERS:
+  FORMAT: '%displayName% &f'

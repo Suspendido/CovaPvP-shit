@@ -1,0 +1,16 @@
+{
+  "Conquest": {
+    "active": "false",
+    "type": "CONQUEST",
+    "capzones": {},
+    "points": {}
+  },
+  "Payload": {
+    "start": "null",
+    "end": "null",
+    "path": [],
+    "speed": "0.1",
+    "radius": "5.0",
+    "type": "PAYLOAD"
+  }
+}

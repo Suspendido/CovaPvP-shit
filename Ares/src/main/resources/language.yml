@@ -1,0 +1,3408 @@
+COLORS:
+  PRINCIPAL: 'DARK_RED'
+  SECONDARY: 'RED'
+  EXTRA: '#00FF00'
+  ERROR: 'RED'
+
+GLOBAL_COMMANDS:
+  INSUFFICIENT_PERMISSION: '<r>You do not have permission.'
+  PLAYER_ONLY: '<r>This command can only be executed by players.'
+  PLAYER_NOT_FOUND: '<r>The player <p>%player% <r>could not be found.'
+  NOT_VALID_NUMBER: '<r>The argument <p>%number% <r>is not a valid number.'
+  COMMAND_COMBAT: '<r>You can not use that command now.'
+
+JOIN_LISTENER:
+  ENABLED: true
+  TITLE: '&5&lKitmap'
+  SUBTITLE: '&fCreate a team using /f create [name]'
+  NOT_USING_LC: '&cWe recommend using <p>&lLunar Client &cfor the best experience.'
+
+GENERAL_LISTENER:
+  DENY_PLACE_BLOCKS: "&cYou cannot place that here."
+
+
+REMOVE_INVIS:
+  ENABLED: true
+  MESSAGE: '&cInvisiblity effect is disabled in this dimension.'
+
+BOUNTY:
+  USAGE:
+    - "&7&m---------------------"
+    - "<p>&lBounty Usage"
+    - ""
+    - "&c/bounty list"
+    - "&c/bounty add %player% %amount%"
+    - "&7&m---------------------"
+  LIST_EMPTY: "&cThere is no bounties at the moment."
+  CANNOT_PUT_YOURSELF: "&cYou cannot put yourself into bounty list!"
+  CANNOT_PUT_FACTION_MEMBERS: "&cYou cannot put faction members into bounty list!"
+  MINIMAL_AMOUNT_REQUIRED: "&cMinimal bounty amount is %amount%!"
+  NOT_SET_YET: "&cYou have not set bounty on %target% yet."
+  NO_ENOUGH_MONEY: "&cYou do not have enough money for this bounty."
+  IN_COOLDOWN: "&cYou cannot use this for another %time% seconds."
+  ADDED_PLAYER:
+    PLAYER: "&eYou have added bounty of &a$%amount% &eto &r%rank-prefix%%player%&e."
+    GLOBAL: "&r%rank-prefix%%applier% &ehas placed a bounty worth &a$%amount% &eon %target-prefix%%target%&e."
+  REMOVED: "&eYou have &cremoved &ebounty from &r%rank-prefix%%player%&e."
+  DEATH:
+    PLAYER: "&eYou have received &r%rank-prefix%%player%&e's bounty of &a$%amount%&e."
+    GLOBAL: "&r%rank-prefix%%player% &ehas claimed &r%rank-prefix%%target%&e's bounty worth &a$%amount%&e."
+  CLAIMED: "&eYou have claimed &r%rank-prefix%%player%&e's bounty of &a$%amount%&e."
+
+DEATH_LISTENER:
+  PLAYER_FORMAT: '<p>%player%&5[%kills%]'
+  ACTIONBAR: '&cKilled &f%rank-prefix%%rank-color%%player%'
+
+  # Send title and subtitle to the death player
+  ENABLED_TITLES: true
+  TITLE: '&4&lYou died!'
+  SUBTITLE: ''
+
+  KILLSTREAK: '&e%player% &ehas gotten the &r%killstreak% &ekillstreak.'
+  TEAMS_MESSAGES:
+    LOST_POINTS: '&c-%points% points &efor the death of &9%player%&e.'
+    GAINED_POINTS: '&c+%points% points &efor the killing of &9%player%&e.'
+  MESSAGES:
+    KILLER: '&e%player% &ewas slain by %killer% &eusing &c%item%&e.'
+    ENTITY: '&e%player% &ewas slain by &c%entity%&e.'
+    FALL: '&e%player% &ehit the ground too hard.'
+    FALL_KILLER: '&e%player% &ehit the ground too hard thanks to %killer%&e.'
+    VOID: '&e%player% &efell into the void.'
+    VOID_KILLER: '&e%player% &efell into the void thanks to %killer%&e.'
+    PROJECTILE: '&e%player% &ewas shot by skeleton.'
+    PROJECTILE_KILLER: '%player% &ewas shot by %killer% &efrom &9%blocks% blocks&e'
+    LIGHTNING: '&e%player% &ewas struck by lightning.'
+    WITHER: '&e%player% &ewithered to death.'
+    POISON: '&e%player% &ewas poisoned to death.'
+    MAGIC: '&e%player% &ewas killed by magic.'
+    DROWNED: '&e%player% &edrowned.'
+    STARVATION: '&e%player% &egot consumed by hunger.'
+    SUFFOCATION: '&e%player% &esuffocated.'
+    CONTACT: '&e%player% &ewas pricked to death.'
+    EXPLOSION: '&e%player% &ehas blew up.'
+    LAVA: '&e%player% &etried to swim in lava.'
+    FIRE: '&e%player% &ewent up in flames.'
+    LOGGER: '&e%player% &7(Logger) &edied'
+    LOGGER_VOID: '&e%player% &7(Logger) &efell into the void.'
+    LOGGER_KILLER: '&e%player% &7(Logger) &ewas slain by %killer%&e.'
+    BACKSTABBED: '&e%player% &ewas backstabbed by %killer%&e.'
+    DEFAULT: '&e%player% &edied.'
+
+USER_LISTENER:
+  SERVER_NOT_LOADED: '&cServer is loading, please try again or contact an Developer.'
+  COULD_NOT_LOAD_DATA: '&cError! Your data could not be loaded. Please contact a Developer'
+
+DROPITEMS_SPAWN:
+  ENABLED: true
+  MESSAGE: '&cYou can not drop items in &aSpawn'
+
+APPLE_LISTENER:
+  CARRY_TOO_MANY: '&eGolden apples have been limited to &c%limit% apples &eper player.'
+
+ABILITIES:
+  GLOBAL_COOLDOWN: '&cYou still have a <p>&lAbility Item &ccooldown for &c&l%time%&c.'
+  COOLDOWN: '&cYou still have a %ability% &ccooldown for &c&l%time%&c.'
+  DISABLED: '&cThat ability is currently disabled.'
+  DISABLED_CITADEL: '&cYou cannot use abilities in citadel.'
+  DISABLED_EVENT: '&cYou cannot use abilities in events.'
+  DISABLED_END: '&cYou cannot use abilities in end.'
+  DISABLED_NETHER: '&cYou cannot use abilities in nether.'
+  DISABLED_WARZONE: '&cYou cannot use abilities in warzone.'
+  DISABLED_SPAWN: '&cYou cannot use abilities in a safezone.'
+  DISABLED_RADIUS: '&cAbilities has been disabled for %radius% blocks down road.'
+  DISABLED_TOGGLED: '&cAbilities has been disabled in this claim.'
+  POCKET_BARD:
+    COOLDOWN_GLOBAL: "&cYou must wait %remaining%s before using another Pocket Bard."
+    COOLDOWN_SINGLE: "&cYou must wait %remaining%s to use the %type% &ceffect again."
+  ANTI_BUILD:
+    USED:
+      - ''
+      - '&6▎ &eSuccessfully used <p>AntiTrap Bone &eon &6%player%&e.'
+      - '&6▎ &eThey can not build for &6%seconds%s&e.'
+      - ''
+    BEEN_HIT:
+      - ''
+      - '&6▎ &eYou have been hit with an <p>AntiTrap Bone&e.'
+      - '&6▎ &eYou cannot build for &6%seconds%s&e.'
+      - ''
+    DENIED_BUILD: '&cYou cannot build for another &c&l%seconds%&c.'
+  KNIFE_ABILITY:
+    USED:
+      - ''
+      - '&6▎ &eSuccessfully used &cKnife &eon &6%player%&e.'
+      - '&6▎ &eThey are currently bleeding for &6%seconds%s&e.'
+      - ''
+    BEEN_HIT:
+      - ''
+      - '&6▎ &eYou have been hit with an &cKnife.'
+      - '&6▎ &eYou are currently bleeding for &6%seconds%s&e.'
+      - ''
+  LIFESTEAL_ABILITY:
+    USED:
+      - ''
+      - '&6▎ &eSuccessfully used <p>LifeSteal'
+      - ''
+    EXPIRED:
+      - ''
+      - '&6▎ &eYour <p>LifeSteal &ehas expired.'
+      - ''
+  HOOK_ABILITY:
+    USED:
+      - ''
+      - '&6▎ &aSuccessfully used &bHook&e!'
+      - '&6▎ &6%player% &ehas been teleported to your location.'
+      - ''
+    BEEN_HIT:
+      - ''
+      - '&6▎ &eYou have been hooked by &6%player%&e!'
+      - '&6▎ &eYou have been teleported to his location!'
+      - ''
+  COMBO_ABILITY:
+    USED:
+      - ''
+      - '&6▎ &eSuccessfully used <p>Combo&e.'
+      - ''
+    GAINED_EFFECT:
+      - ''
+      - '&6▎ &eReceived <p>%amount% &eseconds of strength!'
+      - ''
+  XRAY:
+    USED:
+      - ''
+      - '&6▎ &eSuccessfully used <p>XRay Mode&e in a radius of &c%radius%&e blocks.'
+      - ''
+    TARGET_ALERT:
+      - '&cYou are being revealed by the &6XRay Mode &cfor &6%seconds%s&c.'
+    ENDED:
+      - '&6▎ &eYour <p>XRay Mode &ehas expired.'
+  CRAFTING_CHAOS:
+    USED:
+      - ''
+      - '&6▎ &eSuccessfully used <p>Crafting Chaos &eon <p>%player%&e.'
+      - ''
+    BEEN_HIT:
+      - ''
+      - '&6▎ &eYou have been hit with an <p>Crafting Chaos&e.'
+      - ''
+    EXPIRED:
+      - ''
+      - '&6▎ &eYour <p>Crafting Chaos &ehas expire&6.'
+      - ''
+    MADE_OPEN:
+      - '&6▎ &eMade <p>%player% &eopen a crafting table!'
+  FOCUS_MODE:
+    USED:
+      - ''
+      - '&6▎ &eSuccessfully used <p>Focus Mode &eon <p>%player%&e.'
+      - ''
+    BEEN_HIT:
+      - ''
+      - '&6▎ &eYou have been focus moded on by <p>%player%&e.'
+      - ''
+    EXPIRED:
+      - ''
+      - '<p>▎ &eYour <p>Focus Mode &ehas expired.'
+      - ''
+    NO_LAST_HIT: '&cYou have no last hit to focus!'
+  LIGHTNING:
+    USED:
+      - ''
+      - '&6▎ &eSuccessfully used <p>Thor Power&e.'
+      - ''
+    STRUCK_LIGHTNING:
+      - '&c⁕ &eYou have struck <p>%player% &ewith lightning.'
+    STRUCK_BY_LIGHTNING:
+      - '&c⁕ &eYou have been struck with lightning!'
+    EXPIRED:
+      - ''
+      - '&6▎ &eYour <p>Thor Power &ehas expired.'
+      - ''
+  LUCKY_MODE:
+    USED:
+      - ''
+      - '<p>⁕ &eSuccessfully used <p>Lucky Mode&e.'
+      - '<p>⁕ &eYou have got <p>%amount% &emore damage.'
+      - ''
+    EXPIRED:
+      - ''
+      - '<p>⁕ &eYour <p>Lucky Mode &ehas expired.'
+      - ''
+  RAGE_BALL:
+    USED:
+      - ''
+      - '&6▎ &eSuccessfully used &6Rage Ball&e.'
+      - ''
+  SWITCHER:
+    USED:
+      - ''
+      - '&6▎ &eSuccessfully used <p>Switcher&e.'
+      - '&6▎ &eYou have switched places with <p>%player%&e.'
+      - ''
+    BEEN_HIT:
+      - ''
+      - '&6▎ &eYou have been hit by a <p>Switcher&e.'
+      - '&6▎ &eYou have switched places with &6%player%&e.'
+      - ''
+    TOO_FAR: '&cThat player is out of switcher range!'
+  TIMEWARP:
+    USED:
+      - ''
+      - '&6▎ &eSuccessfully used <p>TimeWarp&e.'
+      - '&6▎ &eYou will be teleported back in <p>%seconds%s&e.'
+      - ''
+    INVALID_PEARL: '&cYou have not thrown a pearl in the last &c&l%seconds%s&c.'
+  NINJA_ABILITY:
+    TELEPORTING:
+      - ''
+      - '&6▎ &eYou are teleporting to <p>%player% &ein <p>%seconds%s&e.'
+      - ''
+    TELEPORTING_ATTACKER:
+      - ''
+      - '&6▎ <p>%player% &ewill be teleported to you in <p>%seconds%s&e.'
+      - ''
+    TELEPORTED_SUCCESSFULLY:
+      - ''
+      - '&6▎ &eYou have teleported to <p>%player%&e.'
+      - ''
+    NO_LAST_HIT: '&cYou have no last hit!'
+  INVERSE_NINJA:
+    TELEPORTING:
+      - ''
+      - '&6▎ &eYou are teleporting <p>%player% to you &ein <p>%seconds%s&e.'
+      - ''
+    TELEPORTING_ATTACKER:
+      - ''
+      - '&6▎ <p>%player% &ewill teleport you in <p>%seconds%s&e.'
+      - ''
+    TELEPORTED_SUCCESSFULLY:
+      - ''
+      - '&6▎ &eYou have teleported <p>%player%&e.'
+      - ''
+    NO_LAST_HIT: '&cYou have no last hit!'
+  INVISIBILITY:
+    USED:
+      - ''
+      - '&6▎ &eSuccessfully used <p>Invisibility&e.'
+      - '&6▎ &eYour are now fully invisible with armor!'
+      - ''
+    EXPIRED: '&cYour invisibility effect has expired.'
+    DAMAGED: '&cYour invisibility effect has been taken because you were hit!'
+  GRAPPLE:
+    USED:
+      - ''
+      - '&6▎ &eSuccessfully used &bGrapple&e.'
+      - '&6▎ &eYou have been pulled towards the target block!'
+      - ''
+  BERSERK:
+    USED:
+      - ''
+      - '&6▎ &eSuccessfully used <p>Berserk&e.'
+      - '&6▎ &eYou will not be able to pot for &67s&e.'
+      - ''
+    DENY_POT: '&cYou cannot throw potions while you have active effects.'
+  CLOSE_CALL:
+    USED_SUCCESSFULLY:
+      - ''
+      - '&6▎ &eSuccessfully used &Neutralizer&e.'
+      - '&6▎ &eYou have received effects.'
+      - ''
+    USED_UNSUCCESSFULLY:
+      - '&cYou were not lower than 3.5 hearts.'
+  SWITCH_STICK:
+    USED:
+      - ''
+      - '<p>⁕ &eSuccessfully used <p>Switch Stick&e.'
+      - '<p>⁕ &eYou have a <p>20% &echance of turning them around.'
+      - ''
+    ACTIVATED:
+      - '&eYour <p>Switch Stick &eability has turned the player around.'
+  TELEPORT_EYE:
+    TELEPORTING:
+      - ''
+      - '<p>⁕ &eYou are teleporting to <p>%player% &ein <p>%seconds%s&e.'
+      - ''
+    TELEPORTING_ATTACKER:
+      - ''
+      - '<p>⁕ <p>%player% &ewill be teleported to you in <p>%seconds%s&e.'
+      - ''
+    TELEPORTED_SUCCESSFULLY:
+      - ''
+      - '<p>⁕ &eYou have teleported to <p>%player%&e.'
+      - ''
+    NO_LAST_HIT: '&cYou have no last hit!'
+    NOT_IN_LIQUID: '&cYou are not in liquid.'
+  SAMURAI_ABILITY:
+    TELEPORTING:
+      - ''
+      - '6▎ &eYou are teleporting to &6%player% &ein &6%seconds%s&e.'
+      - ''
+    TELEPORTING_ATTACKER:
+      - ''
+      - '&6▎ &6%player% &ewill be teleported to you in &6%seconds%s&e.'
+      - ''
+    TELEPORTED_SUCCESSFULLY:
+      - ''
+      - '&6▎ &eYou have teleported to &6%player%&e.'
+      - ''
+    NO_LAST_HIT: '&cYou have no last hit!'
+  MAGIC_ROCK:
+    USED:
+      - ''
+      - '<p>⁕ &eSuccessfully used <p>Magic Rock&e.'
+      - '<p>⁕ &eBase Height: <p>%height%'
+      - ''
+    NOT_FOUND: '&cYou are currently not in a base or the base is too tall!'
+  WEB_TRAIL:
+    CANNOT_USE:
+      - '&cYou can only use this ability inside faction claims.'
+    USED:
+      - ''
+      - '&6▎ &eSuccessfully used &6Web Trail&e.'
+      - '&6▎ &eYou will now leave behind webs for &6%time%s&e.'
+      - ''
+    ENDED:
+      - ''
+      - '&6▎ &eYour &6Web Trail &ehas ended!'
+      - ''
+  ARMOR_DECAY:
+    APPLIED:
+      - ''
+      - '&6▎ &ESuccessfully used <p>Armor Decay &eon <p>%player%&e.'
+      - ''
+    AFFECTED:
+      - ''
+      - '&6▎ &eSomeone used <p>Armor Decay &eon you, be careful.'
+      - ''
+    PROGRESS: "&7[&fArmor Decay&7] &fFaltan: &c%remaining%&f golpes"
+    RETURNED: '&6▎ &eYour armor has been restored!'
+    EFFECT_ENDED: "&a&l» &fEl efecto de Armor Decay en &a%player%&f ha terminado."
+    NO_ARMOR_ABOVE_ONE: '&cYou can only use Armor Decay on players with Protection above 1!'
+    NOT_FULL_DIAMOND: '&cYou can only use Armor Decay on players who are full diamond!'
+  ANTI_TRAP_STAR_ABILITY:
+    TELEPORTING:
+      - ''
+      - '<p>⁕ &eYou are teleporting to <p>%player% &ein <p>%seconds%s&e.'
+      - ''
+    TELEPORTING_ATTACKER:
+      - ''
+      - '<p>⁕ <p>%player% &ewill be teleported to you in <p>%seconds%s&e.'
+      - ''
+    TELEPORTED_SUCCESSFULLY:
+      - ''
+      - '<p>⁕ &eYou have teleported to <p>%player%&e.'
+      - ''
+    NO_LAST_HIT: '&cYou have no last hit!'
+  MED_KIT:
+    USED:
+      - ''
+      - '&6▎ &eSuccessfully used &6Med Kit&e.'
+      - '&6▎ &eReceived &6regeneration &eand &6absorption&e.'
+      - ''
+  ROCKET:
+    USED:
+      - ''
+      - '&6▎ &eSuccessfully used <p>Rocket&e.'
+      - ''
+  ANTI_TRAP_BEACON:
+    USED:
+      - ''
+      - '&6▎ &eSuccessfully used <p>AntiTrap Beacon&e.'
+      - ''
+    TEAM_MESSAGE:
+      - '&c%player% &ehas placed a anti trap beacon at &c%loc%&e.'
+    ENEMY_MESSAGE:
+      - '&cAnti trap beacon has been placed in your claim. You cannot place blocks for 30s or until you hit it 10 times.'
+    CANNOT_USE: '&cYou cannot do this while a beacon is placed near you.'
+    CANNOT_PLACE: '&cThe anti trap beacon cannot be used at this location.'
+    BLOCK_BELOW: '&cYou cannot place this where there is no block below.'
+    BLOCK_EMPTY: '&cYou cannot place this in a block that is not empty.'
+    BEACON_DESTROYED: '&cYour beacon has been destroyed!'
+  ANTI_PEARL:
+    USED:
+      - ''
+      - '&6▎ &eSuccessfully used <p>Anti Pearl&e.'
+      - '&6▎ &ePut <p>%player% &eon cooldown for <p>%seconds%s&e.'
+      - ''
+    BEEN_HIT:
+      - ''
+      - '&6▎ &eYou have been anti-pearled by &6%player%&e.'
+      - ''
+  POTION_COUNTER:
+    USED:
+      - ''
+      - '&6▎ &eSuccessfully used &6Potion Counter&e.'
+      - '&6▎ &e%player% has %potion_count% potions left.'
+      - ''
+    BEEN_HIT:
+      - ''
+      - '&6▎ &eYou have been hit with Potion Counter by &6%player%&e.'
+      - ''
+  ULTIMATE_ABILITY:
+    USED:
+      - ''
+      - '&6▎ &eSuccessfully used <p>Rush Ability&e.'
+      - ''
+  TANK_INGOT:
+    USED:
+      - ''
+      - '&6▎ &eSuccessfully used &6Lethal Mode&e.'
+      - '&6▎ &eYou received effects for &6%time%s &7(&cEnemies&7: &c%nearby%&7)'
+      - ''
+  TELEPORT_BOW:
+    TELEPORTING:
+      - ''
+      - '<p>⁕ &eYou are teleporting to <p>%player% &ein &e%seconds%s&e.'
+      - ''
+    TELEPORTING_ATTACKER:
+      - ''
+      - '<p>⁕ <p>%player% &ewill be teleported to you in <p>%seconds%s&e.'
+      - ''
+    TELEPORTED_SUCCESSFULLY:
+      - ''
+      - '<p>⁕ &eYou have teleported to <p>%player%&e.'
+      - ''
+  EXPLOSIVE_EGG:
+    USED:
+      - ''
+      - '<p>⁕ &eSuccessfully used <p>Explosive Egg&e.'
+      - ''
+  EFFECT_DISABLER:
+    IN_CLASS: '&cThis item cannot be used on classes.'
+    USED:
+      - ''
+      - '<p>⁕ &eSuccessfully used <p>Effect Disabler&e.'
+      - '<p>⁕ &eYou have cleared effects of <p>%player%&e.'
+      - ''
+    BEEN_HIT:
+      - ''
+      - '<p>⁕ &eYou have been hit with <p>Effect Disabler&e.'
+      - '<p>⁕ &eYour effects have been cleared by <p>%player%&e.'
+      - ''
+  ANTI_TRAP_HALO:
+    USED:
+      - ''
+      - '<p>⁕ &eSuccessfully used <p>Anti Trap Halo&e.'
+      - ''
+    EXPIRED:
+      - ''
+      - '<p>⁕ &eYour <p>Anti-Trap Halo &ehas expired.'
+      - ''
+    DENIED: '&cSomeone has used a anti trap halo near you.'
+  PORTABLE_BARD:
+    - ''
+    - '&6▎ &eSuccessfully used <p>Portable Bard&e.'
+    - ''
+  SCRAMBLER:
+    USED:
+      - ''
+      - '&6▎ &eSuccessfully used <p>Scrambler&e.'
+      - ''
+    SCRAMBLED:
+      - '&6▎ &ESuccessfully <p>scrambled &eplayer inventory!'
+    SCRAMBLED_BY:
+      - '&6⁕ &eYour inventory was <p>scrambled!'
+    EXPIRED:
+      - '&6▎ &eYour <p>Scrambler &eability has expired.'
+  EFFECT_STEALER:
+    NO_EFFECTS: '&cThat player doesnt have active effects to steal!'
+    STOLEN:
+      - ''
+      - '&6▎ &ESuccessfully used <p>Effect Stealer &eon <p>%player%&e.'
+      - ''
+    STOLEN_BY:
+      - ''
+      - '&6▎ &EYour effects has been <p>stolen &efor <p>10 seconds&e!'
+      - ''
+    RETURNED: '&6⁕ &cThe stolen effects has been returned to enemy!'
+    RESTORED: '&6▎ &eYour effects has been restored!'
+  REFLECTOR:
+    ENEMY_NEEDS_FULL_DIAMOND: '&4The target must be wearing full diamond armor to use this ability.'
+    APPLIED:
+      - '&4» &cYou have activated &4Reflector &con &4%player%&c!'
+      - '&4» &cNow, all damage you take from them will be reflected.'
+    AFFECTED:
+      - '&4» &cYou are now being &4REFLECTED &cby &4%player%&c!'
+      - '&4» &cAll damage you deal to them will be reflected back.'
+    REMOVED:
+      - '&4» &cThe &4Reflector&c effect has ended.'
+    TARGET_FREE:
+      - '&4» &cYou are no longer being reflected.'
+    PROGRESS: "&7[&fReflector&7] &fFaltan: &c%remaining%&f golpes"
+  FREEZER:
+    TITLE: '&3¡You are frozen!'
+    APPLIED:
+      - ''
+      - '&b▎ &aSuccessfully used &bFreezer &aon &b%player%'
+      - ''
+    AFFECTED:
+      - ''
+      - '&b▎ &cYou have been &bFROZEN&c! You cannot move.'
+      - ''
+    UNFROZEN:
+      - ''
+      - '&b▎ &aYou are no longer frozen.'
+      - ''
+    RELEASED:
+      - ''
+      - '&b▎ &a%player% &ais no longer frozen.'
+      - ''
+    ENEMY_NEEDS_FULL_DIAMOND: '&7The target must be wearing full diamond armor to use this ability.'
+    PROGRESS: "&4[&cFreezer&4] &4Hits needed: &c%hits%"
+    VICTIM_IMMUNE: "&4The target is immune. Time remaining: &c%time%&4 seconds."
+    ALREADY_FROZEN: "&4The target is already frozen."
+  GUARDIAN_ANGEL:
+    ACTIVATED:
+      - ''
+      - '&6▎ &ESuccessfully activated <p>Guardian Angel &efor <p>10 seconds&e.'
+      - ''
+    EXPIRED: '&6⁕ &eYour <p>Guardian Angel &eeffect has expired, be careful!'
+    HEALED: '&6▎ &eYour <p>Guardian Angel &eeffect has healed you!'
+  HELMET_REMOVER:
+    APPLIED:
+      - ''
+      - '&6▎ &ESuccessfully used <p>Helmet Remover &eon <p>%player%&e.'
+      - ''
+    AFFECTED:
+      - ''
+      - '&6▎ &eSomeone used <p>Helmet Remover &eon you, be careful.'
+      - ''
+    RETURNED: '&6▎ &eYour helmet has been restored!'
+    NO_DIAMOND_HELMET: '&cYou can only remove helmet on Diamonds Kit!'
+    PROGRESS: "&7You need &c%hits% &7more hits to remove their helmet!"
+  ABILITY_DISABLER:
+    USED:
+      - ''
+      - '<p>▎ &eSuccessfully used <p>Ability Disabler&e.'
+      - '<p>▎ &eAbilities are now disabled in a <p>8 block &eradius.'
+      - '<p>▎ &eAffected players will receive periodic warnings.'
+      - ''
+    EXPIRED:
+      - ''
+      - '<p>▎ &eYour <p>Ability Disabler &ehas expired.'
+      - '<p>▎ &eAbilities are now re-enabled in the area.'
+      - ''
+    DENIED: '&cAbilities are disabled in this area.'
+    RADIUS_MESSAGE:
+      - '<p>▎ &eYou are within an <p>Ability Disabler &eradius activated by <p>%player%&e.'
+      - '<p>▎ &eAll abilities are temporarily disabled in this area.'
+    COOLDOWN_APPLIED:
+      - ''
+      - '<p>▎ &eYour abilities have been disabled by <p>%player% &efor 20 seconds!'
+      - '<p>▎ &eYou cannot use any abilities during this time.'
+      - ''
+    COOLDOWN_EXPIRED:
+      - ''
+      - '<p>▎ &eYour ability cooldown has expired.'
+      - '<p>▎ &eYou can now use abilities again.'
+      - ''
+
+CHAT_LISTENER:
+  COOLDOWN: '&eYou need to wait &c%seconds% &ebefore chatting again!'
+  FORBIDDEN_MESSAGE: '&cYour message contains forbidden words!'
+
+WALL_LISTENER:
+  DENIED_EVENT_ENTRY: '&eYou need &c%members% &emembers or more online to enter &r%claim%&e.'
+  DENIED_CITADEL_ENTRY: '&eYou need &c%members% &emembers or more online to enter &r%claim%&e.'
+  DENIED_CONQUEST_ENTRY: '&eYou need &c%members% &emembers or more online to enter &r%claim%&e.'
+  DISQUALIFIED_ENTRY: '&cYou cannot enter &r%claim%&c while being disqualified.'
+
+SPAWNER_LISTENER:
+  CANNOT_PLACE: '&cYou cannot place spawners in the end or nether.'
+  CANNOT_BREAK: '&cYou cannot break spawners in the end or nether.'
+  CANNOT_BREAK_CROWBAR: '&cYou can only use crowbars to break spawners.'
+  PLACED_SPAWNER: '&eYou have placed a &a%type% &espawner.'
+  BREAK_SPAWNER: '&eYou have broken a &a%type% &espawner.'
+
+CROWBAR_LISTENER:
+  CANNOT_USE_NETHER: '&cYou cannot use crowbars in the nether.'
+  CANNOT_USE_END: '&cYou cannot use crowbars in the end.'
+  CANNOT_USE: '&cYou cannot use crowbars here.'
+  INSUFFICIENT_SPAWNER: '&cYou cannot break more spawners.'
+  INSUFFICIENT_END_FRAME: '&cYou cannot break more end frames.'
+  SPAWNER_NO_EXIST: '&cSpawner does not exist.'
+
+CUSTOM_SIGNS:
+  ELEVATOR_SIGNS:
+    INVALID_SIGN: '&cSigns cannot contain 2 or more air blocks above it.'
+    CANNOT_FIND_LOCATION: '&cCouldn''t find a safe location.'
+  KIT_SIGNS:
+    KIT_NOT_FOUND: '&eKit does not exist.'
+    INVENTORY_NOT_EMPTY: '&eYour inventory is not empty. &aClick here &eto confirm kit.'
+    HOVER: '&aClick to confirm kit.'
+    EQUIPPED: '&eYou have equipped the &a%kit% &ekit.'
+  ECONOMY_SIGNS:
+    WRONG_MAT: '&eThe material is wrong!'
+    WRONG_PRICE: '&eThe price is wrong!'
+    WRONG_AMOUNT: '&eThe amount is wrong!'
+    INSUFFICIENT_MONEY: '&cCannot Afford'
+    INSUFFICIENT_BLOCKS: '&cNot Carrying'
+    SOLD: '&cSold'
+    PURCHASED: '&aBought'
+  SUBCLAIM_SIGNS:
+    NOT_CREATABLE: '&cYou are not allowed to create a subclaim here.'
+    NOT_CHEST: '&cSubclaims only work on chests.'
+    ALREADY_SUBCLAIMED: '&cThat chest is already subclaimed.'
+    CREATED_SUBCLAIM: '&eCreated subclaim successfully.'
+    DENIED_OPEN: '&cYou are not allowed to open this subclaim.'
+    DENIED_BREAK: '&cYou are not allowed to break this subclaim.'
+  REFILL_SIGN:
+    COOLDOWN: '&cYou cannot use this for &c&l%time%&c.'
+    NOT_USE_SPAWN: '&cYou can only use refill command in spawn.'
+  QUICK_REFILL_SIGN:
+    COOLDOWN: '&cYou cannot use this for &c&l%time%&c.'
+    NOT_USE_SPAWN: '&cYou can only use quick refill command in spawn.'
+
+CITADEL:
+  DENIED_PEARL: '&eYou cannot use pearls in citadel!'
+  DENIED_TELEPORT: '&eYou cannot teleport inside citadel!'
+DISQUALIFIED:
+  DENIED_TELEPORT: '&eYou cannot teleport inside while being disqualified!'
+PVP_CLASSES:
+  EQUIPPED: '<p>Class: &l%class% &7--> &aEnabled!'
+  UNEQUIPPED: '<p>Class: &l%class% &7--> &cDisabled!'
+  LIMIT_REACHED: '&cYour faction has reached the limit for this class. (%limit%)'
+  ARCHER_CLASS:
+    BUFF_COOLDOWN: '&cYou cannot use this for &c&l%seconds%&c.'
+    CANNOT_MARK: '&cYou cannot mark other archers.'
+    NOT_DRAWN_BACK: '&e[&9Arrow Range&e(&c%distance%&e)] &cBow wasn''t fully drawn back. &9&l(%damage%)'
+    MARKED_PLAYER: '&e[&9Arrow Range&e(&c%distance%&e)] &6Marked player for %seconds% seconds. &9&l(%damage%)'
+    PLAYER_MARKED: '&c&lMarked! &eAn archer has shot you and marked you (+25% damage) for %seconds% seconds.'
+  BARD_CLASS:
+    BUFF_COOLDOWN: '&cYou cannot use this for &c&l%seconds%&c.'
+    INSUFFICIENT_ENERGY: '&cYou do not have enough energy for this! You need %energy% energy, but you only have %current%'
+    CANNOT_BARD_SAFEZONE: '&cYou cannot use bard effects while in a safezone.'
+    CANNOT_BARD_PVPTIMER: '&cYou cannot use bard effects while your pvp timer is active.'
+    CANNOT_KNOCKBACK_EVENT: '&cYou cannot use bard knockback in events.'
+    USED_EFFECT: '&eYou have given <p>%effect% &eto &c%affected% &eplayers.'
+    USED_EFFECT_NO_ENERGY: '&eYou have used the <p>%effect% &eeffect.' # For pocketbards
+    TEAM_EFFECT: '&6%player% &ehas given you <p>%effect% &eusing their bard buff.'
+  MAGE_CLASS:
+    BUFF_COOLDOWN: '&cYou cannot use this for &c&l%seconds%&c.'
+    INSUFFICIENT_ENERGY: '&cYou do not have enough energy for this! You need %energy% energy, but you only have %current%'
+    CANNOT_MAGE_SAFEZONE: '&cYou cannot use mage effects while in a safezone.'
+    CANNOT_MAGE_PVPTIMER: '&cYou cannot use mage effects while your pvp timer is active.'
+    USED_EFFECT: '&eYou have used the <p>%effect% &eeffect costing &c%energy% &eenergy.'
+  GHOST_CLASS:
+    QUARTZ_COOLDOWN: '&cYou cannot use this for &c&l%seconds%&c.'
+    CHANGED_MODE: '&eYou are now in &c%mode% &emode.'
+  ROGUE_CLASS:
+    BUFF_COOLDOWN: '&cYou cannot use this for &c&l%seconds%&c.'
+    BACKSTAB_COOLDOWN: '&cYou cannot use this for &c&l%seconds%&c.'
+    BACKSTAB_FAILED: '&cBackstab failed!'
+  MINER_CLASS:
+    INVIS_ENABLED: '&9Miner Invisibility &ehas been enabled.'
+    INVIS_DISABLED: '&9Miner Invisibility &ehas been removed.'
+  BOMBER_CLASS:
+    TNT_COOLDOWN: '&cYou cannot use this for &c&l%seconds%&c.'
+    MINECART_COOLDOWN: '&cYou cannot use this for &c&l%seconds%&c.'
+    CANNOT_TNT_EVENT: '&cYou cannot use the TNT on &6Event Zone&c!'
+    CANNOT_TNT_SAFEZONE: '&cYou cannot use TNT while in a &aSafezone&c.'
+    CANNOT_TNT_PVPTIMER: '&cYou cannot use TNT while your &aPvP timer&c is active.'
+  YETI_CLASS:
+    ICE_COOLDOWN: '&cYou cannot use this for &c&l%seconds%&c.'
+    USED_ICE: '&eYou have used the <p>%effect% &eeffect.'
+    SNOWBALL_COOLDOWN: '&cYouc cannot use this for &c&l%seconds%&c.'
+    CANNOT_ICE_EVENT: '&cYou cannot use this on &6Event Zone&c!'
+    CANNOT_ICE_SAFEZONE: '&cYou cannot use this while in a &aSafezone&c.'
+    CANNOT_ICE_PVPTIMER: '&cYou cannot use this while your &aPvP timer&c is active.'
+
+PORTAL_LISTENER:
+  CANNOT_TELEPORT: '&ePortal would have created in the territory of &r%team%&e.'
+  CANNOT_USE_NETHER: '&cYou recently died in nether and cannot go back for &c&l%time%&c.'
+  CANNOT_USE_END: '&cYou recently died in end and cannot go back for &c&l%time%&c.'
+
+DIAMOND_LISTENER:
+  FD_MESSAGE: '&f[FD] &b%player% has found &f%amount% &bdiamonds.'
+
+BORDER_LISTENER:
+  CANNOT_WALK: '&cYou cannot go past the world border.'
+  CANNOT_PLACE: '&cYou cannot place blocks past the world border.'
+  CANNOT_BREAK: '&cYou cannot break blocks past the world border.'
+  CANNOT_TELEPORT: '&cYou cannot teleport past the world border.'
+  CANNOT_INTERACT: '&cYou cannot interact with blocks past the world border.'
+
+END_LISTENER:
+  ENTERED: '&eYou have entered the end exit.'
+
+DEATHBAN_LISTENER:
+  KICK_MESSAGE: '&cYou have been Killed by %reason%. You can log back again in &e%time%'
+  REVIVED: '&aYou have revived!'
+  DENY_JOIN_MESSAGE: '&cYou are still deathbanned for Killed by %reason%. Remaining Time: &e%time%'
+  BYPASSED_DEATHBAN: '&eYou would have been deathbanned but have permission to bypass.'
+
+TEAM_LISTENER:
+  CLAIM_MESSAGE:
+    DEATHBAN_FORMAT:
+      NON_DEATHBAN: '&aNon-Deathban'
+      DEATHBAN: '&cDeathban'
+    MESSAGE:
+      - '&eEntering: %to-team% &e(%to-deathban%&e)'
+      - '&eLeaving: %from-team% &e(%from-deathban%&e)'
+  DAMAGER_ATTACK: '&eYou cannot attack &c%player% &ewhile they are in a safezone.'
+  DAMAGED_ATTACK: '&eYou cannot attack &c%player% &ewhile you are in a safezone.'
+  BLOCK_PLACE: '&eYou cannot build in the territory of &r%team%&e.'
+  CANNOT_PLACE_LIQUID: '&cYou cannot place liquids in the territory of &r%team%&c.'
+  BLOCK_DIG: '&eYou cannot break in the territory of &r%team%&e.'
+  BLOCK_INTERACT: '&eYou cannot do this in the territory of &r%team%&e.'
+  DENY_TELEPORT_TO_SPAWN: '&cYou cannot pearl in to spawn.'
+  DENY_ENDERPEARL_IN_SPAWN: '&cYou cannot use an enderpearl in spawn.'
+
+PLAYER_TEAM_LISTENER:
+  ALLY_HURT: '&eYou cannot hurt &9%player%&e.'
+  ALLY_ONLINE: '&9Ally Online: &f%player%'
+  ALLY_OFFLINE: '&cAlly Offline: &f%player%'
+  MEMBER_HURT: '&eYou cannot hurt &a%role%player%&e.'
+  MEMBER_ONLINE: '&aMember Online: &f%player%'
+  MEMBER_OFFLINE: '&cMember Offline: &f%player%'
+  MEMBER_DEATH:
+    - '&cMember Death: &f%player%'
+    - '&cDTR: &f%dtr%'
+  TEAM_MANAGE:
+    CANCELLED: '&cTeam manage cancelled.'
+    NOT_ALPHANUMERICAL: '&cThe name must be alphanumerical!'
+    MIN_LENGTH: '&eTeam name must be atleast &c%amount% &eletters!'
+    MAX_LENGTH: '&eTeam name cannot be more than &c%amount% &eletters!'
+    RENAMED: '&eYou have force renamed &c%team% &eto &9%newname%&e.'
+    CHANGED_BALANCE: '&eYou have set the balance of &c%team% &eto &9$%balance%&e.'
+    CHANGED_DTR: '&eYou have set the DTR of &c%team% &eto &b%dtr%&e.'
+    SET_REGEN: '&eYou have put &c%team% &eon DTR regen for &b%time%&e.'
+    CHANGED_POINTS: '&eYou have set the points of &c%team% &eto &b%points%&e.'
+
+KOTH_EVENTS:
+  SOUND_START: 'NOTE.PLING' #DEFAULT "PORTAL_TRAVEL", USE 1.8.8 SPIGOT SOUNDS
+  BROADCAST_START:
+    - ''
+    - '&8⬛&e⬛⬛⬛⬛⬛⬛⬛&8⬛'
+    - '&e⬛⬛⬛⬛⬛⬛⬛⬛⬛'
+    - '&e⬛&6⬛&e⬛&6⬛&e⬛&6⬛&e⬛&6⬛&e⬛'
+    - '&e⬛&6⬛⬛⬛⬛⬛⬛⬛&e⬛      %color%koth% '
+    - '&e⬛&6⬛&b⬛&6⬛&b⬛&6⬛&b⬛&6⬛&e⬛      &ehas been started'
+    - '&e⬛&6⬛&e⬛&6⬛&e⬛&6⬛&e⬛&6⬛&e⬛      &b%time%'
+    - '&e⬛⬛⬛⬛⬛⬛⬛⬛⬛'
+    - '&e⬛⬛⬛⬛⬛⬛⬛⬛⬛'
+    - '&8⬛&e⬛⬛⬛⬛⬛⬛⬛&8⬛'
+  BROADCAST_START_TITLE: '%color%koth% &9KOTH'
+  BROADCAST_START_SUBTITLE: '&7Can be contested'
+  BROADCAST_END:
+    - '&6[KingOfTheHill] %color%koth% &ehas been controlled by &6[&r%team%&6] &r%player% &eafter &b%uptime% &eof uptime.'
+  BROADCAST_LOST:
+    - '&6[KingOfTheHill] &c%player% &ehas lost control of %color%koth%&e.'
+  TEAM_CONTROLLING:
+    - '&6[KingOfTheHill] &eYour team is controlling %color%koth%&e.'
+  PLAYER_CONTROLLING:
+    - '&6[KingOfTheHill] &eAttempting to control %color%koth%&e.'
+  TEAM_RECEIVED_POINTS:
+    - '&6[KingOfTheHill] &eYour team has been awarded &c%points% &epoints.'
+  GLOBAL_COOLDOWN_DENY_PVP: "&cYou can not attack while you have Global Cooldown active!"
+  HIT_KNOCKBACK: '&cYou cannot attack players with Knockback enchant!'
+  PLAYER_CANNOT_CAPTURE_WHILE_DISQUALIFIED: '&cYou cannot cap koths while being disqualified.'
+  PLAYER_CANNOT_ENTER_CAPZONE_WHILE_DISQUALIFIED: '&cYou cannot enter the capzone while being disqualified.'
+
+CONQUEST_EVENTS:
+  BROADCAST_START:
+    - '&e[Conquest] &9Conquest &ecan be contested now. (Points: %maxpoints%)'
+  BROADCAST_DEATH:
+    - '&e[Conquest] &6Your team has lost &c%deathpoints% points because of %player%''s death! &b(%points%/%maxpoints%)'
+  BROADCAST_CAP:
+    - '&e[Conquest] &6%team% captured %color%capzone% &6and earned a point! &b(%points%/%maxpoints%)'
+  BROADCAST_END:
+    - '&e[Conquest] &9%team% &6has won conquest!'
+
+KING_EVENTS:
+  BROADCAST_START:
+    - '&4[KillTheKing] &eKill the king has &astarted&e! Kill &9%player% &efor &c%reward%!'
+  BROADCAST_END:
+    - '&4[KillTheKing] &eKill the king has been stopped.'
+  BROADCAST_KILL:
+    - '&4[KillTheKing] &e&9%player% &ehas been killed. &eCongratulations to &c%killer%&e!'
+    - '&4[KillTheKing] &eKing survived for: &c%time%&e.'
+
+STAFF_MODE:
+  DENY_BREAK: '&cYou cannot break blocks while in staffmode.'
+  DENY_PLACE: '&cYou cannot place blocks while in staffmode.'
+  DENY_DROP: '&cYou cannot drop items while in staffmode.'
+  COMBAT_TP_EMPTY: '&cCould not find players in combat.'
+  NOT_ALLOWED_COMMAND: '&cYou are not allowed to use this command while frozen.'
+  HIT_DENIED: '&cYou cannot damage other players while frozen!'
+  HIT_FROZEN: '&eYou cannot hit &c%player% &eas they are currently frozen!'
+  ENABLED_STAFF: '<p>Mod Mode: &aEnabled'
+  ENABLED_STAFF_TITLE: '<p>&lMod Mode'
+  ENABLED_STAFF_SUB: '&aEnabled'
+  DISABLED_STAFF: '<p>Mod Mode: &cDisabled'
+  ENABLED_HSTAFF: '&4[H] <p>Mod Mode: &aEnabled'
+  DISABLED_HSTAFF: '&4[H] <p>Mod Mode: &cDisabled'
+  DISABLED_STAFF_TITLE: '<p>&lMod Mode'
+  DISABLED_STAFF_SUB: '&cDisabled'
+  ENABLED_STAFF_TARGET: '<p>Mod Mode: &aEnabled &7(%player%)'
+  DISABLED_STAFF_TARGET: '<p>Mod Mode: &cDisabled &7(%player%)'
+  ENABLED_HSTAFF_TARGET: '&4[H] <p>Mod Mode: &aEnabled &7(%player%)'
+  DISABLED_HSTAFF_TARGET: '&4[H] <p>Mod Mode: &cDisabled &7(%player%)'
+  ENABLED_VANISH: '<p>Vanish: &aEnabled'
+  ENABLED_VANISH_TITLE: '<p>&lVanish'
+  ENABLED_VANISH_SUB: '&aEnabled'
+  DISABLED_VANISH: '<p>Vanish: &cDisabled'
+  ENABLED_HVANISH: '&4[H] <p>Vanish: &aEnabled'
+  DISABLED_HVANISH: '&4[H] <p>Vanish: &cDisabled'
+  DISABLED_VANISH_TITLE: '<p>&lVanish'
+  DISABLED_VANISH_SUB: '&cDisabled'
+  ENABLED_VANISH_TARGET: '<p>Vanish: &aEnabled &7(%player%)'
+  DISABLED_VANISH_TARGET: '<p>Vanish: &cDisabled &7(%player%)'
+  ENABLED_HVANISH_TARGET: '&4[H] <p>Vanish: &aEnabled &7(%player%)'
+  DISABLED_HVANISH_TARGET: '&4[H] <p>Vanish: &cDisabled &7(%player%)'
+  JOIN_MESSAGE:
+    - ''
+    - '&eWelcome back &f%rank-prefix%%rank-color%%player%&e.'
+    - '&eYou have joined with &6Staff Permissions'
+    - ''
+  VANISH_INTERVAL_MESSAGE:
+    - ''
+    - '<p>&lYou are currently frozen!'
+    - '&cJoin our teamspeak: <p>ts.cyruspvp.net'
+    - ''
+
+STAFF_LOGS:
+  VANISH_OFF:
+    - '&4[H] &c%rank-prefix%%rank-color%%player% &ehas &cdisabled &eVanish.'
+  VANISH_ON:
+    - '&4[H] &c%rank-prefix%%rank-color%%player% &ehas &aenabled &eVanish.'
+  MODMODE_ON:
+    - '&4[H] &c%rank-prefix%%rank-color%%player% &ehas &aenabled &eMod Mode.'
+  MODMODE_OFF:
+    - '&4[H] &c%rank-prefix%%rank-color%%player% &ehas &cdisabled &eMod Mode.'
+  HVANISH_OFF:
+    - '&4[H] &c%rank-prefix%%rank-color%%player% &ehas &cdisabled &eHead Vanish.'
+  HVANISH_ON:
+    - '&4[H] &c%rank-prefix%%rank-color%%player% &ehas &aenabled &eHead Vanish.'
+  HMODMODE_ON:
+    - '&4[H] &c%rank-prefix%%rank-color%%player% &ehas &aenabled &eHead Mod Mode.'
+  HMODMODE_OFF:
+    - '&4[H] &c%rank-prefix%%rank-color%%player% &ehas &cdisabled &eHead Mod Mode.'
+  FORCEJOIN:
+    - '&4[H] &c%player% &ehas force joined &c%team%&e.'
+  ATTACK_SHARPNESS:
+    - '&4[H] &c%rank-prefix%%rank-color%%player% &eis attacking with &c%item% &esharpness level.'
+  RECEIVED_EFFECT:
+    - '&4[H] &c%rank-prefix%%rank-color%%player% &ehas received &c%effect% &elevel &c%level%&e.'
+  CHANGED_MEMBERS:
+    - '%4[H] &c%staff% &cchanged the map members size to &c%value%'
+  CHANGED_ALLIES:
+    - '%4[H] &c%staff% &cchanged the map allies size to &c%value%'
+
+LIMITER_LISTENER:
+  DENIED_POTION: '&cThis potion has been prohibited.'
+
+INVINCIBILITY:
+  DAMAGER_ATTACK: '&eYou cannot attack &c%player% &ewhile you are invincible.'
+  DAMAGED_ATTACK: '&eYou cannot attack &c%player% &ewhile they are invincible.'
+  CANNOT_TELEPORT: '&eYou cannot teleport into &r%claim% &ewhile you are invincible.'
+  CANNOT_ENTER: '&eYou cannot enter &r%claim% &ewhile you are invincible.'
+  DENIED_PICKUP: '&cYou cannot pickup that item while you are invincible.'
+  DENIED_USE: '&cYou cannot use that item while you are invincible.'
+  DENIED_END_ENTRY: '&cYou cannot enter The End while you are invincible.'
+
+PVP_TIMER:
+  DAMAGER_ATTACK: '&eYou cannot attack &c%player% &ewith pvptimer.'
+  DAMAGED_ATTACK: '&eYou cannot attack &c%player% &ewhile they have pvptimer.'
+  CANNOT_TELEPORT: '&eYou cannot teleport into &r%claim% &ewhile you have pvptimer.'
+  CANNOT_ENTER: '&eYou cannot enter &r%claim% &ewith pvptimer.'
+  DENIED_PICKUP: '&cYou cannot pickup that item with pvptimer.'
+  DENIED_USE: '&cYou cannot use that item with pvptimer.'
+  DENIED_END_ENTRY: '&cYou cannot enter The End with pvptimer.'
+
+TEAM_REGEN_TIMER:
+  REGENERATING: '&eYour team has regenerated &a+%dtr% &eDTR.' # The message sent every 1min
+  FINISHED_REGENERATING: '&e(Your team has fully regenerated!)'
+
+ANTICLEAN_TIMER:
+  CANNOT_HIT_DAMAGED: '&c%team% has anti-clean with %team2%'
+  CANNOT_HIT_DAMAGER: '&cYou may only hit players from %team% due to anti-clean'
+  STATS_MESSAGE:
+    HITS_MESSAGE: '&f%player% &7(%hits% hits)'
+    EMPTY_HITS: '&fNone'
+    LINES:
+      - '&7&m---------------------'
+      - '<p>Top AntiClean Stats'
+      - '&6#1. %tophits1%'
+      - '&2#2. %tophits2%'
+      - '&7#3. %tophits3%'
+      - ''
+      - '<p>Your AntiClean Stats'
+      - '&eHits: &f%hits%'
+      - '&eGolden Apples: &f%apples%'
+      - '&ePotions Used: &f%potions%'
+      - '&eArcher Tags: &f%archertags%'
+      - '&eDamage Dealt: &f%damage%'
+      - ''
+      - '&cTeam Total Hits: &f%totalhits%'
+      - '&cTeam Total damage: &f%totaldamage%'
+      - '&7&m---------------------'
+
+COMBAT_TIMER:
+  CANNOT_TELEPORT: '&eYou cannot teleport into &aSpawn &ewhile you are spawn tagged.'
+  CANNOT_ENTER: '&eYou cannot enter &aSpawn &ewhile you are spawn tagged.'
+  DENIED_END_ENTRY: '&eYou cannot enter the end while spawn tagged.'
+  TAGGED: '&eYou have been spawn tagged for &c%seconds% &eseconds.'
+  BLOCKED_COMMAND: '&cThis command has been blocked while in combat.'
+
+SOTW_TIMER:
+  STARTED_SOTW:
+    - ''
+    - '&8⬛&7⬛⬛⬛⬛⬛⬛⬛&8⬛'
+    - '&7⬛&a⬛⬛⬛⬛⬛⬛⬛&7⬛'
+    - '&7⬛&a⬛&7⬛⬛⬛⬛⬛⬛⬛      &a&lSTART OF THE WORLD'
+    - '&7⬛&a⬛⬛⬛⬛⬛⬛⬛&7⬛      &fhas been started'
+    - '&7⬛⬛⬛⬛⬛⬛⬛&a⬛&7⬛      <p>&nstore.cyruspvp.net'
+    - '&7⬛&a⬛⬛⬛⬛⬛⬛⬛&7⬛'
+    - '&8⬛&7⬛⬛⬛⬛⬛⬛⬛&8⬛'
+    - ''
+  EXTENDED_SOTW:
+    - ''
+    - '&8⬛&7⬛⬛⬛⬛⬛⬛⬛&8⬛'
+    - '&7⬛&6⬛⬛⬛⬛⬛⬛⬛&7⬛'
+    - '&7⬛&6⬛&7⬛⬛⬛⬛⬛⬛⬛      &a&lSTART OF THE WORLD'
+    - '&7⬛&6⬛⬛⬛⬛⬛⬛⬛&7⬛      &fhas been extended'
+    - '&7⬛⬛⬛⬛⬛⬛⬛&6⬛&7⬛      <p>&nstore.cyruspvp.net'
+    - '&7⬛&6⬛⬛⬛⬛⬛⬛⬛&7⬛'
+    - '&8⬛&7⬛⬛⬛⬛⬛⬛⬛&8⬛'
+    - ''
+  ENDED_SOTW:
+    - ''
+    - '&8⬛&7⬛⬛⬛⬛⬛⬛⬛&8⬛'
+    - '&7⬛&c⬛⬛⬛⬛⬛⬛⬛&7⬛'
+    - '&7⬛&c⬛&7⬛⬛⬛⬛⬛⬛⬛      &a&lSTART OF THE WORLD'
+    - '&7⬛&c⬛⬛⬛⬛⬛⬛⬛&7⬛      &fhas ended'
+    - '&7⬛⬛⬛⬛⬛⬛⬛&c⬛&7⬛      <p>&nstore.cyruspvp.net'
+    - '&7⬛&c⬛⬛⬛⬛⬛⬛⬛&7⬛'
+    - '&8⬛&7⬛⬛⬛⬛⬛⬛⬛&8⬛'
+    - ''
+  DAMAGER_ATTACK: '&eYou cannot attack &c%player% &ewhile &aSOTW &eis active!'
+  DAMAGED_ATTACK: '&eYou cannot attack &c%player% &ewhile they have not disabled SOTW timer.'
+
+EOTW_TIMER:
+  DEATHBANNED:
+    - '&cYou cannot join this server during EOTW.'
+    - '&cCome back next map!'
+  STARTED_PRE_EOTW:
+    - ''
+    - '&4&lEOTW &cwill be started soon.'
+    - '&eTeams will be raidable.'
+    - '&eEOTW koth will be active.'
+    - ''
+  STARTED_EOTW:
+    - ''
+    - '&4&lEOTW &chas started!'
+    - '&eTeams are now raidable.'
+    - '&eEOTW koth is now active.'
+    - ''
+  CANCELLED_EOTW:
+    - ''
+    - '&4&lEOTW has been cancelled.'
+    - ''
+
+PURGE_TIMER:
+  STARTED_PURGE:
+    - ''
+    - '&4&lPurge &chas started!'
+    - '&eYou can now interact'
+    - '&ewith storages!'
+    - ''
+  STARTED_TITLE: "&4&LPurge"
+  STARTED_SUBTITLE:  "&7Has been started for %time%"
+  STARTED_SOUND: "NOTE_PLING" #DEFAULT, USE 1.8.8 SPIGOT SOUNDS
+  CANCELLED_PURGE:
+    - ''
+    - '&4&lPurge has been cancelled.'
+    - ''
+
+STUCK_TIMER:
+  DAMAGED: '&eYour &4&lStuck &etimer has been cancelled because you took damage.'
+  MOVED: '&eYour &4&lStuck &etimer has been cancelled because you moved more than &c%amount% &eblocks'
+  NO_SAFE_LOC: '&cWe could not find a safe location, so we logged you out safely. Contact a staff member!'
+  TELEPORTED: '&aYou have been teleported to a safe location.'
+
+HQ_TIMER:
+  DAMAGED: '&eWarping to hq has been cancelled because you took damage.'
+  MOVED: '&eWarping to hq has been cancelled because you moved a block.'
+  WARPED: '&eWarped to <p>%team%''s &ehq.'
+
+CAMP_TIMER:
+  DAMAGED: '&eCamp timer has been cancelled because you took damage.'
+  MOVED: '&eCamp timer has been cancelled because you moved a block.'
+  WARPED: '&eCamping <p>%team%''s &eHQ.'
+
+SPAWN_TIMER:
+  DAMAGED: '&eWarping to spawn has been cancelled because you took damage.'
+  MOVED: '&eWarping to spawn has been cancelled because you moved a block.'
+  WARPED: '&eWarped to <p>Spawn&e.'
+
+ENDERPEARL_TIMER:
+  COOLDOWN: '&cYou cannot use this for &c&l%seconds%&c.'
+
+APPLE_TIMER:
+  COOLDOWN: '&cYou cannot use this for &c&l%seconds%&c.'
+
+GAPPLE_TIMER:
+  COOLDOWN: '&cYou cannot use this for &c&l%seconds%&c.'
+  ADDED_COOLDOWN:
+    - '&2&l███&0&l██&2&l███'
+    - '&2&l███&0&l█&2&l████'
+    - '&2&l██&6&l████&2&l██ &6Super Golden Apple:'
+    - '&2&l█&6&l██&f&l█&6&l███&2&l█  &2Consumed'
+    - '&2&l█&6&l█&f&l█&6&l████&2&l█ &eCooldown Remaining:'
+    - '&2&l█&6&l██████&2&l█   &9%cooldown%'
+    - '&2&l█&6&l██████&2&l█'
+    - '&2&l██&6&l████&2&l██'
+
+ADMIN_TEAM_COMMAND:
+  STATUS_IF_DISQUALIFIED: ' &c✘'
+  TEAM_ADDSTRIKE:
+    USAGE: '&cUsage: /team addstrike <team> <amount>'
+    ADDSTRIKE: '&eAdded &c%total_strikes%&e strikes to &9%team%&e.'
+  TEAM_SETSTRIKE:
+    USAGE: '&cUsage: /team setstrike <team> <amount>'
+    SETSTRIKES: '&eSet the strikes of &9%team% &eto &c%amount%&e.'
+  TEAM_DISQUALIFY:
+    USAGE: '&cUsage: /team disqualify <team>'
+    SETDISQUALIFY: '&eSuccessfully disqualified &9%team%&e.'
+    UNDODISQUALIFY: '&eSuccessfully deleted the disqualification of &9%team%&e.'
+  TEAM_SETBALANCE:
+    USAGE: '&cUsage: /team setbalance <team> <amount>'
+    SETBAL: '&eSet the balance of &9%team% &eto &c$%amount%&e.'
+  TEAM_SETPOINTS:
+    USAGE: '&cUsage: /team setpoints <team> <amount>'
+    SETPOINTS: '&eSet the points of &9%team% &eto &c%amount%&e.'
+  TEAM_SETRAIDABLEPOINTS:
+    USAGE: '&cUsage: /team setraidablepoints <team> <amount>'
+    SETPOINTS: '&eSet the raidable points of &9%team% &eto &c%amount%&e.'
+  TEAM_SETCAPTURES:
+    USAGE: '&cUsage: /team setcaptures <team> <amount>'
+    SETCAPTURES: '&eSet the captures of &9%team% &eto &c%amount%&e.'
+  TEAM_SETDTR:
+    USAGE: '&cUsage: /team setdtr <team> <amount>'
+    SETDTR: '&eSet the dtr of &9%team% &eto &c%amount%&e.'
+  TEAM_TELEPORT:
+    USAGE: '&cUsage: /team teleport <team>'
+    NO_HQ: '&cTeam does not have an HQ set.'
+    TELEPORTED: '&eWarped to <p>%team%''s &eHQ.'
+  TEAM_SETREGEN:
+    USAGE: '&cUsage: /team setregen <team> <time>'
+    SET_REGEN: '&eYou have put &9%team% &eon regen for &c%time%&e.'
+    BROADCAST_SET: '&eYour team regen has been set to &c%time%&e.'
+  TEAM_FORCELEADER:
+    USAGE: '&cUsage: /team forceleader <team> <player>'
+    NOT_IN_TEAM: '&cThat player has to be in the team to be leader.'
+    ALREADY_LEADER: '&cThat player is already the leader.'
+    BROADCAST_CHANGE: '&eYour team leader has been force changed to &c%player%&e.'
+  TEAM_FORCEJOIN:
+    USAGE: '&cUsage: /team forcejoin <team>'
+    ALREADY_IN_TEAM: '&cYou cannot join a team while you are already in one.'
+    BROADCAST_FORCEJOIN: '&9%player% &ehas force joined the team.'
+  TEAM_FORCEKICK:
+    USAGE: '&cUsage: /team forcekick <player>'
+    NOT_IN_TEAM: '&cThat player is not in a team.'
+    TOO_LITTLE_MEMBER: '&cThat team only has 1 member. Use /f forcedisband instead.'
+    FORCEKICKED: '&eYou have been force kicked from &9%team%&e.'
+    BROADCAST_FORCEKICK: '&9%player% &ehas been force kicked from the team.'
+  TEAM_FORCEDISBAND:
+    USAGE: '&cUsage: /team forcedisband <team>'
+    BROADCAST_DISBAND: '&c&lYour team has been force disbanded.'
+    BROADCAST_DISBAND_ALL: '&eTeam &9%team% &ehas been &cdisbanded &eby &f%player%&e.'
+  TEAM_FORCEPROMOTE:
+    USAGE: '&cUsage: /team forcepromote <player>'
+    NOT_IN_TEAM: '&eThe player &c%player% &eis not in a team.'
+    HIGHEST_ROLE: '&cYou cannot promote that player further.'
+    PROMOTED_BROADCAST: '&c%player% &ehas been force promoted to &9%role%&e.'
+    FORCE_PROMOTED: '&eYou have force promoted &c%player% &eto &9%role%&e.'
+  TEAM_FORCEDEMOTE:
+    USAGE: '&cUsage: /team forcedemote <player>'
+    NOT_IN_TEAM: '&eThe player &c%player% &eis not in a team.'
+    LOWEST_ROLE: '&cYou cannot demote that player further.'
+    CANNOT_DEMOTE_LEADER: '&cYou cannot demote the leader.'
+    DEMOTED_BROADCAST: '&c%player% &ehas been force demoted to &9%role%&e.'
+    FORCE_DEMOTED: '&eYou have force demoted &c%player% &eto &9%role%&e.'
+  TEAM_TELEPORTHERE:
+    USAGE: '&cUsage: /team teleporthere <team>'
+    EMPTY: '&eThere is no online players in that team.'
+    TELEPORTED: '&eYou have teleported &c%size% members &eto you.'
+  TEAM_ADD_DTR:
+    USAGE: '&cUsage: /team addtr <team> <amount>'
+    ADDED_DTR: '&eAdded &a+%dtr% &edtr to &9%team%&e.'
+  TEAM_FORCE_RENAME:
+    USAGE: '&cUsage: /team forcerename <team> <name>'
+    ALREADY_NAME: '&eThat team is already named &c%name%&e.'
+    NOT_ALPHANUMERICAL: '&cThe name must be alphanumerical!'
+    RENAMED: '&eYou have force renamed &c%team% &eto &9%newname%&e.'
+
+RAID_ANNOUNCER:
+  ENABLED: true
+  MESSAGE:
+    - ""
+    - "&5⁕ &fFaction <p>%faction% &fis now raidable! &7[&4%dtr%&7]"
+    - "&5⁕ <f>RAIDABLE<f>"
+    - ""
+
+MOUNTAIN_COMMAND:
+  USAGE:
+    - '&7&m---------------------'
+    - '<p>&lMountain Usage'
+    - '&c/mountain respawn <name>'
+    - '&c/mountain reload <name>'
+    - '&c/mountain editloot'
+    - '&7&m---------------------'
+  MOUNTAIN_NOT_FOUND: '&eThe mountain &c%mountain% &edoes not exist.'
+  MOUNTAIN_RESPAWN:
+    USAGE: '&cUsage: /mountain respawn <name>'
+    RESPAWNED: '&eRespawned all the blocks for &c%mountain%&e.'
+  MOUNTAIN_RELOAD:
+    USAGE: '&cUsage: /mountain reload <name>'
+    RELOADED: '&eReloaded all the blocks for &c%mountain%&e.'
+  MOUNTAIN_EDITLOOT:
+    USAGE: '&cUsage: /mountain editloot <name>'
+
+AUTOSOTW_COMMAND:
+  USAGE:
+    - '&7&m---------------------'
+    - '<p>&lAutosotw Usage'
+    - ''
+    - '&c/autosotw start'
+    - '&c/autosotw cancel'
+    - '&c/autosotw list'
+    - '&c/autosotw add <start/cancel> <command>'
+    - '&c/autosotw remove <start/cancel> <number>'
+    - '&7&m---------------------'
+  START_ADMIN: "&aSOTW started automatically. Commands executed."
+  CANCEL_ADMIN: "&cSOTW cancelled automatically. Commands executed."
+  NO_START_COMMANDS: "&cNo start commands configured."
+  NO_CANCEL_COMMANDS: "&cNo cancel commands configured."
+  START_MESSAGE: "&aSOTW started! Good luck!"
+  CANCEL_MESSAGE: "&cSOTW cancelled by admin."
+  LIST_HEADER: "&7&m--------------------------------"
+  START_COMMANDS_HEADER: "&b&lSOTW Start Commands:"
+  CANCEL_COMMANDS_HEADER: "&c&lSOTW Cancel Commands:"
+  COMMAND_FORMAT: "&7{number}. &f{command}"
+  ADD_USAGE: "&cUsage: &f/autosotw add <start/cancel> <command>"
+  REMOVE_USAGE: "&cUsage: &f/autosotw remove <start/cancel> <number>"
+  INVALID_CATEGORY: "&cInvalid category. Use 'start' or 'cancel'."
+  INVALID_NUMBER: "&cPlease enter a valid number."
+  INVALID_INDEX: "&cInvalid number. Use '/autosotw list' to see available commands."
+  COMMAND_ALREADY_EXISTS: "&cThis command already exists in this category."
+  COMMAND_ADDED: "&aAdded command to &e{category}&a: &f{command}"
+  COMMAND_REMOVED: "&aRemoved command from &e{category}&a: &f{command}"
+
+SYSTEM_TEAM_COMMAND:
+  USAGE:
+    - '&7&m---------------------'
+    - '&c&lSystem Team Usage'
+    - '&c/systemteam create <name> <type>'
+    - '&c/systemteam delete <name>'
+    - '&c/systemteam claim <name>'
+    - '&c/systemteam unclaim <name>'
+    - '&c/systemteam sethq <name>'
+    - '&c/systemteam ability <name>'
+    - '&c/systemteam setcolor <name> <color>'
+    - '&c/systemteam list'
+    - '&7&m---------------------'
+  SYSTEM_TEAM_CREATE:
+    USAGE: '&cUsage: /systeam create <name> <type>'
+    TYPE_INVALID: '&eThe type &c%type% &eis invalid!'
+    CREATED_TEAM: '&eSystem team &9%team% &ehas been created.'
+  SYSTEM_TEAM_DELETE:
+    USAGE: '&cUsage: /systeam delete <name>'
+    DELETED_TEAM: '&eSystem team &9%team% &ehas been deleted.'
+  SYSTEM_TEAM_CLAIM:
+    USAGE: '&cUsage: /systeam claim <name>'
+    INVENTORY_FULL: '&cYour inventory is full!'
+    CANCELLED_SELECTION: '&cCancelled claim selection.'
+    INSUFFICIENT_SELECTIONS: '&cYou have not selected both corners of your claims yet.'
+    CLAIMED_SUCCESSFUL: '&eYou have claimed successfully.'
+  SYSTEM_TEAM_SETHQ:
+    USAGE: '&cUsage: /systeam sethq <name>'
+    SET_HQ: '&eSet the hq of &r%team% &eto &9%location%&e.'
+  SYSTEM_TEAM_UNCLAIM:
+    USAGE: '&cUsage: /systeam unclaim <name>'
+    NOT_IN_CLAIM: '&eYou have to be in &c%team%''s &eclaim!'
+    UNCLAIMED: '&eYou have unclaimed &c%team%''s &eland.'
+  SYSTEM_TEAM_ABILITY:
+    USAGE: '&cUsage: /systeam ability <name>'
+    DISABLED: '&eYou have &cdisabled &eabilities in &9%team%&e.'
+    ENABLED: '&eYou have &aenabled &eabilities in &9%team%&e.'
+  SYSTEM_TEAM_LIST:
+    LIST:
+      - '&7&m---------------------'
+      - '<p>&lSystem Teams'
+      - '%systemteams%'
+      - '&7&m---------------------'
+    TEAM_FORMAT: '%team% &7- &f%hq%'
+  SYSTEM_TEAM_SET_COLOR:
+    USAGE: '&cUsage: /team setcolor <team> <color>'
+    SET_COLOR: '&eYou have set &9%team%''s &ecolor to %color%Color&e.'
+
+TEAM_COMMAND:
+  USAGE:
+    - '&7&m---------------------'
+    - '&9Leader Commands'
+    - '&e/team disband &7- &fDisband your team.'
+    - '&e/team leader <member> &7- &fChange your teams leader.'
+    - '&e/team rename <name> &7- &fRename your team.'
+    - ''
+    - '&9Co-Leader Commands'
+    - '&e/team claim &7- &fStart the claiming process.'
+    - '&e/team unclaim &7- &fUnclaim your team claim.'
+    - '&e/team ally <name> &7- &fAlly another team.'
+    - '&e/team unally <name> &7- &fUnally another team.'
+    - '&e/team promote <member> &7- &fPromote a players role.'
+    - '&e/team demote <member> &7- &fDemote a players role.'
+    - '&e/team lockclaim &7- &fLock your teams claim during SOTW.'
+    - '&e/team sethq &7- &fSet your teams HQ.'
+    - ''
+    - '&9Captain Commands'
+    - '&e/team invite <member> &7- &fInvite a player to join the team.'
+    - '&e/team uninvite <member> &7- &fWithdraw a invite sent.'
+    - '&e/team kick <member> &7- &fKick a player from your team.'
+    - '&e/team withdraw <amount> &7- &fWithdraw balance from your team.'
+    - ''
+    - '&9Member Commands'
+    - '&e/team create <name> &7- &fCreate a team.'
+    - '&e/team info <name> &7- &fView info on a team.'
+    - '&e/team deposit <amount> &7- &fDeposit balance into your team.'
+    - '&e/team join <name> &7- &fJoin a team.'
+    - '&e/team focus <name> &7- &fFocus a team.'
+    - '&e/team list <page> &7- &fView the online teams.'
+    - '&e/team unfocus &7- &fUnfocus current focused team.'
+    - '&e/team unrally &7- &fUnrally current rally location.'
+    - '&e/team top &7- &fView the top teams.'
+    - '&e/team stuck &7- &fTeleport out of a claim.'
+    - '&e/team map &7- &fView the team map.'
+    - '&e/team hq &7- &fTeleport to the teams HQ.'
+    - '&e/team chat &7- &fChange your chat setting.'
+    - '&e/team leave &7- &fLeave your current team.'
+    - '&e/team sort &7- &fSort your team list.'
+    - '&7&m---------------------'
+  NOT_IN_TEAM: '&7You are not in a team.'
+  ALREADY_IN_TEAM: '&cYou are already in a team.'
+  TEAM_ALREADY_EXISTS: '&eThe team &c%team% &ealready exists.'
+  TEAM_NOT_FOUND: '&eThe team &c%team% &edoes not exist.'
+  INSUFFICIENT_ROLE: '&eYou need to be atleast &c%role% &eto execute this command.'
+  TEAM_CREATE:
+    USAGE: '&cUsage: /team create <name>'
+    NOT_ALPHANUMERICAL: '&cThe name must be alphanumerical!'
+    MIN_LENGTH: '&eTeam name must be atleast &c%amount% &eletters!'
+    MAX_LENGTH: '&eTeam name cannot be more than &c%amount% &eletters!'
+    CREATE_COOLDOWN: '&eYou need to wait &c%seconds% &ebefore creating a team again.'
+    CREATED: '&7To learn more about teams type /team.'
+    CREATED_TITLE: '&a&lTeam Created'
+    CREATED_SUBTITLE: '&7Use /f invite to invite members'
+    CREATED_SOUND: 'LEVEL_UP' #DEFAULT "LEVEL_UP", USE 1.8.8 SPIGOT SOUNDS
+    CREATED_BROADCAST: '&7» &eTeam <p>%team% &ehas been &acreated &eby &f%rank-prefix%%rank-color%%player%&e.'
+  TEAM_DISBAND:
+    DISBANDED_TEAM: '&c&lThe team has been disbanded.'
+    CANNOT_DISBAND_REGEN: '&eYou cannot disband your team while on regen.'
+    DISBANDED_BROADCAST: '&7» &eTeam <p>%team% &ehas been &cdisbanded &eby &r%rank-prefix%%rank-color%%player%&e.'
+    CANNOT_DISBAND_DISQUALIFIED: '&cYou cannot disband your faction while being disqualified.'
+  TEAM_CLAIM:
+    INVENTORY_FULL: '&cYour inventory is full!'
+    MAX_CLAIMS: '&eYou have reached the max claims allowed.'
+    WRONG_WORLD: '&cYou cannot claim in this world.'
+    CANNOT_CLAIM_HERE: '&eYou are only allowed to claim in wilderness.'
+    SIZE_SMALL: '&eClaims cannot be smaller than &c%size%&e.'
+    SIZE_LARGE: '&eClaims cannot be larger than &c%size%&e.'
+    SET_LOCATIONS: '&eClaim cost: <p>$%price%&e, Size: (&f%length%, %width%&e), &f%blocks% blocks.'
+    CANCELLED_SELECTION: '&cCancelled claim selection.'
+    CLAIMS_TOUCHING: '&cYour claims must be touching!'
+    TOO_CLOSE: '&eYour selection has to be &c%amount% &eblocks away from other claims!'
+    INSUFFICIENT_SELECTIONS: '&cYou have not selected both corners of your claims yet.'
+    INSUFFICIENT_BALANCE: '&cYour team has insufficient balance to purchase this claim.'
+    PURCHASED_CLAIM: '&eYour teams new balance is &f$%balance% <p>(Price: $%price%)'
+    DISQUALIFIED: '&cYou cannot claim while being disqualified.'
+  TEAM_FALLTRAP:
+    INVENTORY_FULL: '&cYour inventory is full!'
+    CANCELLED_SELECTION: '&cCancelled falltrap selection.'
+    NEVER_SELECT_ALL: '&cYou need to select 2 locations!'
+    CANNOT_CREATE_HERE: '&cYou can only create falltraps in your own claim.'
+    NO_TOKENS: '&cYou have no tokens!'
+    NOT_ENOUGH_TOKENS: '&eYou need atleast &c1 &efalltrap tokens to use this!'
+    STARTED_PROCESS: '&eStarted falltrap process!'
+  TEAM_BASE:
+    INVENTORY_FULL: '&cYour inventory is full!'
+    CANCELLED_SELECTION: '&cCancelled base selection.'
+    NEVER_SELECT_ALL: '&cYou need to select 2 locations!'
+    CANNOT_CREATE_HERE: '&cYou can only create bases in your own claim.'
+    NO_TOKENS: '&cYou have no tokens!'
+    NOT_ENOUGH_TOKENS: '&eYou need atleast &c1 &ebase token to use this!'
+    STARTED_PROCESS: '&eStarted base process!'
+  TEAM_INFO:
+    USAGE: '&cUsage: /team info <team/player>'
+    HQ_FORMAT:
+      NONE: 'None'
+      SET: '%x%, %z%'
+    MEMBER_FORMAT:
+      ONLINE: '&a%player%&e[&a%kills%&e]&7'
+      OFFLINE: '&7%player%&e[&a%kills%&e]&7'
+      DEATHBANNED: '&c%player%&e[&a%kills%&e]&7'
+    ALLY_FORMAT: '&9%team%&e[&a%online%/%max-online%&e]&7'
+    FANCY_MESSAGES: # Name, inside, hover, command
+      - 'FOCUS, &6[Focus], &aClick to focus %name%, /team focus %name%'
+      - 'HQ, &eHQ: &f%hq%, &aClick to teleport to %name%, /team tp %name%'
+      - 'DTR, &eDeaths until raidable: %dtr-color%dtr%dtr-symbol%, &aClick to modify DTR, /manageteam dtr %name%'
+      - 'NAME, &9%name%, &aClick to rename team, /manageteam rename %name%'
+      - 'BALANCE, &eBalance: &9$%balance%, &aClick to change balance, /manageteam balance %name%'
+      - 'REGEN, &eTime Until Regen: &9%regen%, &aClick to modify freeze, /manageteam regen %name%'
+      - 'POINTS, &ePoints: &c%points%, &aClick to modify points, /manageteam points %name%'
+      - 'RAIDABLE, &eClick to focus this faction, &aClick to focus %faction%, /team focus %faction%'
+    FORMAT_SYSTEM_TEAM:
+      - '&7&m--------------------------'
+      - '%color%name% &3- &f%hq%'
+      - '&eThis is a system team.'
+      - '&7&m--------------------------'
+    FORMAT_ENEMIES:
+      - '&7&m--------------------------'
+      - '&9%name% &7[%online%/%max-online%] &3- <f>HQ<f> &3- <f>FOCUS<f>'
+      - '&eAllies: %allies%'
+      - '&eLeader: %leader%'
+      - '&eCo-Leaders: %co-leaders%'
+      - '&eCaptains: %captains%'
+      - '&eMembers: %members%'
+      - '&eBalance: &9$%balance%'
+      - '&eDeaths until raidable: %dtr-color%dtr%dtr-symbol%'
+      - '&eStrikes: &c%strikes% %disqualified%'
+      - '&ePoints: &c%points%'
+      - '&eKoth Captures: &c%kothCaptures%'
+      - '&eTime Until Regen: &9%regen%'
+      - '&7&m--------------------------'
+    FORMAT_FRIENDLIES:
+      - '&7&m--------------------------'
+      - '&9%name% &7[%online%/%max-online%] &3- &eHQ: &f%hq%'
+      - '&eAllies: %allies%'
+      - '&eLeader: %leader%'
+      - '&eCo-Leaders: %co-leaders%'
+      - '&eCaptains: %captains%'
+      - '&eMembers: %members%'
+      - '&eBalance: &9$%balance%'
+      - '&eDeaths until raidable: %dtr-color%dtr%dtr-symbol%'
+      - '&eStrikes: &c%strikes% %disqualified%'
+      - '&ePoints: &c%points%'
+      - '&eKoth Captures: &c%kothCaptures%'
+      - '&eAnnouncement: <p>%announcement%'
+      - '&eTime Until Regen: &9%regen%'
+      - '&7&m--------------------------'
+    FORMAT_STAFF:
+      - '&7&m--------------------------'
+      - '<f>NAME<f> &7[%online%/%max-online%] &3- <f>HQ<f> &3- <f>FOCUS<f>'
+      - '&eAllies: %allies%'
+      - '&eLeader: %leader%'
+      - '&eCo-Leaders: %co-leaders%'
+      - '&eCaptains: %captains%'
+      - '&eMembers: %members%'
+      - '<f>BALANCE<f>'
+      - '<f>DTR<f>'
+      - '&eStrikes: &c%strikes% %disqualified%'
+      - '<f>POINTS<f>'
+      - '&eKoth Captures: &c%kothCaptures%'
+      - '&eAnnouncement: <p>%announcement%'
+      - '<f>REGEN<f>'
+      - '&7&m--------------------------'
+  TEAM_MAP:
+    NO_TEAMS: '&eThere is no claimed land in a radius of &c%radius% &eblocks.'
+    MAP_HIDDEN: '&eClaim pillars have been hidden.'
+    MAP_SHOWN:
+      - '&7&m----------------------------'
+      - '%claims%'
+      - '&7&m----------------------------'
+    CLAIM_FORMAT: '&eLand &a%team% &eshown by <p>%material%&e.'
+  TEAM_KICK:
+    USAGE: '&cUsage: /team kick <player>'
+    NOT_IN_TEAM: '&cThat player is not in your team!'
+    HIGHER_ROLE: '&eYou cannot kick &c%player% &eas they are a higher or equal role as you.'
+    BROADCAST_TEAM: '&c%player% &ehas been kicked from the team.'
+    CANNOT_KICK_SELF: '&eYou cannot kick yourself!'
+    CANNOT_KICK_FREEZE: '&cYou cannot kick a player while your team is on freeze.'
+    KICKED_MESSAGE: '&eYou have been kicked from &9%team%&e.'
+    DISQUALIFIED: '&cYou cannot kick a player while being disqualified.'
+  TEAM_LEAVE:
+    CANNOT_LEAVE_LEADER: '&cYou cannot leave your team as leader.'
+    CANNOT_LEAVE_IN_CLAIM: '&cYou cannot leave your team while in their claim.'
+    CANNOT_LEAVE_COMBAT: '&cYou cannot leave your team while spawn tagged.'
+    CANNOT_LEAVE_FREEZE: '&cYou cannot leave your team while it is on freeze.'
+    BROADCAST_TEAM: '&c%player% &ehas left the team.'
+    LEFT_MESSAGE: '&eYou have left your team.'
+  TEAM_TOP:
+    TOP_SHOWN:
+      - '&7&m----------------------'
+      - '<p>Team Top &7(Page: %page%/%max-pages%)'
+      - '%team_top%'
+      - '&7You are currently on &fPage %page%/%max-pages%'
+      - '&7To view other pages do &e/t top <page>'
+      - '&7&m----------------------'
+    TOP_SHOWN_RAIDABLE:
+      - '&7&m----------------------'
+      - '<p>Team Top Raidable &7(Page: %page%/%max-pages%)'
+      - '%team_top%'
+      - '&7You are currently on &fPage %page%/%max-pages%'
+      - '&7To view other pages do &e/t top <page>'
+      - '&7&m----------------------'
+    HOVER_MESSAGE:
+      - '%team%'
+      - '<p>Leader: &7%leader%'
+      - ''
+      - '<p>Balance: &7%balance%'
+      - '<p>Kills: &7%kills%'
+      - '<p>Deaths: &7%deaths%'
+      - '<p>Disqualified: &7%disqualified%'
+      - ''
+      - '<p>Koth Captures: &7%captures%'
+      - ''
+      - '&aClick to view team info'
+    FORMAT_TEAM: '&7%number%. &r%team% &e- &7%points% %disqualified%'
+    FORMAT_TEAM_RAIDABLE: '&7%number%. &r%team% &e- &7%raidablepoints% %disqualified%'
+    PAGE_NOT_FOUND: '&eThe page &c%number% &ecould not be found.'
+    NO_TEAMS_ONLINE: '&cNo teams online to show.'
+  TEAM_LIST:
+    LIST_SHOWN:
+      - '&7&m----------------------'
+      - '&9Team List &7(Page: %page%/%max-pages%)'
+      - '%team_list%'
+      - '&7You are currently on &fPage %page%/%max-pages%'
+      - '&7To view other pages do &e/t list <page>'
+      - '&7&m----------------------'
+    HOVER_MESSAGE:
+      - '&eDTR: &a%dtr%'
+      - '&eHQ: &a%hq%'
+      - '&aClick to view team info'
+    FORMAT_DTR: '&7%number%. &e%team% &a(%dtr%/%max-dtr%)'
+    FORMAT_ONLINE: '&7%number%. &e%team% &a(%online%/%max-online%)'
+    PAGE_NOT_FOUND: '&eThe page &c%number% &ecould not be found.'
+    NO_TEAMS_ONLINE: '&cNo teams online to show.'
+  TEAM_HQ:
+    NO_HQ: '&eYour teams HQ is not set!'
+    ALREADY_WARPING: '&cYou are already warping!'
+    COMBAT_TAGGED: '&eYou cannot warp while &cspawn tagged&e.'
+    NOT_ALLOWED: '&eYou are not allowed to hq out of this claim.'
+    PVP_TIMER: '&eYou cannot warp to HQ while pvp protected. Type &c/pvp enable &eto enable.'
+    WARPING: '&eWarping to <p>%team%''s &ehq in &9%seconds%s&e.'
+  TEAM_SETHQ:
+    CANNOT_SET: '&cYou can only set the team HQ in your own claim.'
+    SETHQ: '&c%player% &ehas updated the team''s HQ point.'
+    DISQUALIFIED: '&cYou cannot set the HQ while being disqualified.'
+  TEAM_SORT:
+    TITLE: '<p>Team List'
+    SIZE: 9
+    SLOT: 5
+    NAME: '<p>Sorting Type'
+    MATERIAL: 'PAPER'
+    ONLINE_LOW: '&eLowest to highest online'
+    ONLINE_HIGH: '&eHighest to lowest online'
+    LOWEST_DTR: '&eLowest to highest dtr'
+    HIGHEST_DTR: '&eHighest to lowest dtr'
+    POINTER: ' &9▶ '
+  TEAM_ALLY:
+    USAGE: '&cUsage: /team ally <name>'
+    ALLIES_DISABLED: '&cAllies are currently disabled.'
+    CANNOT_ALLY_SELF: '&cYou cannot ally yourself!'
+    TARGET_MAX_ALLIES: '&eTeam &9%team% &ehas the maximum amount of allies.'
+    SELF_MAX_ALLIES: '&eYour team has the maximum amount of allies!'
+    ALREADY_ALLIED: '&eYou are already allied with &9%team%&e.'
+    ALREADY_REQUESTED: '&eYou have already sent an ally request to &9%team%&e.'
+    REQUEST_SENT: '&eYour team has sent an ally request to &9%team%&e.'
+    REQUEST_RECEIVED: '&eTeam &9%team% &ehas sent an alliance request.'
+    ALLY_ACCEPTED: '&eYour team is now allied with &9%team%&e.'
+    DISQUALIFIED: '&cYou cannot ally while being disqualified.'
+  TEAM_UNALLY:
+    USAGE: '&cUsage: /team unally <name>'
+    NOT_ALLIED: '&cYou are not allied to that team.'
+    UNALLIED: '&eYour team has un-allied with &9%team%&e.'
+    UNALLIED_TARGET: '&eTeam &9%team% &ehas un-allied with yours.'
+    DISQUALIFIED: '&cYou cannot unally while being disqualified.'
+  TEAM_INVITE:
+    USAGE: '&cUsage: /team invite <player>'
+    ALREADY_INVITED: '&cYou already invited that player.'
+    FRIENDLY_MEMBER: '&cThat player is apart of your team!'
+    BROADCAST_INVITE: '&c%player% &ehas been invited to the team.'
+    MESSAGE_INVITE: '&eYou have been invited to &9%team% &eby &c%player%&e.'
+    HOVER: '&aClick to join the team.'
+    DISQUALIFIED: '&cYou cannot invite players while being disqualified.'
+  TEAM_UNINVITE:
+    USAGE: '&cUsage: /team uninvite <player|all>'
+    NEVER_INVITED: '&cYou never invited that player.'
+    UNINVITED_ALL: '&eYou have cleared all invitations to your team.'
+    UNINVITED_PLAYER: '&eCancelled pending invitation for &c%player%&e.'
+    DISQUALIFIED: '&cYou cannot uninvite while being disqualified.'
+  TEAM_JOIN:
+    USAGE: '&cUsage: /team join <name>'
+    NOT_INVITED: '&eYou have not received an invitation from &9%team%&e.'
+    CANNOT_JOIN_COMBAT: '&cYou cannot join a team while spawn tagged.'
+    CANNOT_JOIN_FREEZE: '&cYou cannot join a team that is on DTR freeze.'
+    TEAM_FULL: '&cYou cannot join a full team.'
+    BROADCAST_JOIN: '&c%player% &ehas joined the team!'
+    DISQUALIFIED: '&cYou cannot join this team while is disqualified.'
+  TEAM_FOCUS:
+    USAGE: '&cUsage: /team focus <name>'
+    FOCUS_ALLY: '&cYou cannot focus an allied team!'
+    FOCUS_SELF: '&cYou cannot focus your own team!'
+    FOCUS_UPDATED: '&b%team% &ehas been focused by <p>%player%&e!'
+    AUTOFOCUS_APPLIED: '&eSuccessfully applied focus on the last player that you attack!'
+  TEAM_UNFOCUS:
+    NO_FOCUS: '&cYour team is not focusing anyone.'
+    FOCUS_CLEARED: '&eYour team focus has been cleared.'
+  TEAM_RALLY:
+    UPDATED: '<p>%player% &ehas set a rally point at &b%location% &7(%world%)'
+  TEAM_UNRALLY:
+    NO_RALLY: '&cYour team does not have a rally point to remove.'
+    UNRALLIED: '&eYour teams rally point has been removed.'
+  TEAM_MARK:
+    NO_TARGET: '&cYou must target a block within %range% radius.'
+    MARKED: '%player% &ehas marked a point.'
+  TEAM_STUCK:
+    CANNOT_STUCK: '&eYou can only use this in the overworld!'
+    ALREADY_STUCKING: '&cYou are already trying to stuck.'
+    COMBAT_TAGGED: '&eYou cannot stuck while &cspawn &etagged.'
+    STARTED_STUCK: '&4&lStuck &etimer has started. Teleport will occur in &b%seconds%s&e, Do not move more than &c%blocks% &eblocks.'
+  TEAM_DEPOSIT:
+    USAGE: '&cUsage: /team deposit <all|amount>'
+    DEPOSIT_ZERO: '&eYou cannot deposit &c$0 &eor less!'
+    INSUFFICIENT_BAL: '&eYou cannot deposit &c$%amount% &ewhile you only have &9$%balance%&e.'
+    DEPOSITED: '&9%player% &ehas deposited &c$%amount% &einto the team balance.'
+  TEAM_WITHDRAW:
+    USAGE: '&cUsage: /team withdraw <amount>'
+    INSUFFICIENT_BAL: '&cYour team does not have enough money to do this!'
+    WITHDREW: '<p>%player% &ewithdrew &b$%amount% &efrom the team balance.'
+  TEAM_RENAME:
+    USAGE: '&cUsage: /team rename <name>'
+    ALREADY_NAME: '&eYour team is already named &c%name%&e.'
+    NOT_ALPHANUMERICAL: '&cThe name must be alphanumerical!'
+    MIN_LENGTH: '&eTeam name must be atleast &c%amount% &eletters!'
+    MAX_LENGTH: '&eTeam name cannot be more than &c%amount% &eletters!'
+    RENAME_COOLDOWN: '&eYou need to wait &c%seconds% &ebefore renaming your team again.'
+    RENAMED: '&eTeam &9%team% &ehas been renamed to &c%name%&e.'
+    DISQUALIFIED: '&cYou cannot rename your faction while being disqualified.'
+  TEAM_CHAT:
+    CHAT_CHANGED: '&eYou are now in &c%chat% &echat mode.'
+  TEAM_LEADER:
+    USAGE: '&cUsage: /team leader <player>'
+    NOT_IN_TEAM: '&cThat player is not in your team.'
+    ALREADY_LEADER: '&cYou are already the team leader.'
+    LEADER_CHANGED: '&eYour team leader has been changed to &c%player%&e.'
+    DISQUALIFIED: '&CYou cannot change your leader status while being disqualified.'
+  TEAM_PROMOTE:
+    USAGE: '&cUsage: /team promote <player>'
+    NOT_IN_TEAM: '&eThe player &c%player% &eis not in your team.'
+    PROMOTE_SELF: '&cYou cannot promote your self.'
+    HIGHEST_ROLE: '&cYou cannot promote that player further. Use /team leader.'
+    HIGHER_ROLE: '&cOnly leaders can promote co-leaders.'
+    PROMOTED_BROADCAST: '&c%player% &ehas been promoted to &9%role%&e.'
+    DISQUALIFIED: '&cYou cannot promote while being disqualified.'
+  TEAM_DEMOTE:
+    USAGE: '&cUsage: /team demote <player>'
+    NOT_IN_TEAM: '&eThe player &c%player% &eis not in your team.'
+    DEMOTE_SELF: '&cYou cannot demote your self.'
+    LOWEST_ROLE: '&cYou cannot demote that player further.'
+    HIGHER_ROLE: '&cYou cannot demote a player with a higher or equal role as you.'
+    DEMOTED_BROADCAST: '&c%player% &ehas been demoted to &9%role%&e.'
+    DISQUALIFIED: '&CYou cannot demote while being disqualified.'
+  TEAM_UNCLAIM:
+    NO_CLAIMS: '&cYou do not own any claims.'
+    NOT_OWNED: '&eYou do not own this land. Type &c/team unclaim all &eto unclaim all your land.'
+    RAIDABLE: '&eYou cannot unclaim land while raidable.'
+    UNCLAIMED_ALL: '&c%player% &ehas unclaimed all your teams land and got &a$%balance% &eback.'
+    UNCLAIMED_LAND: '&c%player% &ehas unclaimed land at (9%x1%-%z1%, %x2%-%z2%) &eand got &a$%balance% &eback.'
+    DISQUALIFIED: '&cYou cannot unclaim while being disqualified.'
+  TEAM_LOCKCLAIM:
+    NO_OWN: '&cYou do not own this claim.'
+    ONLY_SOTW: '&cYou can only lock claims during SOTW.'
+    COOLDOWN: '&eYou have to wait &c%seconds% &ebefore you can lock your claim.'
+    TELEPORTED_SAFE: '&eThe claim you were in has been locked and you were teleported out.'
+    LOCKED: '<p>%player% &ehas locked all claims.'
+    UNLOCKED: '<p>%player% &ehas unlocked all claims.'
+  TEAM_ROSTER:
+    DISQUALIFIED: '&CYou cannot roster while being disqualified.'
+    USAGE:
+      - '&7&m--------------------------'
+      - '<p>&lTeam Roster Usage'
+      - '&c/team roster list'
+      - '&c/team roster add <name> <role>'
+      - '&c/team roster remove <name>'
+      - '&7&m--------------------------'
+    ROSTER_LIST:
+      FORMAT:
+        - '&7&m--------------------------'
+        - '<p>Team Roster'
+        - '%roster%'
+        - '&7&m--------------------------'
+      PLAYER_FORMAT: '&e%stars%player% &7(%role%)'
+    ROSTER_ADD:
+      ALREADY_IN: '&c%player% &eis already in the roster.'
+      NOT_FOUND: '&eRole &c%role% &edoes not exist.'
+      LEADER: '&eLeader role cannot be added to roster.'
+      ADDED: '&eAdded &c%player% &eto the team roster.'
+    ROSTER_REMOVE:
+      NOT_IN: '&c%player% &eis not in the roster.'
+      REMOVED: '&eRemoved &c%player% &efrom the team roster.'
+  TEAM_FRIENDLY_FIRE:
+    ENABLED: '&eFriendly fire has been &aenabled&e.'
+    DISABLED: '&eFriendly fire has been &cdisabled&e.'
+  TEAM_CAMP:
+    USAGE: '&cUsage: /team camp <name>'
+    NO_HQ: '&cThis team does not have an HQ.'
+    DENIED_SELF: '&cYou cannot camp your own team.'
+    DENIED_COMBAT: '&cThis command cannot be executed in combat.'
+    DENIED_OWN_CLAIM: '&cYou cannot use this command in your own claim.'
+    DENIED_SPAWN: '&cYou cannot use this command in spawn.'
+    DENIED_OTHER: '&cYou can only use this command in your own claim and spawn.'
+    STARTED_CAMP: '&eWarping to <p>%team%''s &eHQ.'
+  TEAM_OPEN:
+    ON_COOLDOWN: '&cYou cannot use this for &c&l%time%&c.'
+    OPENED: '&9%team% &eis now &aopen &eto the public.'
+    CLOSED: '&9%team% &eis now &cclosed &eto the public.'
+    DISQUALIFIED: '&cYou cannot open your faction while being disqualified.'
+  TEAM_INVITES:
+    NON_PENDING_PLACEHOLDER: '&cNo pending invites.'
+    INVITES_FORMAT: '&7%team%'
+    USER_FORMAT: '&7%player%'
+    SELF_INVITES:
+      - '&eYour invites: &r%invites%'
+    TEAM_INVITES:
+      - '&eInvited to your team: &r%users%'
+  TEAM_ANNOUNCEMENT:
+    USAGE: '&cUsage: /team announcement <announcement|clear>'
+    CLEARED: '<p>%player% &ehas cleared the teams announcement.'
+    TOO_LONG: '&eTeam announcement cannot be longer than &c%amount% &eletters.'
+    SET_ANNOUNCEMENT: '<p>%player% &ehas changed the team announcement to <p>%announcement%&e.'
+  TEAM_AUTOFOCUS:
+    ENABLED: '&eYou have been &aenabled &eauto focus.'
+    DISABLED: '&eYou have been &cdisabled &eauto focus'
+
+MANAGE_TEAM_COMMAND:
+  USAGE:
+    - '&7&m----------------------'
+    - '<p>&lManage Team Usage'
+    - ''
+    - '&c/manageteam manage <team>'
+    - '&c/manageteam dtr <team>'
+    - '&c/manageteam regen <team>'
+    - '&7&m----------------------'
+  MANAGE_DTR: '&eEnter a new DTR for %team%.'
+  MANAGE_BALANCE: '&bEnter a new balance for %team%.'
+  MANAGE_RENAME: '&aEnter a new name for %team%.'
+  MANAGE_REGEN: '&bEnter the new time for %team%.'
+  MANAGE_POINTS: '&aEnter the new points for %team%.'
+
+SETTINGS_COMMAND:
+  TITLE: '<p>Settings'
+  SIZE: 27
+  FILLER:
+    ENABLED: true
+    NAME: '&7'
+    MATERIAL: 'STAINED_GLASS_PANE'
+    DATA: 15
+    LORE: { }
+  ITEMS:
+    DEATH_MESSAGES: # Don't change these names, remove this and below if you don't want it.
+      ENABLED:
+        NAME: '<p>Death Messages'
+        MATERIAL: 'DIAMOND_SWORD'
+        SLOT: 11
+        DATA: 0
+        SOUND: 'CLICK'
+        LORE:
+          - '&9Do you want to be able'
+          - '&9to see death messages.'
+          - ''
+          - ' &9▶ &eShow Death Messages'
+          - '   &eHide Death Messages'
+      DISABLED:
+        NAME: '<p>Death Messages'
+        MATERIAL: 'DIAMOND_SWORD'
+        SLOT: 11
+        DATA: 0
+        SOUND: 'CLICK'
+        LORE:
+          - '&9Do you want to be able'
+          - '&9to see death messages.'
+          - ''
+          - '   &eShow Death Messages'
+          - ' &9▶ &eHide Death Messages'
+    LUNAR_NAMETAGS: # Don't change these names, remove this and below if you don't want it.
+      ENABLED:
+        NAME: '<p>Lunar Nametags'
+        MATERIAL: 'NAME_TAG'
+        SLOT: 12
+        DATA: 0
+        SOUND: 'CLICK'
+        LORE:
+          - '&9Do you want to be able'
+          - '&9to see lunar nametags.'
+          - ''
+          - ' &9▶ &eShow Lunar Nametags'
+          - '   &eHide Lunar Nametags'
+      DISABLED:
+        NAME: '<p>Lunar Nametags'
+        MATERIAL: 'NAME_TAG'
+        SLOT: 12
+        DATA: 0
+        SOUND: 'CLICK'
+        LORE:
+          - '&9Do you want to be able'
+          - '&9to see lunar nametags.'
+          - ''
+          - '   &eShow Lunar Nametags'
+          - ' &9▶ &eHide Lunar Nametags'
+    SCOREBOARD_CLAIM: # Don't change these names, remove this and below if you don't want it.
+      ENABLED:
+        NAME: '<p>Scoreboard Claim'
+        MATERIAL: 'WOOD_HOE'
+        SLOT: 13
+        DATA: 0
+        SOUND: 'CLICK'
+        LORE:
+          - '&9Do you want your current'
+          - '&9claim position to show.'
+          - ''
+          - ' &9▶ &eShow Claim'
+          - '   &eHide Claim'
+      DISABLED:
+        NAME: '<p>Scoreboard Claim'
+        MATERIAL: 'WOOD_HOE'
+        SLOT: 13
+        DATA: 0
+        SOUND: 'CLICK'
+        LORE:
+          - '&9Do you want your current'
+          - '&9claim position to show.'
+          - ''
+          - '   &eShow Claim'
+          - ' &9▶ &eHide Claim'
+    SCOREBOARD: # Don't change these names, remove this and below if you don't want it.
+      ENABLED:
+        NAME: '<p>Scoreboard'
+        MATERIAL: 'ITEM_FRAME'
+        SLOT: 14
+        DATA: 0
+        SOUND: 'CLICK'
+        LORE:
+          - '&9Do you want your'
+          - '&9scoreboard to show.'
+          - ''
+          - ' &9▶ &eShow Scoreboard'
+          - '   &eHide Scoreboard'
+      DISABLED:
+        NAME: '<p>Scoreboard'
+        MATERIAL: 'ITEM_FRAME'
+        SLOT: 14
+        DATA: 0
+        SOUND: 'CLICK'
+        LORE:
+          - '&9Do you want your'
+          - '&9scoreboard to show.'
+          - ''
+          - '   &eShow Scoreboard'
+          - ' &9▶ &eHide Scoreboard'
+    PUBLIC_CHAT: # Don't change these names, remove this and below if you don't want it.
+      ENABLED:
+        NAME: '<p>Public Chat'
+        MATERIAL: 'NETHER_STAR'
+        SLOT: 15
+        DATA: 0
+        SOUND: 'CLICK'
+        LORE:
+          - '&9Do you want to receive'
+          - '&9public chat messages.'
+          - ''
+          - ' &9▶ &eShow Messages'
+          - '   &eHide Messages'
+      DISABLED:
+        NAME: '<p>Public Chat'
+        MATERIAL: 'NETHER_STAR'
+        SLOT: 15
+        DATA: 0
+        SOUND: 'CLICK'
+        LORE:
+          - '&9Do you want to receive'
+          - '&9public chat messages.'
+          - ''
+          - '   &eShow Messages'
+          - ' &9▶ &eHide Messages'
+    COBBLE: # Don't change these names, remove this and below if you don't want it.
+      ENABLED:
+        NAME: '<p>Cobblestone Pickup'
+        MATERIAL: 'COBBLESTONE'
+        SLOT: 16
+        DATA: 0
+        SOUND: 'CLICK'
+        LORE:
+          - '&9Do you want to'
+          - '&9pickup cobblestone.'
+          - ''
+          - ' &9▶ &ePickup cobble'
+          - '   &eNo pickup'
+      DISABLED:
+        NAME: '<p>Cobblestone Pickup'
+        MATERIAL: 'COBBLESTONE'
+        SLOT: 16
+        DATA: 0
+        SOUND: 'CLICK'
+        LORE:
+          - '&9Do you want to'
+          - '&9pickup cobblestone.'
+          - ''
+          - '   &ePickup cobble'
+          - ' &9▶ &eNo pickup'
+    FOUND_DIAMOND: # Don't change these names, remove this and below if you don't want it.
+      ENABLED:
+        NAME: '<p>Diamond Alerts'
+        MATERIAL: 'DIAMOND'
+        SLOT: 17
+        DATA: 0
+        SOUND: 'CLICK'
+        LORE:
+          - '&9Do you want to see'
+          - '&9found diamond alerts.'
+          - ''
+          - ' &9▶ &eShow alerts'
+          - '   &eHide alerts'
+      DISABLED:
+        NAME: '<p>Diamond Alerts'
+        MATERIAL: 'DIAMOND'
+        SLOT: 17
+        DATA: 0
+        SOUND: 'CLICK'
+        LORE:
+          - '&9Do you want to see'
+          - '&9found diamond alerts.'
+          - ''
+          - '   &eShow alerts'
+          - ' &9▶ &eHide alerts'
+
+LEADERBOARDS_COMMAND:
+  TITLE: '<p>Leaderboards'
+  SIZE: 27
+  NONE_MESSAGE: '&7N/A'
+  ITEMS:
+    TEAM_TOP:
+      NAME: '<p>Top Teams'
+      MATERIAL: 'SKULL_ITEM'
+      SLOT: 11
+      DATA: 3
+      FORMAT: '&e%team% &7- &f%points% points'
+      LORE:
+        - '&f1. %team_top1%'
+        - '&f2. %team_top2%'
+        - '&f3. %team_top3%'
+        - '&f4. %team_top4%'
+        - '&f5. %team_top5%'
+        - '&f6. %team_top6%'
+        - '&f7. %team_top7%'
+        - '&f8. %team_top8%'
+        - '&f9. %team_top9%'
+        - '&f10. %team_top10%'
+    KILLS_TOP:
+      NAME: '<p>Top Kills'
+      MATERIAL: 'SKULL_ITEM'
+      SLOT: 12
+      DATA: 3
+      FORMAT: '&e%player% &7- &f%kills% kills'
+      LORE:
+        - '&f1. %kills_top1%'
+        - '&f2. %kills_top2%'
+        - '&f3. %kills_top3%'
+        - '&f4. %kills_top4%'
+        - '&f5. %kills_top5%'
+        - '&f6. %kills_top6%'
+        - '&f7. %kills_top7%'
+        - '&f8. %kills_top8%'
+        - '&f9. %kills_top9%'
+        - '&f10. %kills_top10%'
+    DEATHS_TOP:
+      NAME: '<p>Top Deaths'
+      MATERIAL: 'SKULL_ITEM'
+      SLOT: 13
+      DATA: 3
+      FORMAT: '&e%player% &7- &f%deaths% deaths'
+      LORE:
+        - '&f1. %deaths_top1%'
+        - '&f2. %deaths_top2%'
+        - '&f3. %deaths_top3%'
+        - '&f4. %deaths_top4%'
+        - '&f5. %deaths_top5%'
+        - '&f6. %deaths_top6%'
+        - '&f7. %deaths_top7%'
+        - '&f8. %deaths_top8%'
+        - '&f9. %deaths_top9%'
+        - '&f10. %deaths_top10%'
+    KDR_TOP:
+      NAME: '<p>Top KDR'
+      MATERIAL: 'SKULL_ITEM'
+      SLOT: 15
+      DATA: 3
+      FORMAT: '&e%player% &7- &f%kdr% KDR'
+      LORE:
+        - '&f1. %kdr_top1%'
+        - '&f2. %kdr_top2%'
+        - '&f3. %kdr_top3%'
+        - '&f4. %kdr_top4%'
+        - '&f5. %kdr_top5%'
+        - '&f6. %kdr_top6%'
+        - '&f7. %kdr_top7%'
+        - '&f8. %kdr_top8%'
+        - '&f9. %kdr_top9%'
+        - '&f10. %kdr_top10%'
+    KILLSTREAKS_TOP:
+      NAME: '<p>Top Killstreaks'
+      MATERIAL: 'SKULL_ITEM'
+      SLOT: 16
+      DATA: 3
+      FORMAT: '&e%player% &7- &f%killstreak% killstreak'
+      LORE:
+        - '&f1. %killstreaks_top1%'
+        - '&f2. %killstreaks_top2%'
+        - '&f3. %killstreaks_top3%'
+        - '&f4. %killstreaks_top4%'
+        - '&f5. %killstreaks_top5%'
+        - '&f6. %killstreaks_top6%'
+        - '&f7. %killstreaks_top7%'
+        - '&f8. %killstreaks_top8%'
+        - '&f9. %killstreaks_top9%'
+        - '&f10. %killstreaks_top10%'
+    BALANCE_TOP:
+      NAME: '<p>Top Balance'
+      MATERIAL: 'SKULL_ITEM'
+      SLOT: 17
+      DATA: 3
+      FORMAT: '&e%player% &7- &2$&a%balance%'
+      LORE:
+        - '&f1. %balance_top1%'
+        - '&f2. %balance_top2%'
+        - '&f3. %balance_top3%'
+        - '&f4. %balance_top4%'
+        - '&f5. %balance_top5%'
+        - '&f6. %balance_top6%'
+        - '&f7. %balance_top7%'
+        - '&f8. %balance_top8%'
+        - '&f9. %balance_top9%'
+        - '&f10. %balance_top10%'
+
+SET_KILLS_COMMAND:
+  USAGE:
+    - '&cUsage: /setkills <player> <amount>'
+  SET: '&eYou have set the kills of &c%player% &eto &9%amount%&e.'
+
+SET_KILLSTREAK_COMMAND:
+  USAGE:
+    - '&cUsage: /setkillstreak <player> <amount>'
+  SET: '&eYou have set the killstreak of &c%player% &eto &9%amount%&e.'
+
+SET_DEATHS_COMMAND:
+  USAGE:
+    - '&cUsage: /setdeaths <player> <amount>'
+  SET: '&eYou have set the deaths of &c%player% &eto &9%amount%&e.'
+
+MAP_COMMAND:
+  USAGE:
+    - '&7&m----------------------'
+    - '<p>&lChange the Map Configuration'
+    - ''
+    - '&c/map members'
+    - '&c/map allies'
+    - '&7&m----------------------'
+  SET_MEMBERS: '&ASuccessfully changed teams members size.'
+  SET_ALLIES: '&aSuccessfully changed teams max allies.'
+
+CUSTOMITEM_COMMAND:
+  USAGE:
+    - '&7&m----------------------'
+    - '<p>&lCustom Items'
+    - ''
+    - '&c/customitem give <player> <item> <amount>'
+    - '&c/customitem list'
+    - '&c/customitem getall'
+    - '&7&m----------------------'
+  CUSTOMITEM_GIVE:
+    USAGE: '&cUsage: /customitem give <player> <item> <amount>'
+    NOT_FOUND: '&eThe item &c%acustomitem% &edoes not exist.'
+    GAVE: '&eYou have gave &c%player% &9x%amount% &eof <p>%customitem%&e.'
+  CUSTOMITEM_LIST:
+    CUSTOMITEMS:
+      - '&7&m----------------------'
+      - '<p>&lCustom Items'
+      - '%customitems%'
+      - '&7&m----------------------'
+    CUSTOMITEM_FORMAT: '&f%customitem% &7(Cooldown: N/A)'
+
+KING_COMMAND:
+  USAGE:
+    - '&7&m----------------------'
+    - '<p>&lKill The King Usage'
+    - ''
+    - '&c/king start <player> <reward>'
+    - '&c/king end'
+    - '&7&m----------------------'
+  KING_START:
+    USAGE: '&cUsage: /king start <player> <reward>'
+    ALREADY_ACTIVE: '&cKill the king is already active.'
+  KING_END:
+    NOT_ACTIVE: '&cKill the king is not active.'
+
+BOOST_COMMAND:
+  USAGE:
+    - '&9&m----------------------'
+    - '<p>&lBoost Event Usage'
+    - ''
+    - '&c/boost start <time> <multiplier>'
+    - '&c/boost extends <time>'
+    - '&c/boost end'
+    - '&9&m----------------------'
+  BOOST_SET:
+    USAGE: '&cUsage: /boost set <number>'
+    SPECIFY: '&cYou must specify a number.'
+    INVALID: '&cYou must specify a number over 0.'
+    SET: '&eYou have set the boost number of &cx%number%'
+  BOOST_START:
+    ALREADY_ACTIVE: '&cBoost event is already active.'
+    STARTED:
+      - '<p>&lBoost Event.'
+      - ''
+      - '&eHas been started'
+      - '&eYour earned points will be multiplied for x&c%multiplier%'
+    BROADCAST: '&eBoost event has started for &c%time% &ewith a multiplier of &x%number%.'
+    INVALID: '&cYou must set a boost number before starting.'
+    EXTENDED: '&eYou have extended the boost event.'
+  BOOST_END:
+    NOT_ACTIVE: '&cBoost event is not active.'
+    ENDED:
+      - '&eBoost event has ended.'
+  BOOST_GIVE:
+    KILL: '&eYou earned &c%points% &epoints thanks to <p>&lBoost Event'
+    KOTH: '&eYou earned more points thanks to <p>&lBoost Event'
+
+PAYLOAD:
+  EVENT_START:
+    - '&6[Payload] Event has started.'
+    - '&6'
+    - '&eGo to the zone to start moving the Payload.'
+    - ''
+  EVENT_END:
+    - '&6[Payload] &eEvent has ended.'
+    - '&eCaptured by &c%team%'
+  EVENT_MOVING: '&6[Payload] &eThe payload is moving to the end of the route.'
+  ROUTE_ACTIVE_EDIT: '&6[Payload] You cannot edit the route while the event is active.'
+  ROUTE_ALREADY_EDITING: '&6[Payload] You are already editing a route.'
+  ROUTE_START: '&6[Payload] Tap each rail of the route with the stick.'
+  ROUTE_POINT_ADDED: '&7Added point &f%index% &7at &e%x%,%y%,%z%'
+  ROUTE_POINT_ALREADY: '&6[Payload] That rail was already selected.'
+  ROUTE_NO_POINTS: '&6[Payload] No points of the route were registered.'
+  ROUTE_SAVED: '&a[Payload] Route scanned correctly. Points: &f%points%'
+  ROUTE_PATH: '&aRoute: &f%coords%'
+  NOT_EDITING: '&6[Payload] You are not editing a route.'
+  COMMAND_EVENT_STARTED: '&ePayload event started.'
+  COMMAND_EVENT_ALREADY_ACTIVE: '&cPayload event is already active.'
+  COMMAND_EVENT_STOPPED: '&ePayload event stopped.'
+  COMMAND_EVENT_NOT_ACTIVE: '&cPayload event is not active.'
+  COMMAND_USE_ROUTE: '&eUse: /payload route <start|done>'
+  COMMAND_SCAN: '&eScanned payload route. Total points: &f%points%'
+  COMMAND_SPEED_SET: '&ePayload speed set to &f%speed%'
+  COMMAND_RADIUS_SET: '&ePayload radius set to &f%radius%'
+  COMMAND_STOPDELAY_SET: '&ePayload stop delay set to &f%delay%s'
+  COMMAND_START_SET: '&eStart location set.'
+  COMMAND_END_SET: '&eEnd location set.'
+  COMMAND_CAPPER_TEAM: '&eControlling team: &f%team%'
+  COMMAND_CAPPER_UNCONTESTED: '&eThe payload is uncontested.'
+  MINECART_SPAWNED: '<p>[Payload] &eMinecart generated on the route.'
+  EVENT_STOPPED_BROADCAST: '<p>[Payload] &eEvent stopped.'
+  ADVANCING_TEAM: '&6[Payload] &eAdvancing. Team: %team%'
+  ADVANCING_SOLO: '&6[Payload] &eAdvancing - player without team.'
+  BACKWARDS_MULTIPLE: '&6[Payload] &eGoing back to base, multiple teams present.'
+  RETURNING_NO_PLAYERS: '&6[Payload] &eGoing back to base, there are no players in the area.'
+  STOPPED_WAITING: '&6[Payload] &eWaiting for a team in the area.'
+  STOPPED_NO_PLAYERS: '&6[Payload] &eThere are no players in the area.'
+  EVENT_FINISHED_BY: '&6[Payload] &ePayload completed by %controller%.'
+  COMMAND_LOG_HEADER: '&6[Payload] &eLast event:'
+  COMMAND_LOG_NODATA: '&6[Payload] &eNo previous event data.'
+  COMMAND_LOG_LINE: '&7%name% &econtrolled for %time%s'
+  COMMAND_LOG_WINNER: '&aWinner: %name%'
+  COMMAND_LOG_TOP: '&6Most controlled: %name% (%time%s)'
+
+PAYLOAD_COMMAND:
+  USAGE:
+    - '&9&m---------------------'
+    - '<p>&lPayload Usage'
+    - ''
+    - "&c/payload start"
+    - "&c/payload stop"
+    - "&c/payload tp"
+    - "&c/payload capper"
+    - "&c/payload route <start|done>"
+    - "&c/payload scan"
+    - "&c/payload speed <value>"
+    - "&c/payload radius <value>"
+    - "&c/payload stopdelay <seconds>"
+    - "&c/payload set <start|end>"
+    - "&c/payload log"
+    - '&9&m---------------------'
+
+CHAOS_COMMAND:
+  USAGE:
+    - '&9&m----------------------'
+    - '<p>&lChaos Event Usage'
+    - ''
+    - '&c/chaos start <time>'
+    - '&c/chaos end'
+    - '&9&m----------------------'
+  ALREADY_ACTIVE: '&cChaos event is already active.'
+  NOT_ACTIVE: '&CChaos events is not active.'
+  INVALID_DURATION: '&cPlease provide a valid time duration'
+  START: '&EYou have started &6&lChaos Event'
+  STOP: '&eYou have stopped &6&LChaos Event'
+  STARTED:
+    - '&6&lChaos Event.'
+    - ''
+    - '&eHas been started'
+    - '&eNow all ability items cooldown will be reduced to 50%, without global cooldown!'
+  ENDED:
+    - '&6&lChaos Event'
+    - ''
+    - '&eHas been ended'
+  STOPPED: '&6&lChaos Event &ehas been stopped!'
+
+DTC_COMMAND:
+  USAGE:
+    - '&9&m----------------------'
+    - '<p>&lDTC Usage'
+    - ''
+    - '&c/dtc start <time>'
+    - '&c/dtc extend <time>'
+    - '&c/dtc sethealth <points>'
+    - '&c/dtc coords'
+    - '&c/dtc cancel'
+    - '&9&m----------------------'
+  NOT_ACTIVE: '&5DTC &eis not active!'
+  NOT_ACTIVE_BLOCK: '&5DTC&e is not active, block has been disappeared!'
+  CANCELLED: '&eYou have cancelled &5DTC&e.'
+  STARTED: '&5DTC &eis now active for <p>%time%&e.'
+  COORDS_SET: '&aCoordenadas guardadas en &eX:%x% Y:%y% Z:%z%'
+  EXTENDED: '&5DTC &ehas been extended to <p>%time%&e.'
+  NO_BLOCK: '&eThis is not the &5DTC &eblock!'
+  HEALTH_SET: '&eHeal has been set to &c%health% &epoints.'
+  BREAK: '&5DTC &ehas &c%health% &epoints of health remaining.'
+  BROKEN: '&eYou have destroyed the &5DTC&e, congratulations!'
+  BROKEN_BROADCAST:
+    - ''
+    - '&5&lDTC'
+    - ''
+    - '&eBlock has been destroyed by &c%player%&e.'
+    - ''
+  HOLOGRAM: '&cNot active'
+
+DRAGON_COMMAND:
+  USAGE:
+    - '&9&m----------------------'
+    - '<p>&lDragon Usage'
+    - ''
+    - '&c/dragon start <time>'
+    - '&c/dragon extend <time>'
+    - '&c/dragon sethealth <points>'
+    - '&c/dragon coords'
+    - '&c/dragon cancel'
+    - '&c/dragon list'
+    - '&c/dragon top'
+    - '&9&m----------------------'
+  STARTED:
+    - ''
+    - '&5&lEnd Dragon'
+    - ''
+    - '&7Has been started '
+    - ''
+  NOT_ACTIVE: '&5End Dragon &eis not active.'
+  HEALTH_SET: '&eSuccessfully set health %health%'
+  HEALTH_UPDATE: "&5[Dragon] &eHealth: &c%max%&7/&c%health%"
+  DEFEATED:
+    - ''
+    - "&5&lEnd Dragon"
+    - ''
+    - '&7Has been killed by &c%player%'
+    - ''
+  CANCELLED: '&5End Dragon &ehas been canceled'
+
+SOTW_COMMAND:
+  USAGE_DEFAULT:
+    - '&9&m----------------------'
+    - '<p>&lSOTW Usage'
+    - ''
+    - '&c/sotw enable'
+    - '&9&m----------------------'
+  USAGE_ADMIN:
+    - '&9&m----------------------'
+    - '<p>&lSOTW Usage'
+    - ''
+    - '&c/sotw enable'
+    - '&c/sotw start <time>'
+    - '&c/sotw extend <time>'
+    - '&c/sotw end'
+    - '&9&m----------------------'
+  NOT_ACTIVE: '<p>SOTW &eis not active!'
+  SOTW_START:
+    ALREADY_ACTIVE: '<p>SOTW &cis already active.'
+    STARTED: '&eSOTW has commenced.'
+    STARTED_TITLE: '&a&lStart Of The World'
+    STARTED_SUBTITLE: '&7Has been started for %time%'
+    STARTED_SOUND: 'NOTE.PLING' #DEFAULT "NOTE-PLING" USE 1.8.8 SPIGOT SOUNDS
+  SOTW_END:
+    ENDED: '&eYou have ended SOTW.'
+  SOTW_EXTEND:
+    EXTENDED: '&eYou have extended SOTW.'
+  SOTW_ENABLE:
+    ALREADY_ENABLED: '&cYou are already SOTW enabled.'
+    ENABLED: '&eYou have <p>SOTW &eenabled.'
+  SOTW_FLY:
+    NOT_ALLOWED: '&cYou can only fly in your own claim and spawn.'
+    TOGGLE_TRUE: '&eSotw fly has been &aenabled&e.'
+    TOGGLE_FALSE: '&eSotw fly has been &cdisabled&e.'
+
+EOTW_COMMAND:
+  USAGE:
+    - '&9&m----------------------'
+    - '<p>&lEOTW Usage'
+    - ''
+    - '&c/eotw start <time>'
+    - '&c/eotw extend <time>'
+    - '&c/eotw cancel'
+    - '&c/eotw whitelist <name>'
+    - '&9&m----------------------'
+  NOT_PRE_EOTW: '&ePre EOTW is not active. If &4EOTW &ekoth is active please use /koth to cancel.'
+  CANCELLED: '&eYou have cancelled &4EOTW&e.'
+  STARTED: '&eTeams will be raidable and &4EOTW &ekoth will commence in <p>%time%&e.'
+  STARTED_TITLE: "&4&LEnd Of The World"
+  STARTED_SUBTITLE: "&7Will start in %time%"
+  STARTED_SOUND: "NOTE.PLING" #DEFAUTL, USE 1.8.8 SPIGOT SOUNDS
+  EXTENDED: '&4EOTW &ewill commence in <p>%time%&e.'
+  REMOVED_WHITELIST: '&eYou have removed &c%player% &efrom the whitelist.'
+  WHITELISTED: '&eYou have whitelisted &c%player%&e.'
+
+FFA_COMMAND:
+  USAGE:
+    - '&9&m----------------------'
+    - '<p>&lFFA Usage'
+    - ''
+    - '&c/ffa start'
+    - '&c/ffa confirm'
+    - '&c/ffa effects'
+    - '&c/ffa cancel'
+    - '&9&m----------------------'
+  TITLE: '<p>FFA Event'
+  SUBTITLE: '&7Will start in 2 minutes'
+  CONFIRM: '&aConfirmed FFA event.'
+  CANCEL: '&cYou have cancelled the FFA event.'
+  EFFECTS: '&aYou have received FFA effects.'
+  CONFIRM_ADMIN: '&aConfirmed FFA event.'
+  CANCEL_ADMIN: '&cYou have cancelled the FFA event.'
+  EFFECTS_ADMIN: '&aYou have received FFA effects.'
+  START_ADMIN: '&aYou have started FFA event.'
+
+PURGE_COMMAND:
+  USAGE:
+    - '&9&m----------------------'
+    - '<p>&lPurge Usage'
+    - ''
+    - '&c/purge start <time>'
+    - '&c/purge extend <time>'
+    - '&c/purge cancel'
+    - '&9&m----------------------'
+  NOT_ACTIVE: '&4Purge &eis not active!'
+  CANCELLED: '&eYou have cancelled &4Purge&e.'
+  STARTED: '&4Purge &eis now active for <p>%time%&e.'
+  EXTENDED: '&4Purge &ehas been extended to <p>%time%&e.'
+
+KILLSTREAK_COMMAND:
+  KILLSTREAKS:
+    - '&9&m----------------------'
+    - '<p>&lKillstreaks'
+    - '%killstreaks%'
+    - '&9&m----------------------'
+  KILLSTREAK_FORMAT: '&r%killstreak% &7(%kills% kills)'
+
+ABILITY_COMMAND:
+  USAGE:
+    - '&9&m----------------------'
+    - '<p>&lAbility Usage'
+    - ''
+    - '&c/ability give <player> <ability> <amount>'
+    - '&c/ability toggle'
+    - '&c/ability list'
+    - '&c/ability getall'
+    - '&9&m----------------------'
+  ABILITY_GIVE:
+    USAGE: '&cUsage: /ability give <player> <ability> <amount>'
+    NOT_FOUND: '&eThe ability &c%ability% &edoes not exist.'
+    GAVE: '&eYou have gave &c%player% &9x%amount% &eof <p>%ability%&e.'
+  ABILITY_LIST:
+    ABILITIES:
+      - '&9&m----------------------'
+      - '<p>&lAbilities'
+      - '%abilities%'
+      - '&9&m----------------------'
+    ABILITY_FORMAT: '&f%ability% &7(Cooldown: %cooldown%)'
+
+STRENGTH_NERF_COMMAND:
+  USAGE:
+    - '&cUsage: /strengthnerf <lvl1,lvl2,lvl3plus> <amount>'
+  NERFED: '&eNerfed strength by &c%amount%&e.'
+
+KILLTAGS_COMMAND:
+  RESET_KILLTAG: '&eYou have reset your killtag.'
+  NOT_EQUIPPED: '&cYou do not a killtag equipped.'
+  NO_PERM: '&cYou do not own this killtag.'
+  EQUIPPED_KILLTAG: '&eYou have equipped the %killtag% &ekilltag.'
+
+KOTH_COMMAND:
+  USAGE:
+    - '&9&m----------------------'
+    - '<p>&lKoth Usage'
+    - ''
+    - '&c/koth create <name> <color> <minutes> <pointsReward> &8- &7Create a koth.'
+    - '&c/koth delete <name> &8- &7Delete a koth.'
+    - '&c/koth end <name> &8- &7End a active koth.'
+    - '&c/koth start <name> &8- &7Start a koth.'
+    - '&c/koth list &8- &7List all the koths'
+    - '&c/koth editloot <name> &8- &7Edit the rewards for a koth.'
+    - '&c/koth setcolor <name> <color> &8- &7Set the color of the koth on scoreboard.'
+    - '&c/koth setminutes <name> <mins> &8- &7Set the minute a koth should start at.'
+    - '&c/koth setpoints <name> &8- &7Set the points of a koth.'
+    - '&c/koth setremaining <name> <time> &8- &7Set the remaining of an active koth.'
+    - '&c/koth claimzone <name> &8- &7Claim the zone of a koth.'
+    - '&c/koth teleport <name> &8- &7Teleport to a koth.'
+    - '&c/koth lastcapper <name> &8- &7Show the last capped koth'
+    - '&c/koth focus <name> &8- &7Hide all players just show the capper'
+    - '&7&m----------------------'
+  KOTH_NOT_FOUND: '&eKoth &c%koth% &ecould not be found.'
+  KOTH_CREATE:
+    USAGE: '&cUsage: /koth create <name> <color> <minutes> <pointsReward>'
+    ALREADY_EXISTS: '&cKoth already exists.'
+    CREATED: '&eCreated the koth &c%koth%&e.'
+  KOTH_DELETE:
+    USAGE: '&cUsage: /koth delete <name>'
+    DELETED: '&eDeleted the koth &c%koth%&e.'
+  KOTH_END:
+    USAGE: '&cUsage: /koth end <name>'
+    NOT_ACTIVE: '&cThat koth is not active.'
+    STOPPED: '&eStopped the koth &c%koth%&e.'
+  KOTH_START:
+    USAGE: '&cUsage: /koth start <name>'
+    ALREADY_ACTIVE: '&cThat koth is already active.'
+    MAX_KOTHS_REACHED: '&cYou have reached the maximum koths active!'
+    STARTED: '&eStarted the koth &c%koth%&e.'
+  KOTH_SETCOLOR:
+    USAGE: '&cUsage: /koth setcolor <name> <color>'
+    UPDATED_COLOR: '&eUpdated the color of &c%koth% &eto &r%color%Color&e.'
+  KOTH_SETMIN:
+    USAGE: '&cUsage: /koth setmin <name> <mins>'
+    UPDATED_MIN: '&eUpdated the minutes of &c%koth% &eto &9%min%m&e.'
+  KOTH_SETPOINTS:
+    USAGE: '&cUsage: /koth setpoints <name> <points>'
+    UPDATED_POINTS: '&eUpdated the points of &c%koth% &eto &c%points%&e.'
+  KOTH_SETREM:
+    USAGE: '&cUsage: /koth setrem <name> <mins>'
+    NOT_ACTIVE: '&cYou can only set the remaining time of an active koth.'
+    UPDATED_REM: '&eUpdated the remaining time of &c%koth% &eto &9%rem%&e.'
+  KOTH_CLAIMZONE:
+    USAGE: '&cUsage: /koth claimzone <name>'
+    CLAIMING_STARTED: '&eStarted the zone claim process for &c%koth% &ekoth.'
+    NEED_BOTH_LOCS: '&eYou have not set both positions.'
+    SET_ZONE: '&eYou have set the zone successfully.'
+    UPDATED_LOC1: '&eSet the position of location 1 to &c%loc%&e.'
+    UPDATED_LOC2: '&eSet the position of location 2 to &c%loc%&e.'
+  KOTH_LIST:
+    LIST:
+      - '&7&m---------------------'
+      - '<p>&lKoth List'
+      - '%koths%'
+      - '&7&m---------------------'
+    FORMAT: '%color%koth% &7- &e(%mins% minutes)'
+  KOTH_RENAME:
+    USAGE: '&cUsage: /koth rename <koth> <name>'
+    SUCCESS: '&c%old_name% &ehas been renamed to &e%new_name%'
+  KOTH_EDITLOOT:
+    USAGE: '&cUsage: /koth editloot <koth>'
+    SAVED: '&aSaved koth loot.'
+    TITLE: '<p>Koth Loot'
+    SIZE: 9
+  KOTH_TP_CAPPER:
+    USAGE: '&cUsage: /koth tpcapper <koth>'
+    NO_CAPPER: '&eThere is nobody capturing &c%koth%'
+    SUCCESS: '&c%koth% &eis being capturing by &e%player% &efor %time%'
+  KOTH_UNCLAIM:
+    USAGE: '&cUsage: /koth unclaim <koth>'
+    UNCLAIMED: '&eYou have unclaimed the capture zone for &c%koth%&e.'
+  KOTH_TELEPORT:
+    USAGE: '&cUsage: /koth teleport <koth>'
+    NO_CAP_ZONE: '&cThe koth does not have a capture zone.'
+    TELEPORTED: '&eYou have teleported to %color%koth%&e''s &ecapture zone.'
+  KOTH_SOTW: '&eKOTH &a%koth% &ehas been canceled due &a&LSOTW &eis currently running!'
+  KOTH_LASTCAPPER:
+    USAGE: '&cUsage: /koth lastcapper <koth>'
+    NO_LAST_KOTH: '&eThere is not a last capped koth'
+    KOTH_NOT_FOUND: '&eKOTH &c%koth% &ewas not found.'
+    NO_LAST_CAP:  '&eNobody capped &c%koth% &ekoth yet.'
+    SUCCESS:
+      - '&9&m----------------------'
+      - '<p>&lLast Capture Information'
+      - ''
+      - '&eKOTH: &c%koth%'
+      - '&eCapper: &c%capper%'
+      - '&eFaction: &c%faction%'
+      - '&9&m----------------------'
+  KOTH_FOCUS:
+    USAGE: '&cUsage: /koth focus <koth>'
+    KOTH_NOT_FOUND: '&eKOTH &c%koth% &ewas not found.'
+    NOT_ACTIVE: '&c%koth% &eis not being capture.'
+    DISABLED: '&eYou have disabled focus.'
+    ENABLED:
+      - '&9&m----------------------'
+      - '<p>&lKOTH Focus Mode'
+      - ''
+      - '&eYou have enabled focus for'
+      - '&eKOTH: &c%koth%'
+      - '&eCapper: &c%capper%'
+      - '&9&m----------------------'
+
+CONQUEST_COMMAND:
+  USAGE:
+    - '&9&m----------------------'
+    - '<p>&lConquest Usage'
+    - ''
+    - '&c/conquest start'
+    - '&c/conquest end'
+    - '&c/conquest claimzone <RED|BLUE|GREEN|YELLOW>'
+    - '&c/conquest setpoints <team> <amount>'
+    - '&9&m----------------------'
+  CONQUEST_START:
+    ALREADY_ACTIVE: '&cConquest is already active.'
+    CAPZONES_NOT_CLAIMED: '&eYou do not have the capzone claimed: %color%capzone%'
+    STARTED: '&aConquest has been started.'
+  CONQUEST_END:
+    NOT_ACTIVE: '&cConquest is not active.'
+    ENDED: '&aConquest has been ended.'
+  CONQUEST_CLAIM:
+    USAGE: '&cUsage: /conquest claimzone <RED|BLUE|GREEN|YELLOW>'
+    TYPE_NOT_FOUND: '&eThe capzone &c%type% &ecould not be found.'
+    STARTED_PROCESS: '&aStarted the capture zone claiming process.'
+    NEVER_CLAIM_ALL_POS: '&cYou have not selected 2 positions.'
+    UPDATE_LOC1: '&eSet the position of location 1 to &c%loc%&e.'
+    UPDATE_LOC2: '&eSet the position of location 2 to &c%loc%&e.'
+    CLAIMED: '&aSuccessfully claimed capzone.'
+  CONQUEST_SETPOINTS:
+    USAGE: '&cUsage: /conquest setpoints <team> <amount>'
+    SET_POINTS: '&eYou have set the points for &c%team% &eto &9%amount% &epoints.'
+
+FOCUS_COMMAND:
+  USAGE:
+    - '&cUsage: /focus <player>'
+  ALREADY_FOCUSED: '&eThat player is already focused. Use /unfocus to unfocus.'
+  CANNOT_FOCUS_TEAMMATE: '&eYou cannot focus a teammate of yours.'
+  CANNOT_FOCUS_ALLY: '&eYou cannot focus an ally of yours.'
+  FOCUSED: '<p>%target% &ehas been focused by &7%player%&e.'
+
+UNFOCUS_COMMAND:
+  USAGE:
+    - '&cUsage: /unfocus <player>'
+  NOT_FOCUSED: '&eThat player is not focused.'
+  UNFOCUSED: '<p>%target% &ehas been unfocused by &7%player%&e.'
+
+LIVES_COMMAND:
+  USAGE:
+    - '&9&m---------------------'
+    - '<p>&lLives Usage'
+    - ''
+    - '&c/lives revive <player> &8- &7Revive a deathbanned player.'
+    - '&c/lives send <player> <amount> &8- &7Give a player lives.'
+    - '&c/lives check <player> &8- &7Check a players lives.'
+    - '&9&m---------------------'
+  SELF_CHECK: '&eLives: &c%lives%'
+  OTHER_CHECK: '&e%player%''s lives: &c%lives%'
+  INSUFFICIENT_LIVES: '&eYou cannot give &c%amount% &elives while you only have &9%lives%&e.'
+  GAVE_LIVES: '&eYou gave &c%amount% &elives to &9%player%&e.'
+  RECEIVED_LIVES: '&eYou received &c%amount% &elives from &9%player%&e.'
+  REVIVE_NO_LIVES: '&cYou need at least 1 life to revive a player.'
+  REVIVE_NOT_DEATHBANNED: '&cYou cannot revive a player who is not deathbanned.'
+  REVIVED: '&eYou have revived &c%player%&e.'
+
+LFF_COMMAND:
+  NONE_CHOSEN: '&cYou have not chose any classes.'
+  ON_COOLDOWN: '&cYou cannot use this for &c&l%seconds%&c.'
+  ALREADY_IN_TEAM: '&cYou are already in a team.'
+  SEPARATOR: '&7, '
+  BROADCAST_MESSAGE:
+    - '&9&m----------------------------'
+    - '<p>%player% &eis looking for a team!'
+    - '&eClasses: %classes%'
+    - '&9&m----------------------------'
+  LFF_MENU:
+    TITLE: '<p>LFF Menu'
+    SIZE: 9
+    CONFIRM_BUTTON:
+      NAME: '&aConfirm Selection'
+      MATERIAL: 'WOOL'
+      DATA: 5
+      SLOT: 9
+      LORE: { }
+    CLASSES: # Add as many as you want below this
+      DIAMOND:
+        NAME: '<p>Diamond'
+        SLOT: 1
+        ENABLED_ITEM:
+          NAME: '<p>&lDiamond Class &a(Selected)'
+          MATERIAL: 'DIAMOND_CHESTPLATE'
+          DATA: 0
+          ENCHANT: 'DURABILITY:1'
+          LORE:
+            - '&eClick to unselect.'
+        DISABLED_ITEM:
+          NAME: '<p>&lDiamond Class'
+          MATERIAL: 'DIAMOND_CHESTPLATE'
+          DATA: 0
+          ENCHANT: ''
+          LORE:
+            - '&eClick to select.'
+      BARD:
+        NAME: '&eBard'
+        SLOT: 2
+        ENABLED_ITEM:
+          NAME: '&e&lBard Class &a(Selected)'
+          MATERIAL: 'GOLD_CHESTPLATE'
+          DATA: 0
+          ENCHANT: 'DURABILITY:1'
+          LORE:
+            - '&eClick to unselect.'
+        DISABLED_ITEM:
+          NAME: '&e&lBard Class'
+          MATERIAL: 'GOLD_CHESTPLATE'
+          DATA: 0
+          ENCHANT: ''
+          LORE:
+            - '&eClick to select.'
+      ROGUE:
+        NAME: '&8Rogue'
+        SLOT: 3
+        ENABLED_ITEM:
+          NAME: '&8&lRogue Class &a(Selected)'
+          MATERIAL: 'CHAINMAIL_CHESTPLATE'
+          DATA: 0
+          ENCHANT: 'DURABILITY:1'
+          LORE:
+            - '&eClick to unselect.'
+        DISABLED_ITEM:
+          NAME: '&8&lRogue Class'
+          MATERIAL: 'CHAINMAIL_CHESTPLATE'
+          DATA: 0
+          ENCHANT: ''
+          LORE:
+            - '&eClick to select.'
+      MAGE:
+        NAME: '&2Mage'
+        SLOT: 4
+        ENABLED_ITEM:
+          NAME: '&2&lMage Class &a(Selected)'
+          MATERIAL: 'INK_SACK'
+          DATA: 2
+          ENCHANT: 'DURABILITY:1'
+          LORE:
+            - '&eClick to unselect.'
+        DISABLED_ITEM:
+          NAME: '&2&lMage Class'
+          MATERIAL: 'INK_SACK'
+          DATA: 2
+          ENCHANT: ''
+          LORE:
+            - '&eClick to select.'
+      GHOST:
+        NAME: '&7Ghost'
+        SLOT: 5
+        ENABLED_ITEM:
+          NAME: '&7&lGhost Class &a(Selected)'
+          MATERIAL: 'QUARTZ'
+          DATA: 0
+          ENCHANT: 'DURABILITY:1'
+          LORE:
+            - '&eClick to unselect.'
+        DISABLED_ITEM:
+          NAME: '&7&lGhost Class'
+          MATERIAL: 'QUARTZ'
+          DATA: 0
+          ENCHANT: ''
+          LORE:
+            - '&eClick to select.'
+      BASE_BITCH:
+        NAME: '&5Base Bitch'
+        SLOT: 6
+        ENABLED_ITEM:
+          NAME: '&5&lBase Bitch &a(Selected)'
+          MATERIAL: 'CRAFTING_TABLE'
+          DATA: 0
+          ENCHANT: 'DURABILITY:1'
+          LORE:
+            - '&eClick to unselect.'
+        DISABLED_ITEM:
+          NAME: '&5&lBase Bitch'
+          MATERIAL: 'CRAFTING_TABLE'
+          DATA: 0
+          ENCHANT: ''
+          LORE:
+            - '&eClick to select.'
+
+DEATHBAN_COMMAND:
+  USAGE:
+    - '&9&m---------------------'
+    - '<p>&lDeathban Usage'
+    - ''
+    - '&c/deathban set <player> &8- &7Modify the current time of the players deathban.'
+    - '&c/deathban info <player> &8- &7Get info about a players deathban.'
+    - '&c/deathban remove <player> &8- &7Forcibly remove a deathban.'
+    - '&9&m---------------------'
+  NOT_DEATHBANNED: '&ePlayer &c%player% &eis not deathbanned.'
+  REMOVED_DEATHBAN: '&eRemoved the deathban for &c%player%&e.'
+  SET:
+    USAGE: "&cUsage: /deathban set <player> <time> <reason>"
+    INVALID_TIME: "&cThe time must be a valid number in minutes."
+    SUCCESS: "&aYou have deathbanned %player% for %time%."
+  DEATHBAN_INFO:
+    USAGE: '&cUsage: /deathban info <player>'
+    FORMAT:
+      - '&9&m---------------------'
+      - '<p>&lDeathban Info&7: &e%player%'
+      - '&eDate: &f%date%'
+      - '&eLocation: &f%location%'
+      - '&eReason: &f%reason%'
+      - '&9&m---------------------'
+
+INVSEE_COMMAND:
+  USAGE:
+    - '&cUsage: /invsee <player>'
+
+CITADEL_COMMAND:
+  USAGE:
+    - '&9&m---------------------'
+    - '<p>&lCitadel Usage'
+    - ''
+    - '&c/citadel respawn <name> &8- &7Respawn all the chests.'
+    - '&c/citadel reload <name> &8- &7Reload the chests to respawn.'
+    - '&9&m---------------------'
+  CITADEL_NOT_FOUND: '&eThe citadel &c%citadel% &edoes not exist.'
+  CITADEL_RESPAWN:
+    USAGE: '&cUsage: /citadel respawn <name>'
+    RESPAWNED: '&eRespawned all the chests for &c%citadel%&e.'
+  CITADEL_RELOAD:
+    USAGE: '&cUsage: /citadel reload <name>'
+    RELOADED: '&eReloaded all the chests for &c%citadel%&e.'
+
+SET_END_COMMAND:
+  USAGE:
+    - '&9&m---------------------'
+    - '<p>&lSet End Usage'
+    - ''
+    - '&c/setend exit'
+    - '&c/setend worldexit'
+    - '&9&m---------------------'
+  WRONG_WORLD: '&eYou need to be in &c%world% &efor this exit.'
+  UPDATED: '&eYou have updated an exit.'
+
+DAILY_COMMAND:
+  NO_DAILY: '&cThere is no daily found for your rank.'
+  DAILY_COOLDOWN: '&cYou are on daily cooldown for &c&l%time%&c.'
+
+RECLAIM_COMMAND:
+  NO_RECLAIM: '&cThere is no reclaim found for your rank.'
+  ALREADY_RECLAIMED: '&cYou have already reclaimed this map.'
+
+RESET_RECLAIM_COMMAND:
+  USAGE:
+    - '&cUsage: /resetreclaim <player|all|online>'
+  NOT_RECLAIMED: '&ePlayer &c%player% &ehas not reclaimed yet.'
+  RESET_RECLAIM_ALL: '&eYou have reset the reclaim of &c%amount% &eusers.'
+  RESET_RECLAIM_ONLINE: '&eYou have reset the reclaim of all players. &c(%amount%)'
+  RESET_RECLAIM: '&eYou have reset the reclaim of &c%player%&e.'
+
+RESET_DAILY_COMMAND:
+  USAGE:
+    - '&cUsage: /resetdaily <player|all|online>'
+  NOT_DAILY: '&ePlayer &c%player% &ehas not used daily yet.'
+  RESET_DAILY_ALL: '&eYou have reset the daily of &c%amount% &eusers.'
+  RESET_DAILY_ONLINE: '&eYou have reset the daily of all players. &c(%amount%)'
+  RESET_DAILY: '&eYou have reset the daily of &c%player%&e.'
+
+LAST_KILLS_COMMAND:
+  USAGE:
+    - '&cUsage: /lastkills <player>'
+  FORMAT:
+    - '&9&m---------------------'
+    - '<p>&lLast Kills&7: &f%player%'
+    - '%lastkills%'
+    - '&9&m---------------------'
+
+LAST_DEATHS_COMMAND:
+  USAGE:
+    - '&cUsage: /lastdeaths <player>'
+  FORMAT:
+    - '&9&m---------------------'
+    - '<p>&lLast Deaths&7: &f%player%'
+    - '%lastdeaths%'
+    - '&9&m---------------------'
+
+LOGOUT_COMMAND:
+  ALREADY_ACTIVE: '&cYou are already attempting to logout!'
+  MOVED_CANCELLED: '&e&lYou moved. &c&lLOGOUT CANCELLED!'
+  DAMAGED_CANCELLED: '&e&lYou took damage. &c&lLOGOUT CANCELLED!'
+  COMBAT_TAGGED: '&eYou cannot logout while &cspawn tagged&e.'
+  STARTED_LOGOUT: '&eLogging out... please wait &c%seconds% &eseconds.'
+  LOGGED_OUT: '&aYou have been logged out safely!'
+
+STAFF_BUILD_COMMAND:
+  NOT_IN_STAFF: '&cYou are not in staff to use this command.'
+  BUILD_DISABLED: '<p>Staff Build: &cDisabled'
+  BUILD_ENABLED: '<p>Staff Build: &aEnabled'
+
+SET_REPAIR_COMMAND:
+  USAGE:
+    - '&cUsage: /setrepair <all|hand> ?clear'
+  NO_TARGET_BLOCK: '&eNo target block in sight.'
+  SET_BLOCK: '&eYou have set the repair block to &c%loc%&e.'
+  INSUFFICIENT_MONEY: '&eYou need &c$%amount% &eto use this.'
+  HAND_EMPTY: '&cYour hand is empty.'
+  REPAIRED_HAND: '&eYou have repaired your hand for &c$%amount%&e.'
+  REPAIRED_ALL: '&eYou have repaired your inventory for &c$%amount%&e.'
+  CLEARED: '&eYou have cleared this location.'
+
+SPAWN_COMMAND:
+  SPAWNED: '&eWarped to <p>Spawn&e.'
+  SPAWNED_TARGET: '&eYou have teleported &c%player% &eto spawn.'
+  SPAWN_TIMER_DISABLED: '&eSpawn is located at 0, 0.'
+  COMBAT_TAGGED: '&cYou cannot warp to spawn while combat tagged.'
+  ALREADY_TELEPORTING: '&cYou are already warping to spawn.'
+  WARPING: '&eWarping to spawn in <p>%seconds%s&e.'
+
+STATS_COMMAND:
+  USAGE:
+    - '&cUsage: /stats <player>'
+  STATS_SELF:
+    - '&7&m---------------------'
+    - '<p>Your Statistics'
+    - '&eKills: &f%kills%'
+    - '&eDeaths: &f%deaths%'
+    - '&eKDR: &f%kdr%'
+    - '&eKillstreak: &f%killstreak%'
+    - '&7&m---------------------'
+  STATS_TARGET:
+    - '&7&m---------------------'
+    - '<p>%player%''s Statistics'
+    - '&eKills: &f%kills%'
+    - '&eDeaths: &f%deaths%'
+    - '&eKDR: &f%kdr%'
+    - '&eKillstreak: &f%killstreak%'
+    - '&7&m---------------------'
+
+TELEPORT_COMMAND:
+  TPHERE_COMMAND:
+    USAGE:
+      - '&cUsage: /tphere <player>'
+    TELEPORTED: '&eYou teleported &c%player% &eto you.'
+  TPLOC_COMMAND:
+    USAGE:
+      - '&cUsage: /tploc <x> <y> <z>'
+    TELEPORTED: '&eYou have been teleported to &c%x%, %y%, %z%&e.'
+  TP_COMMAND:
+    USAGE:
+      - '&cUsage: /tp <player>'
+    TELEPORTED: '&eYou have been teleported to &c%player%&e.'
+  TPRANDOM_COMMAND:
+    INSUFFICIENT_PLAYERS: '&eThere is not enough players online.'
+    TELEPORTED: '&eYou randomly teleported to &c%player%&e.'
+  TPALL_COMMAND:
+    INSUFFICIENT_PLAYERS: '&eThere is not enough players online.'
+    TELEPORTED: '<p>%player% &ehas teleported all online players to them.'
+
+KILL_COMMAND:
+  USAGE:
+    - '&cUsage: /kill <player>'
+  KILLED_SELF: '&eYou have committed suicide.'
+  KILLED_TARGET: '&eYou have killed &c%player%&e.'
+
+RESTORE_COMMAND:
+  USAGE:
+    - '&cUsage: /restore <player>'
+  RESTORED: '&eYou have restored the inventory of &c%player%&e.'
+  TARGET: '&eYour inventory has been restored by &c%player%&e.'
+
+HEAL_COMMAND:
+  USAGE:
+    - '&cUsage: /heal <player>' # for consoles
+  HEALED_SELF: '&eYou have healed yourself.'
+  HEALED_TARGET: '&eYou have healed &c%player%&e.'
+  TARGET_MESSAGE: '&eYou have been healed by &c%player%&e.'
+
+SPAWNER_COMMAND:
+  USAGE:
+    - '&cUsage: /spawner <entity>'
+  SPAWNER_NOT_FOUND: '&eSpawner &c%type% &edoes not exist.'
+  SPAWNER_GAINED: '&eYou received a &r%type% &espawner.'
+
+CROWBAR_COMMAND:
+  RECEIVED: '&eYou have received a <p>Crowbar&e.'
+
+COBBLE_COMMAND:
+  TOGGLED_OFF: '&eYou have &cdisabled &ecobblestone pickup.'
+  TOGGLED_ON: '&eYou have &aenabled &ecobblestone pickup.'
+
+REDEEM_COMMAND:
+  USAGE:
+    - '&cUsage: /redeem <partner>'
+  ALREADY_REDEEMED: '&cYou have already redeemed this map.'
+  PARTNER_NOT_FOUND: '&cCould not find that partner. Use tab completion to see the list of partners'
+  REDEEMED_BROADCAST:
+    - '&9%player% &ehas redeemed rewards for &c%partner% &eusing &7/redeem&e.'
+
+CHECKREDEEMS_COMMAND:
+  FORMAT:
+    - '&9&m---------------------'
+    - '<p>&lRedeem Counts'
+    - '%redeems%'
+    - '&9&m---------------------'
+  REDEEM_FORMAT: '&c%name% &7- &f%count% Redeems'
+
+HIDE_STAFF_COMMAND:
+  DISABLED: '&eStaff members are now &avisible&e.'
+  ENABLED: '&eStaff members are now &chidden&e.'
+
+SETSPAWN_COMMAND:
+  WRONG_WORLD: '&eYou cannot set spawn in &c%world% &ebecause you are not in it.'
+  SET_SPAWN: '&eSpawnpoint has been updated for &c%world% &eto &9%loc%&e.'
+
+RESET_REDEEM_COMMAND:
+  USAGE:
+    - '&cUsage: /resetredeem <player|all>'
+  NOT_REDEEMED: '&eThat player has not redeemed yet.'
+  RESET_REDEEM: '&eYou have reset the redeem for &9%player%&e.'
+  RESET_ALL: '&eYou have reset the redeems for &c%users% &eusers.'
+
+FEED_COMMAND:
+  USAGE:
+    - '&cUsage: /feed <player>' # for consoles
+  FED_SELF: '&eYou have fed yourself.'
+  FED_TARGET: '&eYou have fed &c%player%&e.'
+  TARGET_MESSAGE: '&eYou have been fed by &c%player%&e.'
+
+FILLBOTTLE_COMMAND:
+  BLOCK: '&cYou must be must looking at a chest'
+  EMPTY: '&cYou must have empty glass bottles in your hand!'
+  FULL_CHEST: '&cThe chest is already full storage'
+  SUCCESSFUL: '&aSuccessfully filled %amount% bottles into the chest!'
+
+BROADCAST_COMMAND:
+  USAGE:
+    - '&cUsage: /broadcast <message>'
+  BROADCAST_FORMAT: '%message%' # if u want a prefix add behind %message%
+
+COPYINV_COMMAND:
+  USAGE:
+    - '&cUsage: /copyinv <player>'
+  COPIED: '&eYou have copied the inventory of &c%player%&e.'
+
+INVTO_COMMAND:
+  USAGE:
+    - '&cUsage: /invto <player>'
+  GAVE: '&eYou have gave your inventory to &c%player%&e.'
+
+MESSAGE_COMMAND:
+  USAGE:
+    - '&cUsage: /message <player>'
+  IGNORING_PLAYER: '&cYou have ignored that player.'
+  IGNORING_TARGET: '&cThat player is ignoring you.'
+  TOGGLED_PLAYER: '&cYou have private messages disabled.'
+  TOGGLED_TARGET: '&cThat player has private messages disabled.'
+  CANNOT_SEND_EMPTY: '&cYou cannot send an empty message.'
+  TO_FORMAT: '&7(To %prefix%%color%%player%%suffix%&7) %message%'
+  FROM_FORMAT: '&7(From %prefix%%color%%player%%suffix%&7) %message%'
+
+CLEAR_COMMAND:
+  USAGE:
+    - '&cUsage: /clear <player>'
+  CLEARED: '&eYour inventory has been cleared.'
+  CLEARED_TARGET: '&eYou have cleared the inventory of &c%player%&e.'
+
+HELP_COMMAND:
+  HELP_MESSAGE:
+    - '&7&m---------------------'
+    - '&6&lCyrusPvP Network &7(cyruspvp.net)'
+    - '&7- &fdiscord.gg/cyruspvp'
+    - '&7- &fstore.cyruspvp.net'
+    - ''
+    - '&7- &eP1, S1'
+    - '&7- &eEnd Portals: &f750 , 750 &7(Each quadrants)'
+    - '&7- &eBorder: 2k 2k'
+    - '&7&m---------------------'
+
+COORDS_COMMAND:
+  COORDS_MESSAGE:
+    - '&7&m---------------------'
+    - '&7- &eEnd Portals: &f750 , 750 &7(Each quadrants)'
+    - '&7- &eBorder: &f2k 2k'
+    - '&7&m---------------------'
+
+STACK_COMMAND:
+  NO_ITEM: '&cYou are not holding an item.'
+  STACKED: '&eStacked that item to 64x.'
+
+REPLY_COMMAND:
+  USAGE:
+    - '&cUsage: /reply <message>'
+  IGNORING_PLAYER: '&cYou have ignored that player.'
+  IGNORING_TARGET: '&cThat player is ignoring you.'
+  TOGGLED_PLAYER: '&cYou have private messages disabled.'
+  TOGGLED_TARGET: '&cThat player has private messages disabled.'
+  NO_REPLY: '&cYou have no one to reply to...'
+
+IGNORE_COMMAND:
+  USAGE:
+    - '&cUsage: /ignore <player>'
+  IGNORE_REMOVE: '&eYou are no longer ignoring &c%player%&e.'
+  IGNORE_ADD: '&eYou are now ignoring &c%player%&e.'
+
+TOGGLESOUNDS_COMMAND:
+  SOUNDS_TRUE: '&eYou have &aenabled &esounds.'
+  SOUNDS_FALSE: '&eYou have &cdisabled &esounds.'
+
+TOGGLEPM_COMMAND:
+  PM_TRUE: '&eYou have &aenabled &eprivate messages.'
+  PM_FALSE: '&eYou have &cdisabled &eprivate messages.'
+
+STAFF_CHAT_COMMAND:
+  TOGGLED_ON: '<p>Staff Chat: &aEnabled'
+  TOGGLED_OFF: '<p>Staff Chat: &cDisabled'
+
+REQUEST_COMMAND:
+  USAGE:
+    - '&cUsage: /request <reason>'
+  REQUEST_COOLDOWN: '&cYou cannot do this for &c&l%time%&c.'
+  REQUESTED: '&eYou have requested help with &c%reason%&e.'
+  REQUESTED_STAFF: '<p>[Request] &b%player% &erequested help with &c%reason%&e.'
+
+REPORT_COMMAND:
+  USAGE:
+    - '&cUsage: /report <player> <reason>'
+  REPORT_COOLDOWN: '&cYou cannot do this for &c&l%time%&c.'
+  REPORTED: '&eYou have reported &b%target% &efor &c%reason%&e.'
+  REPORTED_STAFF: '<p>[Report] &b%player% &ehas reported <p>%target% &efor &c%reason%&e.'
+
+REBOOT_COMMAND:
+  USAGE:
+    - '&9&m---------------------'
+    - '<p>&lReboot Usage'
+    - ''
+    - '&c/reboot start <time>'
+    - '&c/reboot extend <time>'
+    - '&c/reboot cancel'
+    - '&9&m---------------------'
+  ALREADY_STARTED: '&cReboot timer is already active.'
+  NOT_ACTIVE: '&cReboot timer is not active.'
+  STARTED:
+    - '&9&m---------------------'
+    - '&4[REBOOT] &eReboot will commence in &c%time%&e.'
+    - '&9&m---------------------'
+  EXTENDED:
+    - '&9&m---------------------'
+    - '&4[REBOOT] &eReboot has been extended by &c%time%&e.'
+    - '&9&m---------------------'
+  CANCELLED:
+    - '&9&m---------------------'
+    - '&4[REBOOT] &aReboot has been cancelled.'
+    - '&9&m---------------------'
+
+TIMER_COMMAND:
+  USAGE:
+    - '&9&m---------------------'
+    - '<p>&lTimer Usage'
+    - ''
+    - '&c/timer add <player|all> <timer> <time>'
+    - '&c/timer remove <player|all> <timer>'
+    - '&9&m---------------------'
+  NOT_FOUND: '&eThe timer &c%timer% &edoes not exist.'
+  TIMER_ADD:
+    USAGE: '&cUsage: /timer add <player|all> <timer> <seconds>'
+    ADDED_TIMER_ALL: '&eThe timer &c%timer% &ehas been applied to all online players for &f%time%&e.'
+    ADDED_TIMER: '&eThe timer &c%timer% &ehas been applied to &9%player% &efor &f%time%&e.'
+  TIMER_REMOVE:
+    USAGE: '&cUsage: /timer remove <player|all> <timer>'
+    NO_TIMER: '&eThe player &c%player% &edoes not have the timer &9%timer%&e.'
+    REMOVED_TIMER_ALL: '&eYou have removed the &c%timer% &efrom all online players.'
+    REMOVED_TIMER: '&eYou have removed the &c%timer% &efrom &9%player%&e.'
+
+CTIMER_COMMAND:
+  USAGE:
+    - '&9&m---------------------'
+    - '<p>&lCustom Timer Usage'
+    - ''
+    - '&c/customtimer create <name> <displayName> <time>'
+    - '&c/customtimer delete <name>'
+    - '&c/customtimer list'
+    - '&9&m---------------------'
+  CTIMER_CREATE:
+    USAGE: '&cUsage: /customtimer create <name> <displayName> <minutes>'
+    CREATED: '&eCreated a custom timer with name &c%name%&e.'
+    ALREADY_EXISTS: '&eCustom timer with name &c%name% &ealready exists.'
+  CTIMER_DELETE:
+    USAGE: '&cUsage: /customtimer delete <name>'
+    NOT_FOUND: '&eThe custom timer &c%name% &ewas not found.'
+    DELETED: '&eDeleted the custom timer named &c%name%&e.'
+  CTIMER_LIST:
+    TIMERS_LIST:
+      - '&9&m---------------------'
+      - '<p>&lCustom Timers'
+      - '%timers%'
+      - '&9&m---------------------'
+    TIMERS_FORMAT: '<p>%name% &7- &f%remaining% &7(%displayName%&7)'
+
+BLOCKSHOP_COMMAND:
+  DISABLED_SOTW: '&cThis command can only be executed during SOTW.'
+  DISABLED_WARZONE: '&cThis command is disabled in warzone.'
+  DISABLED_WILDERNESS: '&cThis command is disabled in wilderness.'
+  DISABLED_ENEMY: '&cThis command is disabled in enemy teams.'
+  DISABLED_COMBAT: '&cThis command cannot be executed in combat.'
+  DISABLED_HERE: '&cThis command is disabled here.'
+
+BLOCKSHOP:
+  INSUFFICIENT_MONEY: '&eYou need &2$&a%price% &eto purchase this item.'
+  BOUGHT_BLOCK: '&eYou have purchased <p>%type% &efor &2$&a%price%&e.'
+  NOT_CARRYING: '&eYou are not carrying <p>%type%&e.'
+  SOLD: '&eYou have sold <p>%amount%x %type% &efor &2$&a%price%&e.'
+  SOLD_ALL_SPECIFIC: '&eYou have sold all <p>%amount%x %type% &efor &2$&a%price%&e.'
+  SOLD_ALL_NOTHING: '&eYou are not carrying any valuables.'
+  SOLD_ALL: '&eYou have sold all your valuables for &2$&a%price%&e.'
+
+FREEZE_COMMAND:
+  USAGE:
+    - '&cUsage: /freeze <player>'
+  FROZE_PLAYER: '&eYou have froze &c%player%&e.'
+  UNFROZE_PLAYER: '&eYou have unfrozen &c%player%&e.'
+  CANNOT_FREEZE: '&cYou do not have permission to freeze this player.'
+  FROZEN_STAFF:
+    - ''
+    - '&c%staff% &chas frozen &c%player%'
+    - ''
+SCHEDULE_COMMAND:
+  USAGE:
+    - '&9&m---------------------'
+    - '<p>&LSchedule Usage'
+    - ''
+    - '&c/schedule'
+    - '&c/schedule add <name> <display>'
+    - '&c/schedule interval <mins>'
+    - '&9&m---------------------'
+  NEXT: '&eNext event: %next%'
+  REMAINING: '&ETime remaining: %rem%'
+  ADD:
+    USAGE: '&CUsage: /schedule add <name> <display>'
+    SUCCESS: '&eSuccessfully added %name% to koth list.'
+  INTERVAL:
+    USAGE: '&CUsage: /schedule interval <mins>'
+    SUCCESS: '&eSuccessfully updated interval to %interval% minutes.'
+  REMOVE:
+    USAGE: "&cUsage: /schedule remove <name> <dis>"
+    SUCCESS: "&aSuccessfully deleted %name% to koth list."
+    NOT_FOUND: "&cEvent %name% not found."
+  SCHEDULE: '&6[KingOfTheHill] &eEvents Schedule'
+
+KEYALL_COMMAND:
+  USAGE:
+    - '&9&m---------------------'
+    - '<p>&lKey All Usage'
+    - ''
+    - '&c/keyall open'
+    - '&c/keyall redeem'
+    - '&c/keyall toggle'
+    - '&9&m---------------------'
+  NOT_ACTIVE: '&eKeyAll is not active.'
+  NOT_SPACE: '&EYour inventory was full, so you didnt get the loot!'
+  SUCCESS: '&eSuccessfully redeem the KeyAll!'
+  STATUS_CHANGE: '&eKeyAll status changed to &c%status%&e.'
+  INVALID: '&cUsage: /keyall redeem'
+  ALREADY_REDEEMED: '&eYou have already redeeem the KeyAll loot.'
+
+GAPPLE_COMMAND:
+  NO_TIMER: '&cYou do not have an active gapple timer.'
+  FORMAT: '&eGapple Timer: &c%remaining%'
+
+SPEED_COMMAND:
+  TOGGLED_OFF: '&eYou have &cdisabled &eyour speed effect.'
+  TOGGLED_ON: '&eYou have &aenabled &eyour speed effect.'
+
+FIRE_RESISTANCE_COMMAND:
+  TOGGLED_OFF: '&eYou have &cdisabled &eyour fire res effect.'
+  TOGGLED_ON: '&eYou have &aenabled &eyour fire res effect.'
+
+WORLD_COMMAND:
+  USAGE:
+    - '&cUsage: /world <name>'
+  WORLD_NOT_FOUND: '&eWorld &c%name% &edoes not exist.'
+  WORLD_CHANGED: '&eYour world has been changed to &c%name%&e.'
+
+TELL_LOC_COMMAND:
+  FORMAT: '&a[TL] %player%: &f%location%'
+
+BALANCE_COMMAND:
+  USAGE:
+    - '&cUsage: /balance <player>'
+  SELF_CHECK: '&eYour balance: &a$%balance%'
+  TARGET_CHECK: '&e%target%''s balance: &a$%balance%'
+
+EDIT_MENU_COMMAND:
+  USAGE:
+    - '&cUsage: /editmenu <REFILL,QUICKREFILL>'
+  MENU_NOT_FOUND: '&eThe menu &c%menu% &edoes not exist.'
+  SAVED_MENU: '&aSaved menu data.'
+
+FALLTRAP_TOKEN_COMMAND:
+  USAGE:
+    - '&cUsage: /falltraptoken <player>'
+  SELF_CHECK: '&eYour falltrap tokens: &a%balance%'
+  TARGET_CHECK: '&e%target%''s falltrap tokens: &a%balance%'
+
+BASE_TOKEN_COMMAND:
+  USAGE:
+    - '&cUsage: /basetoken <player>'
+  SELF_CHECK: '&eYour base tokens: &a%balance%'
+  TARGET_CHECK: '&e%target%''s base tokens: &a%balance%'
+
+KIT_ADMIN_COMMAND:
+  USAGE:
+    - '&9&m---------------------'
+    - '<p>&lKit Management Usage'
+    - ''
+    - '&c/kit create <name>'
+    - '&c/kit delete <name>'
+    - '&c/kit apply <player> <kit>'
+    - '&c/kit setitems <kit>'
+    - '&c/kit setname <kit> <newName>'
+    - '&c/kit setcooldown <seconds>'
+    - '&c/kit list'
+    - '&9&m---------------------'
+  ON_COOLDOWN: '&cYou need to wait &c&l%seconds% &cbefore using this kit again.'
+  NOT_FOUND: '&eThe kit &c%kit% &edoes not exist.'
+  KIT_CREATE:
+    USAGE: '&cUsage: /kit create <name>'
+    ALREADY_EXISTS: '&eKit &c%kit% &ealready exists.'
+    CREATED: '&eYou have created the kit &c%kit%&e.'
+  KIT_DELETE:
+    USAGE: '&cUsage: /kit delete <name>'
+    DELETED: '&eDeleted the kit &c%kit%&e.'
+  KIT_APPLY:
+    USAGE: '&cUsage: /kit apply <player> <kit>'
+    APPLIED: '&eThe kit &c%kit% &ehas been applied to &9%player%&e.'
+  KIT_SETITEMS:
+    USAGE: '&cUsage: /kit setitems <kit>'
+    SET_ITEMS: '&eYou have set the contents of &c%kit% &eto your inventory.'
+  KIT_SETCOOLDOWN:
+    USAGE: '&cUsage: /kit setcooldown <kit> <seconds>'
+    SET_COOLDOWN: '&eThe cooldown for kit &c%kit% &ehas been set to &9%seconds%s&e.'
+  KIT_SETNAME:
+    USAGE: '&cUsage: /kit setname <kit> <newName>'
+    SET_NAME: '&eChanged the name of kit &c%oldName% &eto &9%newName%&e.'
+  KIT_LIST:
+    KITS_LIST:
+      - '&9&m---------------------'
+      - '<p>&lKits'
+      - '%kits%'
+      - '&9&m---------------------'
+    KITS_FORMAT: '&f%kit% &7(&e%seconds%s CD&7)'
+
+KIT_COMMAND:
+  USAGE:
+    - '&cUsage: /kit <kit>'
+  ONLY_SPAWN: '&eYou can only use kits in &aSpawn&e.'
+  IN_COMBAT: '&cYou cannot use kits in combat.'
+  NOT_FOUND: '&eKit &c%kit% &ecould not be found.'
+  INSUFFICIENT_PERM: '&eYou do not have access to <p>%kit% &ekit.'
+  ON_COOLDOWN: '&cYou are on cooldown for &c&l%time%&c.'
+  EQUIPPED: '&eYou have equipped kit <p>%kit%&e.'
+
+ECOMANAGE_COMMAND:
+  USAGE:
+    - '&9&m---------------------'
+    - '<p>&lBalance Management Usage'
+    - ''
+    - '&c/ecomanage set <player> <amount>'
+    - '&c/ecomanage add <player> <amount>'
+    - '&c/ecomanage take <player> <amount>'
+    - '&9&m---------------------'
+  REMOVED_BAL: '&eRemoved &a$%amount% &efrom &9%target%''s &ebalance.'
+  ADDED_BAL: '&eAdded &a$%amount% &eto &9%target%''s &ebalance.'
+  SET_BAL: '&eSet &9%target%''s &ebalance to &a$%amount%&e.'
+
+ENCHANT_COMMAND:
+  USAGE:
+    - '&cUsage: /enchant <enchant> <level> (Optional: <target>)'
+  ENCHANT_NOT_FOUND: '&eThe enchant &c%enchant% &ecould not be found.'
+  EMPTY_HAND: '&cYour hand is empty!'
+  ENCHANTED_TARGET: '&eYou have enchanted &c%player%&e''s hand with &9%enchant%&e.'
+  ENCHANTED: '&eYour hand has been enchanted with &9%enchant%&e.'
+
+FALLTRAP_TOKEN_MANAGE_COMMAND:
+  USAGE:
+    - '&9&m---------------------'
+    - '<p>&lFalltrap Token Management'
+    - ''
+    - '&c/managefalltraptoken set <player> <amount>'
+    - '&c/managefalltraptoken add <player> <amount>'
+    - '&c/managefalltraptoken take <player> <amount>'
+    - '&9&m---------------------'
+  REMOVED_BAL: '&eRemoved &a%amount% &efrom &9%target%''s &etokens.'
+  ADDED_BAL: '&eAdded &a%amount% &eto &9%target%''s &etokens.'
+  SET_BAL: '&eSet &9%target%''s &etoken balance to &a%amount%&e.'
+
+BASE_TOKEN_MANAGE_COMMAND:
+  USAGE:
+    - '&9&m---------------------'
+    - '<p>&lBase Token Management'
+    - ''
+    - '&c/managebasetoken set <player> <amount>'
+    - '&c/managebasetoken add <player> <amount>'
+    - '&c/managebasetoken take <player> <amount>'
+    - '&9&m---------------------'
+  REMOVED_BAL: '&eRemoved &a%amount% &efrom &9%target%''s &etokens.'
+  ADDED_BAL: '&eAdded &a%amount% &eto &9%target%''s &etokens.'
+  SET_BAL: '&eSet &9%target%''s &etoken balance to &a%amount%&e.'
+
+ENDPLAYERS_COMMAND:
+  FORMAT:
+    - '&7&m---------------------'
+    - '<p>&lEnd Players'
+    - '&eAmount: &c%endplayers%'
+    - '&7&m---------------------'
+
+NETHERPLAYERS_COMMAND:
+  FORMAT:
+    - '&7&m---------------------'
+    - '<p>&lNether Players'
+    - '&eAmount: &c%netherplayers%'
+    - '&7&m---------------------'
+
+NEAR_COMMAND:
+  RADIUS: 100
+  EMPTY: '&cNo players nearby.'
+  FORMAT:
+    - '&7&m---------------------'
+    - '<p>&lNear Players &7(%nearamount%)'
+    - '&e%near%'
+    - '&7&m---------------------'
+
+LIVESMANAGE_COMMAND:
+  USAGE:
+    - '&9&m---------------------'
+    - '<p>&lLives Management Usage'
+    - ''
+    - '&c/livesmanage set <player> <amount>'
+    - '&c/livesmanage add <player> <amount>'
+    - '&c/livesmanage take <player> <amount>'
+    - '&9&m---------------------'
+  REMOVED_LIVES: '&eRemoved &a%amount% &efrom &9%target%''s &elives.'
+  ADDED_LIVES: '&eAdded &a%amount% &eto &9%target%''s &elives.'
+  SET_LIVES: '&eSet &9%target%''s &elives to &a%amount%&e.'
+
+POWERUPS_COMMAND:
+  USAGE:
+    - '&9&m---------------------'
+    - "&c/powerups start <mins>"
+    - "&c/powerups stop            "
+    - "&c/powerups list            "
+    - "&c/powerups tp              "
+    - "&c/powerups spawn <type>   "
+    - "&c/powerups last            "
+    - '&9&m---------------------'
+  ALREADY_RUNNING: "&cThe power-ups system is already running."
+  NOT_RUNNING:     "&cThe power-ups system is not active."
+  INVALID_NUMBER:  "&cInvalid number. Must be a positive integer."
+  STARTED:         "&aPower-ups system started: spawns every %mins% minutes."
+  STOPPED:         "&aPower-ups system stopped."
+  NO_TYPES:        "&cThere are no power-up types configured."
+  ONLY_PLAYER:     "&cThis command can only be used by a player."
+  NO_ACTIVE:       "&cThere are no active power-ups."
+  TELEPORTED:      "&aTeleported to the power-up at (&e%x%, %y%, %z%&a)."
+  INVALID_TYPE:    "&cInvalid power-up type."
+  SPAWNED:         "&aPower-up type %type% force-spawned at your location."
+  NO_LAST:         "&cNo one has picked up a power-up yet."
+  LAST:            "&aLast pickup: player &b%player% &a– type &b%type%&a."
+
+
+
+PLAYTIME_COMMAND:
+  SELF_CHECK: '&eYour playtime: &c%playtime%'
+  TARGET_CHECK: '&e%target%''s playtime: &c%playtime%'
+
+PAY_COMMAND:
+  USAGE:
+    - '&cUsage: /pay <player> <amount>'
+  INSUFFICIENT_BAL: '&cYou do not have &a$%amount%&e.'
+  PAID: '&eYou sent <p>$%amount% &eto <p>%player%&e.'
+  RECEIVED: '<p>%player% &ehas sent you <p>$%amount%&e.'
+
+SEND_FALLTRAP_TOKEN_COMMAND:
+  USAGE:
+    - '&cUsage: /sendfttoken <player> <amount>'
+  INSUFFICIENT_BAL: '&eYou do not have &a%amount% &etokens.'
+  PAID: '&eYou sent <p>%amount% &etokens to <p>%player%&e.'
+  RECEIVED: '<p>%player% &ehas sent you <p>%amount% &etokens.'
+
+SEND_BASE_TOKEN_COMMAND:
+  USAGE:
+    - '&cUsage: /sendbtoken <player> <amount'
+  INSUFFICIENT_BAL: '&eYou do not have &a%amount% &etokens.'
+  PAID: '&eYou sent <p>%amount% &etokens to <p>%player%&e.'
+  RECEIVED: '<p>%player% &ehas sent you <p>%amount% &etokens.'
+
+PVPTIMER_COMMAND:
+  USAGE:
+    - '&7&m---------------------'
+    - '<p>&lPvP Timer Usage'
+    - ''
+    - '&c/pvp enable'
+    - '&c/pvp time'
+    - '&7&m---------------------'
+  NO_TIMERS: '&cYou do not have any timers active.'
+  ENABLED: '&aYou no longer have any pvp protection.'
+  TIME_FORMAT: '&eRemaining protection: &c%remaining%'
+  ENABLE_FOR_NO_TIMER: '&ePlayer &c%target% &ehas no pvp protection.'
+  ENABLED_FOR: '&ePlayer &c%target% &eno longer has pvp protection.'
+
+GAMEMODE_COMMAND:
+  USAGE:
+    - '&cUsage: /gamemode <gamemode> <player>'
+  GM_UPDATED: '&eYour gamemode has been updated to &c%gamemode%&e.'
+  TARGET_GM_UPDATED: '&eYou updated &c%target%''s &egamemode to &9%gamemode%&e.'
+
+PING_COMMAND:
+  SELF_PING: '&eYour ping: %color%ping%'
+  OTHER_PING: '&e%player%''s ping: %color%ping%'
+
+RENAME_COMMAND:
+  EMPTY_HAND: '&cYou cannot rename air!'
+  FORBIDDEN_ITEM: '&cYou cannot rename a forbidden item!'
+  FORBIDDEN_NAME: '&cYou cannot use a forbidden name!'
+  RENAMED: '&aYour item has been renamed to &r%name%&a.'
+
+LORE_COMMAND:
+  EMPTY_HAND: '&cYou cannot add lore to air!'
+  FORBIDDEN_ITEM: '&cYou cannot add lore to a forbidden item!'
+  INVALID_USAGE: '&cUsage: /lore <add|remove|list|edit> <line> <text>'
+  NO_LORE: '&cYour item has no lore.'
+  INVALID_USAGE_ADD: '&cUsage: /lore add <line> <text>'
+  LORE_ADDED: '&aYou have added lore to your item &7(%text%).'
+  INVALID_USAGE_EDIT: '&cUsage: /lore edit <line> <text>'
+  INVALID_INDEX: '&cInvalid index. Use /lore list to see the lore.'
+  LORE_EDITED: '&aYou have edited lore line &c%line% &ato &7(%text%).'
+  INVALID_USAGE_REMOVE: '&cUsage: /lore remove <line>'
+  LORE_REMOVED: '&aYou have removed lore line &c%line%&a.'
+
+
+REPAIR_COMMAND:
+  EMPTY_HAND: '&cYou cannot repair air!'
+  FORBIDDEN_ITEM: '&cYou cannot repair a forbidden item!'
+  UNREPAIRABLE: '&cYour item is unrepairable.'
+  REPAIRED: '&aYour item has been repaired.'
+  REPAIRED_ALL: '&aYou have repaired all the items in your inventory.'
+
+TOP_COMMAND:
+  NOT_SAFE: '&cCould not find a safe location!'
+  TELEPORTED: '&aYou have been teleported to the highest point.'

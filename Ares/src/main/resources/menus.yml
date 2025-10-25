@@ -1,0 +1,67 @@
+PAYOUTS_MENU:
+  TITLE: "&dMap Payouts"
+  SIZE: 27
+  ITEMS:
+    1:
+      slot: 11
+      item: DIAMOND_AXE
+      metadata: 0
+      displayname: "&5&lEVENT PRIZES"
+      lore:
+        - "&f"
+        - "&5How to win event prizes?"
+        - "&d• &fThe faction who won differents events"
+        - "&d• &fon our map will receive the following"
+        - "&d• &frewards provided below"
+        - "&f"
+        - "&5Prizes"
+        - "&d• &fCitadel: &2$&a25 Buycraft + Exclusive Prefix"
+        - "&d• &fConquest: &2$&a50$ Buycraft + Exclusive Prefix"
+        - "&d• &fEOTW Capper: &2$&a10$ Buycraft + Exclusive Prefix"
+        - "&d• &fFFA Winner: &2$&a10$ Buycraft + Exclusive Prefix"
+    2:
+      slot: 13
+      item: NETHER_STAR
+      metadata: 0
+      displayname: "&5&lFACTION TOP"
+      lore:
+        - "&f"
+        - "&5How to win faction top?"
+        - "&d• &fThe Faction with the most points at the end"
+        - "&d• &fof our map will receive the following"
+        - "&d• &frewards provided below"
+        - "&f"
+        - "&5Prizes"
+        - "&d• &a#1 &fWill receive &2$&a30 &bPaypal"
+        - "&d• &c#2 &fWill receive &2$&a20 Buycraft"
+        - "&d• &6#3 &fWill receive &2$&a10 Buycraft"
+        - "&f"
+        - "&5Best way to win points?"
+        - "&d• &f1 Kill = &a1 Point"
+        - "&d• &fCapture &9&lKOTH &f= &a50 Points"
+        - "&d• &fCapture &5&lCitadel &f= &a200 Points"
+        - "&d• &fCapture &4&lConquest &f= &a300 Points"
+    3:
+      slot: 15
+      item: DIAMOND_SWORD
+      metadata: 0
+      displayname: "&5&lKILLS TOP"
+      lore:
+        - "&f"
+        - "&5What is kill top?"
+        - "&d• &fKill Top is a competition where you can"
+        - "&d• &fgrind to the top of the leaderboards, by gaining"
+        - "&d• &fthe most amount of kills by the end of our map"
+        - "&f"
+        - "&5Prizes"
+        - "&d• &a#1 &2$&a15 Buycraft + Exclusive Prefix"
+        - "&d• &c#2 &2$&a10 Buycraft"
+        - "&d• &6#3 &2$&a5 Buycraft"
+    4:
+      slot: 1
+      item: SKULL_ITEM
+      metadata: 3
+      skull-owner: "MeeZoid"
+      displayname: "&6SEX SKULLasdasd"
+      lore:
+        - "&casd"

@@ -1,0 +1,95 @@
+name: autoSync.yml
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch: {}
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Fetch dev-peru branch
+        run: |
+          git fetch origin dev-peru:dev-peru || true
+
+      - name: Attempt merge master -> dev-peru
+        id: merge
+        run: |
+          set -e
+          git checkout dev-peru
+          if git merge --no-ff --no-edit master; then
+            git push origin dev-peru
+            echo "result=merged" >> $GITHUB_OUTPUT
+          else
+            git merge --abort || true
+            echo "result=conflict" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Open PR and request review if conflict
+        if: steps.merge.outputs.result == 'conflict'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { owner, repo } = context.repo;
+            const title = 'Sync master → dev-peru';
+            const body = [
+              'This PR was automatically created because there were **merge conflicts** when syncing `master` into `dev-peru`.'
+            ].join('\n');
+
+            let pr;
+            try {
+              pr = await github.rest.pulls.create({
+                owner, repo,
+                head: 'master',
+                base: 'dev-peru',
+                title, body,
+                maintainer_can_modify: false
+              });
+            } catch (e) {
+              if (e.status !== 422) throw e;
+              const { data: prs } = await github.rest.pulls.list({
+                owner, repo, state: 'open', head: `${owner}:master`, base: 'dev-peru'
+              });
+              if (!prs.length) throw e;
+              pr = { data: prs[0] };
+            }
+
+            const prNumber = pr.data.number;
+            const reviewer = 'RodriDevs'; // <-- tu usuario de GitHub
+            try {
+              await github.rest.issues.addAssignees({
+                owner, repo,
+                issue_number: prNumber,
+                assignees: [reviewer]
+              });
+            } catch (_) {}
+            try {
+              await github.rest.pulls.requestReviewers({
+                owner, repo,
+                pull_number: prNumber,
+                reviewers: [reviewer]
+              });
+            } catch (_) {}
+            try {
+              await github.rest.issues.addLabels({
+                owner, repo,
+                issue_number: prNumber,
+                labels: ['sync', 'needs-conflict-resolution']
+              });
+            } catch (_) {}
